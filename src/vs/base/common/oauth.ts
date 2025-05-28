@@ -5,9 +5,9 @@
 
 import { decodeBase64 } from './buffer.js';
 
-const WELL_KNOWN = '.well-known';
-export const AUTH_PROTECTED_RESOURCE_METADATA_DISCOVERY_PATH = `${WELL_KNOWN}/oauth-protected-resource`;
-export const AUTH_SERVER_METADATA_DISCOVERY_PATH = `${WELL_KNOWN}/oauth-authorization-server`;
+const WELL_KNOWN_ROUTE = '/.well-known';
+export const AUTH_PROTECTED_RESOURCE_METADATA_DISCOVERY_PATH = `${WELL_KNOWN_ROUTE}/oauth-protected-resource`;
+export const AUTH_SERVER_METADATA_DISCOVERY_PATH = `${WELL_KNOWN_ROUTE}/oauth-authorization-server`;
 
 //#region types
 
@@ -19,6 +19,11 @@ export interface IAuthorizationProtectedResourceMetadata {
 	 * REQUIRED. The protected resource's resource identifier URL that uses https scheme and has no fragment components.
 	 */
 	resource: string;
+
+	/**
+	 * OPTIONAL. Human-readable name of the protected resource intended for display to the end user.
+	 */
+	resource_name?: string;
 
 	/**
 	 * OPTIONAL. JSON array containing a list of OAuth authorization server issuer identifiers.

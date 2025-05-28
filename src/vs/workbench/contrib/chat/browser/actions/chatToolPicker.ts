@@ -10,9 +10,9 @@ import { DisposableStore } from '../../../../../base/common/lifecycle.js';
 import { ThemeIcon } from '../../../../../base/common/themables.js';
 import { assertType } from '../../../../../base/common/types.js';
 import { generateUuid } from '../../../../../base/common/uuid.js';
-import { ServicesAccessor } from '../../../../../editor/browser/editorExtensions.js';
 import { localize } from '../../../../../nls.js';
 import { ICommandService } from '../../../../../platform/commands/common/commands.js';
+import { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
 import { IQuickInputButton, IQuickInputService, IQuickPickItem, IQuickPickSeparator } from '../../../../../platform/quickinput/common/quickInput.js';
 import { IEditorService } from '../../../../services/editor/common/editorService.js';
 import { IExtensionsWorkbenchService } from '../../../extensions/common/extensions.js';
@@ -23,7 +23,7 @@ import { IToolData, ToolSet, ToolDataSource, ILanguageModelToolsService } from '
 import { ConfigureToolSets } from '../tools/toolSetsContribution.js';
 
 
-const enum BucketOrdinal { User, Mcp, Extension, BuiltIn }
+const enum BucketOrdinal { User, BuiltIn, Mcp, Extension }
 type BucketPick = IQuickPickItem & { picked: boolean; ordinal: BucketOrdinal; status?: string; children: (ToolPick | ToolSetPick)[] };
 type ToolSetPick = IQuickPickItem & { picked: boolean; toolset: ToolSet; parent: BucketPick };
 type ToolPick = IQuickPickItem & { picked: boolean; tool: IToolData; parent: BucketPick };
@@ -52,7 +52,7 @@ export async function showToolsPicker(
 	placeHolder: string,
 	toolsEntries?: ReadonlyMap<ToolSet | IToolData, boolean>,
 	onUpdate?: (toolsEntries: ReadonlyMap<ToolSet | IToolData, boolean>) => void
-): Promise<ReadonlyMap<ToolSet | IToolData, boolean>> {
+): Promise<ReadonlyMap<ToolSet | IToolData, boolean> | undefined> {
 
 	const quickPickService = accessor.get(IQuickInputService);
 	const mcpService = accessor.get(IMcpService);
@@ -76,19 +76,10 @@ export async function showToolsPicker(
 		picked: false,
 	};
 
-	const mcpBucket: BucketPick = {
-		type: 'item',
-		children: [],
-		label: localize('mcp', "MCP Servers"),
-		ordinal: BucketOrdinal.Mcp,
-		alwaysShow: true,
-		picked: false,
-	};
-
 	const userBucket: BucketPick = {
 		type: 'item',
 		children: [],
-		label: localize('userBucket', "User Defined"),
+		label: localize('userBucket', "User Defined Tool Sets"),
 		ordinal: BucketOrdinal.User,
 		alwaysShow: true,
 		picked: false,
@@ -130,12 +121,26 @@ export async function showToolsPicker(
 		const buttons: ActionableButton[] = [];
 
 		if (toolSetOrTool.source.type === 'mcp') {
+			const key = ToolDataSource.toKey(toolSetOrTool.source);
+
 			const { definitionId } = toolSetOrTool.source;
 			const mcpServer = mcpService.servers.get().find(candidate => candidate.definition.id === definitionId);
 			if (!mcpServer) {
 				continue;
 			}
-			bucket = mcpBucket;
+
+			const buttons: ActionableButton[] = [];
+
+			bucket = toolBuckets.get(key) ?? {
+				type: 'item',
+				label: localize('mcplabel', "MCP Server: {0}", toolSetOrTool.source.label),
+				ordinal: BucketOrdinal.Mcp,
+				picked: false,
+				alwaysShow: true,
+				children: [],
+				buttons
+			};
+			toolBuckets.set(key, bucket);
 
 			const collection = mcpRegistry.collections.get().find(c => c.id === mcpServer.collection.id);
 			if (collection?.presentation?.origin) {
@@ -155,13 +160,11 @@ export async function showToolsPicker(
 				});
 			}
 
-			description = localize('mcplabel', "MCP Server: {0}", mcpServer?.definition.label);
-
 		} else if (toolSetOrTool.source.type === 'extension') {
 			const key = ToolDataSource.toKey(toolSetOrTool.source);
 			bucket = toolBuckets.get(key) ?? {
 				type: 'item',
-				label: toolSetOrTool.source.label,
+				label: localize('ext', 'Extension: {0}', toolSetOrTool.source.label),
 				ordinal: BucketOrdinal.Extension,
 				picked: false,
 				alwaysShow: true,
@@ -213,7 +216,7 @@ export async function showToolsPicker(
 		}
 	}
 
-	for (const bucket of [builtinBucket, mcpBucket, userBucket]) {
+	for (const bucket of [builtinBucket, userBucket]) {
 		if (bucket.children.length > 0) {
 			toolBuckets.set(generateUuid(), bucket);
 		}
@@ -287,7 +290,19 @@ export async function showToolsPicker(
 				}
 			}
 
-			onUpdate?.(result);
+			if (onUpdate) {
+				let didChange = toolsEntries.size !== result.size;
+				for (const [key, value] of toolsEntries) {
+					if (didChange) {
+						break;
+					}
+					didChange = result.get(key) !== value;
+				}
+
+				if (didChange) {
+					onUpdate(result);
+				}
+			}
 
 		} finally {
 			ignoreEvent = false;
@@ -350,13 +365,15 @@ export async function showToolsPicker(
 		_update();
 	}));
 
+	let didAccept = false;
 	store.add(picker.onDidAccept(() => {
 		picker.activeItems.find(isCallbackPick)?.run();
+		didAccept = true;
 	}));
 
 	await Promise.race([Event.toPromise(Event.any(picker.onDidAccept, picker.onDidHide))]);
 
 	store.dispose();
 
-	return result;
+	return didAccept ? result : undefined;
 }

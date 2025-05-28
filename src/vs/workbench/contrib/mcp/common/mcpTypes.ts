@@ -328,7 +328,7 @@ export interface IMcpPrompt {
 	/** Gets string completions for the given prompt part. */
 	complete(argument: string, prefix: string, token: CancellationToken): Promise<string[]>;
 
-	resolve(args: Record<string, string>, token?: CancellationToken): Promise<IMcpPromptMessage[]>;
+	resolve(args: Record<string, string | undefined>, token?: CancellationToken): Promise<IMcpPromptMessage[]>;
 }
 
 export interface IMcpPromptMessage extends MCP.PromptMessage { }
@@ -638,4 +638,10 @@ export const enum McpCapability {
 	ResourcesListChanged = 1 << 6,
 	Tools = 1 << 7,
 	ToolsListChanged = 1 << 8,
+}
+
+export const enum McpToolName {
+	Prefix = 'mcp_',
+	MaxPrefixLen = 18,
+	MaxLength = 64,
 }
