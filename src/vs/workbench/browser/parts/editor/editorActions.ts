@@ -2719,7 +2719,7 @@ export class MoveEditorToStart extends Action2 {
 			category: 'Tabs',
 			menu: {
 				id: MenuId.EditorTitleContext,
-				group: '1_move', // Konum ayarlayabilirsin
+				group: '1_move',
 				order: 90,
 			}
 		});
