@@ -1,0 +1,194 @@
+@import 'tailwindcss';
+
+/* Custom VibeStudio styles */
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Monaco Editor custom styles */
+  .monaco-editor {
+    @apply rounded-lg;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-neutral-100 dark:bg-neutral-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-300 dark:bg-neutral-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-neutral-400 dark:bg-neutral-500;
+  }
+
+  /* Focus visible styles */
+  .focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
+  }
+}
+
+@layer components {
+  /* Button variants */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors duration-200;
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:bg-blue-700;
+    @apply disabled:opacity-50 disabled:pointer-events-none;
+    @apply px-4 py-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors duration-200;
+    @apply bg-neutral-200 text-neutral-900 hover:bg-neutral-300 focus:bg-neutral-300;
+    @apply dark:bg-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600;
+    @apply disabled:opacity-50 disabled:pointer-events-none;
+    @apply px-4 py-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors duration-200;
+    @apply hover:bg-neutral-100 hover:text-neutral-900 focus:bg-neutral-100 focus:text-neutral-900;
+    @apply dark:hover:bg-neutral-800 dark:hover:text-neutral-100 dark:focus:bg-neutral-800 dark:focus:text-neutral-100;
+    @apply disabled:opacity-50 disabled:pointer-events-none;
+    @apply px-4 py-2;
+  }
+
+  /* Input styles */
+  .input {
+    @apply flex h-10 w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm;
+    @apply placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    @apply disabled:cursor-not-allowed disabled:opacity-50;
+    @apply dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder:text-neutral-400;
+  }
+
+  /* Card styles */
+  .card {
+    @apply rounded-lg border border-neutral-200 bg-white shadow-sm;
+    @apply dark:border-neutral-700 dark:bg-neutral-800;
+  }
+
+  .card-header {
+    @apply flex flex-col space-y-1.5 p-6;
+  }
+
+  .card-content {
+    @apply p-6 pt-0;
+  }
+
+  .card-footer {
+    @apply flex items-center p-6 pt-0;
+  }
+
+  /* Loading animations */
+  .loading-dots {
+    @apply inline-flex space-x-1;
+  }
+
+  .loading-dots > div {
+    @apply w-2 h-2 bg-current rounded-full animate-pulse;
+  }
+
+  .loading-dots > div:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .loading-dots > div:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+    @apply dark:bg-black/10 dark:border-white/10;
+  }
+
+  /* IDE specific colors */
+  .bg-gray-850 {
+    background-color: #1f2937;
+  }
+  
+  .bg-gray-750 {
+    background-color: #374151;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  /* Terminal styles */
+  .terminal {
+    @apply bg-neutral-900 text-green-400 font-mono text-sm p-4 rounded-lg;
+  }
+
+  /* Code block styles */
+  .code-block {
+    @apply bg-neutral-100 dark:bg-neutral-800 rounded-lg p-4 font-mono text-sm overflow-x-auto;
+  }
+}
+
+@layer utilities {
+  /* Custom utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Animation utilities */
+  .animate-in {
+    @apply animate-pulse;
+  }
+
+  .animate-out {
+    @apply animate-bounce;
+  }
+
+  /* Responsive design utilities */
+  .mobile-only {
+    @apply block sm:hidden;
+  }
+
+  .desktop-only {
+    @apply hidden sm:block;
+  }
+
+  /* Layout utilities */
+  .layout-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .layout-sidebar {
+    @apply grid grid-cols-1 lg:grid-cols-4 gap-6;
+  }
+
+  .layout-main {
+    @apply lg:col-span-3;
+  }
+
+  .layout-aside {
+    @apply lg:col-span-1;
+  }
+}
