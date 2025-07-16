@@ -25,7 +25,7 @@ export function Sidebar({ activeView, onTerminalToggle }: SidebarProps) {
   }
 
   return (
-    <div className="w-full h-full bg-gray-850 flex flex-col">
+    <div className="w-full h-full bg-vscode-sidebar-background flex flex-col">
       {renderView()}
     </div>
   )

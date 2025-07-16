@@ -43,31 +43,30 @@ export function StatusBar({ terminalOpen }: StatusBarProps) {
   }
 
   return (
-    <div className="h-6 bg-blue-600 text-white text-xs flex items-center justify-between px-3">
+    <div className="h-6 bg-vscode-status-bar-background text-vscode-status-bar-foreground text-xs flex items-center justify-between px-3">
       {/* Left Section */}
       <div className="flex items-center gap-4">
         {/* Git Branch */}
         <div className="flex items-center gap-1">
           <GitBranch className="w-3 h-3" />
           <span>main</span>
-          <span className="text-blue-200">✓</span>
         </div>
 
         {/* Problems */}
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1">
-            <AlertCircle className="w-3 h-3 text-red-300" />
+            <AlertCircle className="w-3 h-3" />
             <span>0</span>
           </div>
           <div className="flex items-center gap-1">
-            <AlertCircle className="w-3 h-3 text-yellow-300" />
+            <CheckCircle className="w-3 h-3" />
             <span>2</span>
           </div>
         </div>
 
         {/* AI Status */}
         <div className="flex items-center gap-1">
-          <Zap className="w-3 h-3 text-purple-300" />
+          <Zap className="w-3 h-3" />
           <span>Cody Ready</span>
         </div>
       </div>
@@ -90,12 +89,12 @@ export function StatusBar({ terminalOpen }: StatusBarProps) {
         <div className="flex items-center gap-1">
           {isOnline ? (
             <>
-              <Wifi className="w-3 h-3 text-green-300" />
+              <Wifi className="w-3 h-3" />
               <span>Connected</span>
             </>
           ) : (
             <>
-              <WifiOff className="w-3 h-3 text-red-300" />
+              <WifiOff className="w-3 h-3" />
               <span>Offline</span>
             </>
           )}
@@ -103,38 +102,36 @@ export function StatusBar({ terminalOpen }: StatusBarProps) {
 
         {/* Live Share */}
         <div className="flex items-center gap-1">
-          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
           <span>Live Share</span>
         </div>
 
         {/* Terminal Indicator */}
         {terminalOpen && (
           <div className="flex items-center gap-1">
-            <div className="w-2 h-2 bg-green-400 rounded-full" />
             <span>Terminal</span>
           </div>
         )}
 
         {/* Language Mode */}
-        <button className="hover:bg-blue-700 px-2 py-0.5 rounded transition-colors">
+        <button className="hover:bg-vscode-status-bar-no-folder-background px-2 py-0.5 rounded transition-colors">
           TypeScript
         </button>
 
         {/* Encoding */}
-        <button className="hover:bg-blue-700 px-2 py-0.5 rounded transition-colors">
+        <button className="hover:bg-vscode-status-bar-no-folder-background px-2 py-0.5 rounded transition-colors">
           UTF-8
         </button>
 
         {/* Line Ending */}
-        <button className="hover:bg-blue-700 px-2 py-0.5 rounded transition-colors">
+        <button className="hover:bg-vscode-status-bar-no-folder-background px-2 py-0.5 rounded transition-colors">
           LF
         </button>
 
         {/* Time */}
-        <span className="text-blue-200">{formatTime(time)}</span>
+        <span>{formatTime(time)}</span>
 
         {/* Settings */}
-        <button className="hover:bg-blue-700 p-1 rounded transition-colors">
+        <button className="hover:bg-vscode-status-bar-no-folder-background p-1 rounded transition-colors">
           <Settings className="w-3 h-3" />
         </button>
       </div>

@@ -30,7 +30,7 @@ export function ActivityBar({ activeView, onViewChange }: ActivityBarProps) {
   }
 
   return (
-    <div className="w-12 bg-gray-800 border-r border-gray-700 flex flex-col items-center py-2">
+    <div className="w-12 bg-vscode-activity-bar-background border-r border-vscode-sidebar-border flex flex-col items-center py-2">
       {/* Main Activities */}
       <div className="space-y-1">
         {activities.map((activity) => {
@@ -50,8 +50,8 @@ export function ActivityBar({ activeView, onViewChange }: ActivityBarProps) {
               className={`
                 w-10 h-10 flex items-center justify-center rounded-lg transition-all duration-200
                 ${isActive 
-                  ? 'bg-blue-600 text-white shadow-lg' 
-                  : 'text-gray-400 hover:text-white hover:bg-gray-700'
+                  ? 'text-vscode-activity-bar-foreground'
+                  : 'text-vscode-activity-bar-inactive-foreground hover:text-vscode-activity-bar-foreground'
                 }
               `}
               whileHover={{ scale: 1.05 }}
@@ -72,7 +72,7 @@ export function ActivityBar({ activeView, onViewChange }: ActivityBarProps) {
         {/* Cody AI Assistant */}
         <motion.button
           onClick={handleCodyClick}
-          className="w-10 h-10 flex items-center justify-center rounded-lg text-purple-400 hover:text-purple-300 hover:bg-gray-700 transition-all duration-200"
+          className="w-10 h-10 flex items-center justify-center rounded-lg text-vscode-activity-bar-inactive-foreground hover:text-vscode-activity-bar-foreground transition-all duration-200"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           title="Cody AI Assistant"
@@ -82,7 +82,7 @@ export function ActivityBar({ activeView, onViewChange }: ActivityBarProps) {
 
         {/* User Account */}
         <motion.button
-          className="w-10 h-10 flex items-center justify-center rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
+          className="w-10 h-10 flex items-center justify-center rounded-lg text-vscode-activity-bar-inactive-foreground hover:text-vscode-activity-bar-foreground transition-all duration-200"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           title="Account"
@@ -92,7 +92,7 @@ export function ActivityBar({ activeView, onViewChange }: ActivityBarProps) {
 
         {/* Settings */}
         <motion.button
-          className="w-10 h-10 flex items-center justify-center rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
+          className="w-10 h-10 flex items-center justify-center rounded-lg text-vscode-activity-bar-inactive-foreground hover:text-vscode-activity-bar-foreground transition-all duration-200"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           title="Settings"

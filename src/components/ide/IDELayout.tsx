@@ -14,7 +14,7 @@ export function IDELayout() {
   const [terminalHeight, setTerminalHeight] = useState(300)
 
   return (
-    <div className="flex h-screen bg-gray-900 text-gray-100 overflow-hidden">
+    <div className="flex h-screen bg-vscode-editor-background text-vscode-editor-foreground overflow-hidden">
       {/* Activity Bar */}
       <ActivityBar 
         activeView={activeSidebarView}
@@ -29,7 +29,7 @@ export function IDELayout() {
             animate={{ width: 280 }}
             exit={{ width: 0 }}
             transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="border-r border-gray-700"
+            className="border-r border-vscode-sidebar-border"
           >
             <Sidebar 
               activeView={activeSidebarView}
@@ -59,7 +59,7 @@ export function IDELayout() {
               animate={{ height: terminalHeight }}
               exit={{ height: 0 }}
               transition={{ duration: 0.2, ease: 'easeInOut' }}
-              className="border-t border-gray-700"
+              className="border-t border-vscode-panel-border"
             >
               <TerminalPanel 
                 height={terminalHeight}

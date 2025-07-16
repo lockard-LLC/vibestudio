@@ -217,32 +217,32 @@ export function TerminalPanel({ height, onHeightChange, onClose }: TerminalPanel
   }
 
   return (
-    <div className="w-full h-full bg-gray-900 flex flex-col">
+    <div className="w-full h-full bg-vscode-panel-background flex flex-col">
       {/* Terminal Header */}
-      <div className="flex items-center justify-between bg-gray-800 border-b border-gray-700 px-3 py-2">
+      <div className="flex items-center justify-between bg-vscode-editor-group-header-tabs-background border-b border-vscode-panel-border px-3 py-2">
         <div className="flex items-center gap-2">
-          <Terminal className="w-4 h-4 text-green-400" />
-          <span className="text-sm font-medium text-gray-300">TERMINAL</span>
+          <Terminal className="w-4 h-4 text-vscode-terminal-foreground" />
+          <span className="text-sm font-medium text-vscode-sidebar-foreground">TERMINAL</span>
         </div>
         
         <div className="flex items-center gap-1">
           <button
             onClick={addNewSession}
-            className="p-1 hover:bg-gray-700 rounded text-gray-400 hover:text-white transition-colors"
+            className="p-1 hover:bg-vscode-list-hover-background rounded text-vscode-sidebar-foreground hover:text-vscode-activity-bar-foreground transition-colors"
             title="New Terminal"
           >
             <Plus className="w-4 h-4" />
           </button>
           <button
             onClick={toggleMaximize}
-            className="p-1 hover:bg-gray-700 rounded text-gray-400 hover:text-white transition-colors"
+            className="p-1 hover:bg-vscode-list-hover-background rounded text-vscode-sidebar-foreground hover:text-vscode-activity-bar-foreground transition-colors"
             title={isMaximized ? "Restore" : "Maximize"}
           >
             {isMaximized ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>
           <button
             onClick={onClose}
-            className="p-1 hover:bg-gray-700 rounded text-gray-400 hover:text-white transition-colors"
+            className="p-1 hover:bg-vscode-list-hover-background rounded text-vscode-sidebar-foreground hover:text-vscode-activity-bar-foreground transition-colors"
             title="Close Terminal"
           >
             <X className="w-4 h-4" />
@@ -252,15 +252,15 @@ export function TerminalPanel({ height, onHeightChange, onClose }: TerminalPanel
 
       {/* Terminal Tabs */}
       {sessions.length > 1 && (
-        <div className="flex bg-gray-850 border-b border-gray-700">
+        <div className="flex bg-vscode-editor-group-header-tabs-background border-b border-vscode-panel-border">
           {sessions.map((session) => (
             <div
               key={session.id}
               className={`
-                flex items-center gap-2 px-3 py-1 cursor-pointer text-sm border-r border-gray-700 group
+                flex items-center gap-2 px-3 py-1 cursor-pointer text-sm border-r border-vscode-panel-border group
                 ${activeSessionId === session.id 
-                  ? 'bg-gray-900 text-white' 
-                  : 'bg-gray-850 text-gray-400 hover:bg-gray-800'
+                  ? 'bg-vscode-panel-background text-vscode-tab-active-foreground'
+                  : 'bg-vscode-editor-group-header-tabs-background text-vscode-tab-inactive-foreground hover:bg-vscode-tab-inactive-background'
                 }
               `}
               onClick={() => setActiveSessionId(session.id)}
@@ -272,7 +272,7 @@ export function TerminalPanel({ height, onHeightChange, onClose }: TerminalPanel
                     e.stopPropagation()
                     closeSession(session.id)
                   }}
-                  className="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-gray-600 rounded transition-all"
+                  className="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-vscode-list-hover-background rounded transition-all"
                 >
                   <X className="w-3 h-3" />
                 </button>
@@ -286,23 +286,23 @@ export function TerminalPanel({ height, onHeightChange, onClose }: TerminalPanel
       <div className="flex-1 flex flex-col min-h-0">
         <div 
           ref={terminalRef}
-          className="flex-1 overflow-y-auto p-3 font-mono text-sm text-green-400 bg-gray-900"
+          className="flex-1 overflow-y-auto p-3 font-mono text-sm text-vscode-terminal-foreground bg-vscode-terminal-background"
         >
           {activeSession?.history.map((line) => (
             <div key={line.id} className="mb-1">
               {line.type === 'command' ? (
                 <div className="flex items-start gap-2">
-                  <span className="text-blue-400 flex-shrink-0">
+                  <span className="text-vscode-terminal-ansi-bright-blue flex-shrink-0">
                     user@vibestudio:~$
                   </span>
-                  <span className="text-white">{line.content}</span>
-                  <span className="text-gray-500 text-xs ml-auto">
+                  <span className="text-vscode-editor-foreground">{line.content}</span>
+                  <span className="text-vscode-terminal-ansi-bright-black text-xs ml-auto">
                     {formatTimestamp(line.timestamp)}
                   </span>
                 </div>
               ) : (
                 <div className={`whitespace-pre-wrap ${
-                  line.type === 'error' ? 'text-red-400' : 'text-gray-300'
+                  line.type === 'error' ? 'text-vscode-terminal-ansi-red' : 'text-vscode-terminal-foreground'
                 }`}>
                   {line.content}
                 </div>
@@ -312,8 +312,8 @@ export function TerminalPanel({ height, onHeightChange, onClose }: TerminalPanel
         </div>
 
         {/* Command Input */}
-        <div className="flex items-center gap-2 p-3 bg-gray-900 border-t border-gray-700">
-          <span className="text-blue-400 font-mono text-sm flex-shrink-0">
+        <div className="flex items-center gap-2 p-3 bg-vscode-terminal-background border-t border-vscode-panel-border">
+          <span className="text-vscode-terminal-ansi-bright-blue font-mono text-sm flex-shrink-0">
             user@vibestudio:~$
           </span>
           <input
@@ -322,7 +322,7 @@ export function TerminalPanel({ height, onHeightChange, onClose }: TerminalPanel
             value={currentCommand}
             onChange={(e) => setCurrentCommand(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 bg-transparent text-white font-mono text-sm outline-none"
+            className="flex-1 bg-transparent text-vscode-editor-foreground font-mono text-sm outline-none"
             placeholder="Type a command..."
             autoFocus
           />

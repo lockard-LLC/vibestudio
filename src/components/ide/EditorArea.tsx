@@ -135,12 +135,12 @@ export function EditorArea() {
 
   if (openTabs.length === 0) {
     return (
-      <div className="w-full h-full bg-gray-900 flex items-center justify-center">
+      <div className="w-full h-full bg-vscode-editor-background flex items-center justify-center">
         <div className="text-center">
           <div className="text-6xl mb-4">📝</div>
-          <h2 className="text-xl font-semibold text-gray-300 mb-2">No files open</h2>
-          <p className="text-gray-500 mb-4">Open a file from the explorer to start coding</p>
-          <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors mx-auto">
+          <h2 className="text-xl font-semibold text-vscode-editor-foreground mb-2">No files open</h2>
+          <p className="text-vscode-editor-foreground mb-4">Open a file from the explorer to start coding</p>
+          <button className="flex items-center gap-2 px-4 py-2 bg-vscode-list-active-selection-background hover:bg-vscode-list-focus-background text-white rounded-lg transition-colors mx-auto">
             <Plus className="w-4 h-4" />
             New File
           </button>
@@ -150,20 +150,20 @@ export function EditorArea() {
   }
 
   return (
-    <div className="w-full h-full flex flex-col bg-gray-900">
+    <div className="w-full h-full flex flex-col bg-vscode-editor-background">
       {/* Tab Bar */}
-      <div className="flex bg-gray-800 border-b border-gray-700 min-h-0">
+      <div className="flex bg-vscode-editor-group-header-tabs-background border-b border-vscode-tab-border min-h-0">
         <div className="flex flex-1 overflow-x-auto">
           {openTabs.map((tab) => (
             <motion.div
               key={tab.id}
               layout
               className={`
-                flex items-center gap-2 px-3 py-2 border-r border-gray-700 cursor-pointer
+                flex items-center gap-2 px-3 py-2 border-r border-vscode-tab-border cursor-pointer
                 min-w-0 max-w-xs group relative
                 ${activeTabId === tab.id 
-                  ? 'bg-gray-900 text-white border-t-2 border-t-blue-500' 
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-750'
+                  ? 'bg-vscode-tab-active-background text-vscode-tab-active-foreground border-t-2 border-t-vscode-tab-active-border'
+                  : 'bg-vscode-tab-inactive-background text-vscode-tab-inactive-foreground hover:bg-vscode-list-hover-background'
                 }
               `}
               onClick={() => setActiveTabId(tab.id)}
@@ -171,14 +171,14 @@ export function EditorArea() {
               <div className={`w-2 h-2 rounded-full ${getLanguageColor(tab.language)}`} />
               <span className="text-sm truncate flex-1">
                 {tab.name}
-                {tab.isDirty && <span className="text-orange-400">•</span>}
+                {tab.isDirty && <span className="text-yellow-400">•</span>}
               </span>
               <button
                 onClick={(e) => {
                   e.stopPropagation()
                   closeTab(tab.id)
                 }}
-                className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-600 rounded transition-all"
+                className="opacity-0 group-hover:opacity-100 p-1 hover:bg-vscode-list-hover-background rounded transition-all"
               >
                 <X className="w-3 h-3" />
               </button>
@@ -189,7 +189,7 @@ export function EditorArea() {
         {/* Tab Actions */}
         <div className="flex items-center px-2">
           <button 
-            className="p-2 hover:bg-gray-700 rounded text-gray-400 hover:text-white transition-colors"
+            className="p-2 hover:bg-vscode-list-hover-background rounded text-vscode-sidebar-foreground hover:text-vscode-activity-bar-foreground transition-colors"
             title="More Actions"
           >
             <MoreHorizontal className="w-4 h-4" />
@@ -217,6 +217,7 @@ export function EditorArea() {
                     updateTabContent(activeTab.id, value)
                   }
                 }}
+                theme="vs-dark"
                 className="w-full h-full"
               />
             </motion.div>
