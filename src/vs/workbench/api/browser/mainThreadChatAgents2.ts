@@ -174,6 +174,9 @@ export class MainThreadChatAgents2 extends Disposable implements MainThreadChatA
 					this._pendingProgress.delete(request.requestId);
 				}
 			},
+			setRequestTools: (requestId, tools) => {
+				this._proxy.$setRequestTools(requestId, tools);
+			},
 			setRequestPaused: (requestId, isPaused) => {
 				this._proxy.$setRequestPaused(handle, requestId, isPaused);
 			},
@@ -208,8 +211,8 @@ export class MainThreadChatAgents2 extends Disposable implements MainThreadChatA
 					metadata: revive(metadata),
 					slashCommands: [],
 					disambiguation: [],
-					locations: [ChatAgentLocation.Panel], // TODO all dynamic participants are panel only?
-					modes: [ChatModeKind.Ask]
+					locations: [ChatAgentLocation.Panel],
+					modes: [ChatModeKind.Ask, ChatModeKind.Agent, ChatModeKind.Edit],
 				},
 				impl);
 		} else {

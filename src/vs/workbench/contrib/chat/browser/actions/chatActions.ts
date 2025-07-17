@@ -155,10 +155,7 @@ abstract class OpenChatGlobalAction extends Action2 {
 		}
 
 		const switchToModeInput = opts?.mode ?? this.mode;
-		let switchToMode = switchToModeInput && (chatModeService.findModeById(switchToModeInput) ?? chatModeService.findModeByName(switchToModeInput));
-		if (!switchToMode) {
-			switchToMode = opts?.query?.startsWith('@') ? ChatMode.Ask : undefined;
-		}
+		const switchToMode = switchToModeInput && (chatModeService.findModeById(switchToModeInput) ?? chatModeService.findModeByName(switchToModeInput));
 		if (switchToMode) {
 			await this.handleSwitchToMode(switchToMode, chatWidget, instaService, commandService);
 		}
@@ -1090,14 +1087,8 @@ const title = localize('ai actions', "AI Actions");
 
 MenuRegistry.appendMenuItem(MenuId.EditorContext, {
 	submenu: MenuId.ChatTextEditorMenu,
-	group: '1_copilot',
-	title,
-	when: menuContext
-});
-
-MenuRegistry.appendMenuItem(MenuId.ExplorerContext, {
-	submenu: MenuId.ChatExplorerMenu,
-	group: '5_copilot',
+	group: '1_chat',
+	order: 3,
 	title,
 	when: menuContext
 });
