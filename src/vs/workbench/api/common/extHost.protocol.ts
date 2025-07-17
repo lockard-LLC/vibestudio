@@ -1731,6 +1731,7 @@ export interface MainThreadWindowShape extends IDisposable {
 	$getInitialState(): Promise<{ isFocused: boolean; isActive: boolean }>;
 	$openUri(uri: UriComponents, uriString: string | undefined, options: IOpenUriOptions): Promise<boolean>;
 	$asExternalUri(uri: UriComponents, options: IOpenUriOptions): Promise<UriComponents>;
+	$openChatSession(sessionType: string, id: string): Promise<void>;
 }
 
 export enum CandidatePortSource {
@@ -2175,7 +2176,7 @@ export interface IWorkspaceEditEntryMetadataDto {
 }
 
 export interface IChatNotebookEditDto {
-	uri: URI;
+	uri: UriComponents;
 	edits: ICellEditOperationDto[];
 	kind: 'notebookEdit';
 	done?: boolean;
@@ -3100,6 +3101,29 @@ export interface MainThreadChatStatusShape {
 	$disposeEntry(id: string): void;
 }
 
+// --- chat session content providers
+
+export interface MainThreadChatSessionContentProvidersShape extends IDisposable {
+	$registerChatSessionContentProvider(handle: number, chatSessionType: string): void;
+	$unregisterChatSessionContentProvider(handle: number): void;
+}
+
+export interface ExtHostChatSessionContentProvidersShape {
+	$provideChatSessionContent(handle: number, id: string, token: CancellationToken): Promise<ChatSessionDto>;
+}
+
+export interface IChatRequestTurnDto {
+
+}
+
+export interface ChatSessionDto {
+	id: string;
+
+	history: Array<
+		| { type: 'request'; prompt: string }
+		| { type: 'response'; parts: IChatProgressDto[] }>;
+}
+
 // --- proxy identifiers
 
 export const MainContext = {
@@ -3177,6 +3201,7 @@ export const MainContext = {
 	MainThreadChatStatus: createProxyIdentifier<MainThreadChatStatusShape>('MainThreadChatStatus'),
 	MainThreadAiSettingsSearch: createProxyIdentifier<MainThreadAiSettingsSearchShape>('MainThreadAiSettingsSearch'),
 	MainThreadDataChannels: createProxyIdentifier<MainThreadDataChannelsShape>('MainThreadDataChannels'),
+	MainThreadChatSessionContentProviders: createProxyIdentifier<MainThreadChatSessionContentProvidersShape>('MainThreadChatSessionContentProviders'),
 };
 
 export const ExtHostContext = {
@@ -3250,4 +3275,5 @@ export const ExtHostContext = {
 	ExtHostLocalization: createProxyIdentifier<ExtHostLocalizationShape>('ExtHostLocalization'),
 	ExtHostMcp: createProxyIdentifier<ExtHostMcpShape>('ExtHostMcp'),
 	ExtHostDataChannels: createProxyIdentifier<ExtHostDataChannelsShape>('ExtHostDataChannels'),
+	ExtHostChatSessionContentProviders: createProxyIdentifier<ExtHostChatSessionContentProvidersShape>('ExtHostChatSessionContentProviders'),
 };
