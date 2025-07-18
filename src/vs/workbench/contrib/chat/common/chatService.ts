@@ -475,6 +475,7 @@ export interface IChatDetail {
 	title: string;
 	lastMessageDate: number;
 	isActive: boolean;
+	mode?: ChatModeKind;
 }
 
 export interface IChatProviderInfo {
