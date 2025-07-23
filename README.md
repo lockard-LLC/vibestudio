@@ -135,4 +135,4 @@ For any questions or issues, feel free to open an issue, or you can also reach o
 
 ## FAQ
 
-Checkout our [FAQ](https://vibestudio.online/faq) on the website.
+Checkout our [FAQ](https://vibestudio.online/faq) our site.
