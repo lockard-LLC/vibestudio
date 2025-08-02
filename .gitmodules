@@ -1,0 +1,19 @@
+[submodule "pearai-app"]
+	path = pearai-app
+	url = https://github.com/trypear/pearai-app.git
+[submodule "pearai-submodule"]
+	path = pearai-submodule
+	url = https://github.com/trypear/pearai-submodule.git
+
+[submodule "pearai-documentation"]
+	path = pearai-documentation
+	url = https://github.com/trypear/pearai-documentation.git
+[submodule "pearai-server-issues-public"]
+	path = pearai-server-issues-public
+	url = https://github.com/trypear/pearai-server-issues-public.git
+[submodule "PearAI-Roo-Code"]
+	path = PearAI-Roo-Code
+	url = https://github.com/trypear/PearAI-Roo-Code
+[submodule "vs-lp"]
+	path = vs-lp
+	url = https://github.com/trypear/pear-landing-page.git

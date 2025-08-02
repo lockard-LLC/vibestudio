@@ -1,0 +1,14 @@
+{
+  "node": {
+    "37b761070e1205c903343a5af43d1516573e7786": {
+      "workers": {
+        "app/(default)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fjerry%2Fvibestudio%2Fvs-lp%2Fcomponents%2Fheader.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(default)/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "VohPkaC4xGCi24sXSOHlDJ/traqkalWAutRcv1GQ+pY="
+}

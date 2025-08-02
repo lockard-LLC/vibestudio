@@ -1,0 +1,17 @@
+{
+  "buildCommand": "yarn build",
+  "installCommand": "yarn install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/docs/:path*",
+      "destination": "https://documentation-page-pearai-landing-chi.vercel.app/:path*"
+    }
+  ]
+}

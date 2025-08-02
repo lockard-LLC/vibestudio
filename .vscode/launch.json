@@ -1,0 +1,118 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "🧩 Launch VibeStudio Extension Host",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/vibestudio-submodule/extensions/vscode"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/vibestudio-submodule/extensions/vscode/out/**/*.js"
+      ],
+      "preLaunchTask": "🚀 Start All Dev Servers",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"],
+      "killBehavior": "polite"
+    },
+    {
+      "name": "📱 Attach to VibeStudio App",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "restart": true,
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceFolder}/vibestudio-app/out/**/*.js"
+      ],
+      "skipFiles": ["<node_internals>/**"],
+      "killBehavior": "polite"
+    },
+    {
+      "name": "🚀 Attach to VibeStudio-Roo-Code",
+      "type": "node",
+      "request": "attach",
+      "port": 9230,
+      "restart": true,
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceFolder}/VibeStudio-Roo-Code/dist/**/*.js"
+      ],
+      "skipFiles": ["<node_internals>/**"],
+      "killBehavior": "polite"
+    },
+    {
+      "name": "🧩 Run Submodule GUI Dev",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}/vibestudio-submodule/gui",
+      "skipFiles": ["<node_internals>/**"],
+      "killBehavior": "polite"
+    },
+    {
+      "name": "🧩 Run Submodule Extension Watch",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run esbuild-watch",
+      "cwd": "${workspaceFolder}/vibestudio-submodule/extensions/vscode",
+      "skipFiles": ["<node_internals>/**"],
+      "killBehavior": "polite"
+    },
+    {
+      "name": "📱 Run VibeStudio App Watch",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run watch",
+      "cwd": "${workspaceFolder}/vibestudio-app",
+      "skipFiles": ["<node_internals>/**"],
+      "killBehavior": "polite"
+    },
+    {
+      "name": "🚀 Run Roo Code Watch",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run watch",
+      "cwd": "${workspaceFolder}/VibeStudio-Roo-Code",
+      "skipFiles": ["<node_internals>/**"],
+      "killBehavior": "polite"
+    },
+    {
+      "name": "🚀 Run Roo Code Dev",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}/VibeStudio-Roo-Code",
+      "skipFiles": ["<node_internals>/**"],
+      "killBehavior": "polite"
+    },
+    {
+      "name": "🧩 Run Submodule TSC Watch",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run tsc-watch",
+      "cwd": "${workspaceFolder}/vibestudio-submodule/extensions/vscode",
+      "skipFiles": ["<node_internals>/**"],
+      "killBehavior": "polite"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "🚀 Start All Dev Processes",
+      "configurations": [
+        "🧩 Run Submodule GUI Dev",
+        "🧩 Run Submodule Extension Watch",
+        "🧩 Run Submodule TSC Watch",
+        "📱 Run VibeStudio App Watch",
+        "🚀 Run Roo Code Watch",
+        "🚀 Run Roo Code Dev"
+      ],
+      "presentation": {
+        "group": "",
+        "order": 2
+      },
+      "stopAll": true
+    }
+  ]
+}
