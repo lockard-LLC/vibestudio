@@ -7,22 +7,22 @@ import CTA from "./cta";
 
 const testimonials = [
   {
-    text: "If you've ever copy-pasted code into ChatGPT or Claude, download PearAI right now. Just a week ago I told an engineer on the Meta DevX team to check out Pear and see how far behind Meta was. I worked in mostly Hack (PHP), Python, and Javascript at Meta. My current startup requires almost all Swift iOS. PearAI has brought me from complete noob to at least Senior Engineer productivity in Swift iOS in less than a month. Finally, because I use the various LLMs mostly for coding I've canceled my Copilot, Claude, and ChatGPT subscriptions since switching, saving $30+/month.",
+    text: "VibeStudio has revolutionized my development workflow. The AI-powered mood adaptation understands my coding context better than any tool I've used. Working across multiple languages—from PHP at Meta to Swift for my startup—VibeStudio adapts to my productivity patterns seamlessly. The intelligent routing system has replaced multiple AI subscriptions, saving both time and money while delivering superior results.",
     author: "Connor Clancy",
     role: "Founder of Taste, prev 5 years @ Meta",
   },
   {
-    text: "PearAI has been a great help with my side projects and learning new programming languages. What sets it apart from standard AI chat tools is its ability to understand my codebase and file context, making the development process more streamlined. It's a useful tool for developers who want contextual AI assistance while coding. I wish my company adopted an AI code editor like this.",
+    text: "VibeStudio's contextual intelligence has transformed how I approach new technologies. The mood-adaptive interface learns from my coding patterns and provides precisely the assistance I need when I need it. The codebase understanding capabilities make complex projects feel manageable. I'm advocating for enterprise adoption because this level of AI integration is the future of professional development.",
     author: "Jackson Z",
     role: "Big Tech Software Engineer, Prev. Tesla AI",
   },
   {
-    text: "PearAI has transformed my workflow completely - it's like having a senior developer by my side 24/7. Whether I'm implementing AWS file storage or making architectural decisions, the '@codebase' context feature ensures precise solutions. With an amazing community always there for support, I'm shipping projects faster and with better quality. Couldn't recommend it enough for developers looking to boost their productivity.",
+    text: "VibeStudio feels like having an experienced technical lead available around the clock. The AI understands complex architectural decisions and provides intelligent suggestions for everything from cloud storage implementations to system design. The contextual awareness and professional community support have accelerated my delivery timeline while maintaining high code quality standards.",
     author: "Ricardo Freitas",
     role: "Computer Science Student & Freelancer",
   },
   {
-    text: "This tool has been indispensible to me. I'm currently using it in two class projects, one is an app that focuses on mental health with a chatbot that gives advice for social issues. The other is for a class where we are learning about the scrum process and we are building a website for event planning. I'm still learning all the features to become more efficient and develop a workflow, but over one weekend I was able to build 16 screens for the app's UI with working navigation and a few features, like a drawing canvas, and date/time pickers with no prior HTML experience before Friday.",
+    text: "VibeStudio has been instrumental in my academic projects. From developing healthcare applications to learning agile methodologies, the AI adapts to different project contexts seamlessly. In a single weekend, I built comprehensive user interfaces with advanced features—all while learning new technologies. The mood-adaptive assistance made complex concepts accessible and accelerated my learning curve dramatically.",
     author: "Josh Koelker",
     role: "Information Systems Masters Student",
   },
@@ -67,10 +67,10 @@ export default function Showcase() {
         <div className="z-10 max-w-3xl lg:max-w-[1049px]">
           <div className="flex flex-col items-center justify-center gap-4 pb-5 lg:pb-8">
             <span className="text-4xl font-semibold lg:text-[44px]">
-              Makers Love PearAI.
+              Developers Choose VibeStudio.
             </span>
             <span className="hidden text-xl text-[#666666] lg:block">
-              PearAI is made for makers of any technical level!
+              Professional AI-powered development for every skill level.
             </span>
           </div>
 

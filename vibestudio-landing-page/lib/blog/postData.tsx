@@ -1,22 +1,22 @@
 export const posts = [
   {
-    title: "Introducing PearAI Creator (Beta)!",
-    author: "PearAI Team",
+    title: "Introducing VibeStudio Creator (Beta)!",
+    author: "VibeStudio Team",
     date: "2025-05-10",
     excerpt:
-      "Turn your ideas into reality with PearAI V2! Create production-ready web applications with expert templates and best practices. From idea to deployment, PearAI Creator handles it all.",
+      "Turn your ideas into reality with VibeStudio V2! Create production-ready web applications with expert templates and best practices. From idea to deployment, VibeStudio Creator handles it all.",
     thumbnail: "/images/blog/pearai_v1.8.png",
     tags: ["creator", "beta", "launch", "webapp"],
-    url: "/blog/introducing-pearai-creator",
+    url: "/blog/introducing-vibestudio-creator",
     content: `<div
   class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8"
 >
   <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl mb-4">
-    You can now turn your ideas into creation within PearAI V2! PearAI focuses on starting you out the right way, with templates made with strong foundations and best practices.
+    You can now turn your ideas into creation within VibeStudio V2! VibeStudio focuses on starting you out the right way, with templates made with strong foundations and best practices.
   </p>
 
   <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl mb-4">
-      This is currently available in Beta, which you can download at <a href="https://trypear.ai/beta">https://trypear.ai/beta</a>
+      This is currently available in Beta, which you can download at <a href="https://vibestudio.online/beta">https://vibestudio.online/beta</a>
   </p>
 
 
@@ -25,7 +25,7 @@ export const posts = [
   </p>
 
   <h2 class="mb-4 mt-8 text-2xl font-bold text-primary-600 dark:text-primary-400 sm:mb-6 sm:mt-12 sm:text-3xl">
-    How PearAI Creator Works
+    How VibeStudio Creator Works
   </h2>
 
   <ol class="ml-4 list-decimal space-y-8 text-base sm:ml-6 sm:text-lg">
@@ -48,7 +48,7 @@ export const posts = [
         Start with Expert Templates
       </h3>
       <p class="mt-2 mb-4">
-        First, PearAI Creator will use PearAI Templates to start you off. Most other 0 to 1 tools merely make frontend toys, but PearAI starts you off with templates that experts use for production level apps! PearAI ensures that your projects are built to grow and scale.
+        First, VibeStudio Creator will use VibeStudio Templates to start you off. Most other 0 to 1 tools merely make frontend toys, but VibeStudio starts you off with templates that experts use for production level apps! VibeStudio ensures that your projects are built to grow and scale.
       </p>
     </li>
 
@@ -57,7 +57,7 @@ export const posts = [
         Create a Beautiful Frontend
       </h3>
       <p class="mt-2 mb-4">
-        PearAI Creator will design and implement a beautiful, responsive frontend for your application, following modern design principles and best practices.
+        VibeStudio Creator will design and implement a beautiful, responsive frontend for your application, following modern design principles and best practices.
       </p>
     </li>
 
@@ -66,16 +66,16 @@ export const posts = [
         Implement Backend Functionality
       </h3>
       <p class="mt-2 mb-4">
-        After this, PearAI Creator will complete the backend functionality of your app. This uses:
+        After this, VibeStudio Creator will complete the backend functionality of your app. This uses:
       </p>
       <ul class="list-disc pl-6 space-y-2">
-        <li>PearAI Database for data storage</li>
-        <li>PearAI Authentication for user management</li>
+        <li>VibeStudio Database for data storage</li>
+        <li>VibeStudio Authentication for user management</li>
         <li>Production-ready security practices</li>
       </ul>
       <p class="mt-4 text-sm italic">
         Note: As these features are still in beta, you may need to set up some configuration. Check out our
-        <a href="/blog/how-to-setup-pearai-database" class="text-blue-600 hover:underline dark:text-blue-400">
+        <a href="/blog/how-to-setup-vibestudio-database" class="text-blue-600 hover:underline dark:text-blue-400">
           database setup guide
         </a>
         for more details.
@@ -87,7 +87,7 @@ export const posts = [
         Connect Frontend and Backend
       </h3>
       <p class="mt-2 mb-4">
-        PearAI Creator seamlessly integrates your frontend and backend, ensuring smooth data flow and optimal performance.
+        VibeStudio Creator seamlessly integrates your frontend and backend, ensuring smooth data flow and optimal performance.
       </p>
     </li>
 
@@ -96,7 +96,7 @@ export const posts = [
         Deploy Your App
       </h3>
       <p class="mt-2 mb-4">
-        Finally, PearAI Creator uses PearAI Deploy, powered by Netlify, to launch your app so you can share it with anyone!
+        Finally, VibeStudio Creator uses VibeStudio Deploy, powered by Netlify, to launch your app so you can share it with anyone!
       </p>
     </li>
   </ol>
@@ -106,35 +106,35 @@ export const posts = [
   </h2>
 
   <p class="text-base sm:text-lg mb-6">
-    PearAI Creator is now available in beta. Experience the future of web development where your ideas transform into production-ready applications with just a few clicks.
+    VibeStudio Creator is now available in beta. Experience the future of web development where your ideas transform into production-ready applications with just a few clicks.
   </p>
 
   <div class="my-6 rounded-r-lg border-l-4 border-blue-500 bg-blue-100 p-4 text-blue-800 dark:bg-blue-900 dark:text-blue-200 sm:my-8 sm:p-6">
     <p class="mb-2 text-base font-bold sm:text-lg">Beta Note:</p>
     <p class="text-sm sm:text-base">
-      As PearAI Creator is in beta, we're continuously improving and adding new features. Your feedback helps us make it even better!
+      As VibeStudio Creator is in beta, we're continuously improving and adding new features. Your feedback helps us make it even better!
     </p>
   </div>
 </div>`,
   },
   {
-    title: "How To Setup PearAI Database (Beta)",
-    author: "PearAI Team",
+    title: "How To Setup VibeStudio Database (Beta)",
+    author: "VibeStudio Team",
     date: "2025-05-10",
     excerpt:
-      "A step-by-step guide to setting up your database for PearAI projects using Neon, a popular database provider.",
+      "A step-by-step guide to setting up your database for VibeStudio projects using Neon, a popular database provider.",
     thumbnail: "/images/blog/pearai_v1.8.png",
     tags: ["database", "setup", "neon", "beta"],
-    url: "/blog/how-to-setup-pearai-database",
+    url: "/blog/how-to-setup-vibestudio-database",
     content: `<div
   class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8"
 >
   <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl mb-4">
-    Welcome! You are likely using PearAI Creator to make a project, and are connecting the backend. To store data, all you need is to add your database URL and PearAI Database will take care of the rest! Currently, the process is a bit manual due to the nature of the Beta - we are working on making this process more seamless in the near future.
+    Welcome! You are likely using VibeStudio Creator to make a project, and are connecting the backend. To store data, all you need is to add your database URL and VibeStudio Database will take care of the rest! Currently, the process is a bit manual due to the nature of the Beta - we are working on making this process more seamless in the near future.
   </p>
 
   <p class="text-base sm:text-lg mb-4">
-    PearAI recommends you use Neon for this, so here's how to get your database URL:
+    VibeStudio recommends you use Neon for this, so here's how to get your database URL:
   </p>
 
   <ol class="ml-4 list-decimal space-y-8 text-base sm:ml-6 sm:text-lg">
@@ -210,7 +210,7 @@ export const posts = [
         All Done!
       </h3>
       <p class="mt-2 mb-4">
-        PearAI Creator will now use this database for your project!
+        VibeStudio Creator will now use this database for your project!
       </p>
     </li>
   </ol>
@@ -224,19 +224,19 @@ export const posts = [
 </div>`,
   },
   {
-    title: "How We Designed Our Servers at PearAI",
+    title: "How We Designed Our Servers at VibeStudio",
     author: "Nang",
     date: "2024-09-1",
     excerpt:
-      "I spent the last 2 months working on PearAI, an Open Sourced AI-Powered Code Editor. It is like having an expert on your codebase right next to you. We achieve this with Retrieval Augmented Generation. This is my new startup after finishing my B.S. & M.S from Carnegie Mellon and working for 1.5 years in High Frequency Trading as a Software Engineer. This is exactly how we designed our server.",
+      "I spent the last 2 months working on VibeStudio, an Open Sourced AI-Powered Code Editor. It is like having an expert on your codebase right next to you. We achieve this with Retrieval Augmented Generation. This is my new startup after finishing my B.S. & M.S from Carnegie Mellon and working for 1.5 years in High Frequency Trading as a Software Engineer. This is exactly how we designed our server.",
     thumbnail: "/images/blog/pearai-server-option.png",
     tags: ["server", "server design", "pearai server"],
-    url: "/blog/how-we-designed-our-servers-end-to-end-for-pearai",
+    url: "/blog/how-we-designed-our-servers-end-to-end-for-vibestudio",
     content: `<div
   class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8"
 >
   <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl mb-4">
-    I spent the last 2 months working on PearAI, an Open Source AI-Powered Code
+    I spent the last 2 months working on VibeStudio, an Open Source AI-Powered Code
     Editor. It's like having an expert on your codebase right next to you. We
     achieve this with Retrieval Augmented Generation. This is my new startup
     after finishing my B.S. & M.S from Carnegie Mellon and working for 1.5 years
@@ -253,7 +253,7 @@ export const posts = [
     <figcaption
       class="mt-4 text-center text-sm italic text-gray-600 dark:text-gray-400"
     >
-      PearAI: An AI-Powered Code Editor
+      VibeStudio: An AI-Powered Code Editor
     </figcaption>
   </figure>
 
@@ -267,13 +267,13 @@ export const posts = [
   <figure class="my-8 sm:my-12">
     <img
       src="/images/blog/pearai-server-option.png"
-      alt="PearAI Server Options"
+      alt="VibeStudio Server Options"
       class="w-full rounded-xl shadow-lg"
     />
     <figcaption
       class="mt-4 text-center text-sm italic text-gray-600 dark:text-gray-400"
     >
-      PearAI Server Architecture Options
+      VibeStudio Server Architecture Options
     </figcaption>
   </figure>
 
@@ -284,20 +284,20 @@ export const posts = [
   </h2>
 
   <p class="mb-4 text-base sm:text-lg">
-    PearAI offers two different services for LLM:
+    VibeStudio offers two different services for LLM:
   </p>
 
   <ol
     class="ml-4 list-inside list-decimal space-y-4 text-base sm:ml-6 sm:text-lg"
   >
     <li class="pl-2">
-      <span class="font-semibold">Use PearAI's hosted server:</span> Pay
+      <span class="font-semibold">Use VibeStudio's hosted server:</span> Pay
       subscription for unlimited usage. Underlying LLM is abstracted for
       convenience and latest AI technology.
     </li>
     <li class="pl-2">
       <span class="font-semibold">Use API key:</span> Users self-manage and pay
-      per token to the LLM Provider. On PearAI's side, this is open source and
+      per token to the LLM Provider. On VibeStudio's side, this is open source and
       fully transparent. Users can also use their own local LLM.
     </li>
   </ol>
@@ -358,13 +358,13 @@ export const posts = [
   <figure class="my-8 sm:my-12">
     <img
       src="/images/blog/pearai-authentication-flow.png"
-      alt="PearAI Authentication Flow"
+      alt="VibeStudio Authentication Flow"
       class="w-full rounded-xl shadow-lg"
     />
     <figcaption
       class="mt-4 text-center text-sm italic text-gray-600 dark:text-gray-400"
     >
-      PearAI Authentication Flow
+      VibeStudio Authentication Flow
     </figcaption>
   </figure>
 
@@ -411,18 +411,18 @@ export const posts = [
   </ul>
 
   <p class="mt-6 text-base sm:mt-8 sm:text-lg">
-    Hopefully this was helpful to someone. PearAI is open source, so please
+    Hopefully this was helpful to someone. VibeStudio is open source, so please
     help us out by starring the repo here:
     <a
       href="https://github.com/trypear/pearai-master"
       class="font-medium text-blue-600 hover:underline dark:text-blue-400"
-      >PearAI GitHub Repo</a
+      >VibeStudio GitHub Repo</a
     >, and consider contributing! If you'd like to use the app, join the wait
     list here
     <a
-      href="https://trypear.ai/"
+      href="https://vibestudio.online/"
       class="font-medium text-blue-600 hover:underline dark:text-blue-400"
-      >https://trypear.ai/</a
+      >https://vibestudio.online/</a
     >. We're launching next week to our first batch of users!
   </p>
 
@@ -444,19 +444,19 @@ export const posts = [
 `,
   },
   {
-    title: "Setting Up Auto-Complete On PearAI",
+    title: "Setting Up Auto-Complete On VibeStudio",
     date: "2024-08-31",
     excerpt:
-      "PearAI supports tab autocomplete, and this is how to set this up. Tab autocomplete predicts / suggests what you would type next as you're coding!",
+      "VibeStudio supports tab autocomplete, and this is how to set this up. Tab autocomplete predicts / suggests what you would type next as you're coding!",
     thumbnail: "/images/blog/codestral.jpg",
     tags: ["autocomplete", "suggestions"],
-    url: "/blog/setting-up-auto-complete-on-pearai",
+    url: "/blog/setting-up-auto-complete-on-vibestudio",
     author: "Nang",
     content: `<div
   class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8"
 >
   <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">
-    PearAI supports tab autocomplete, and this is how to set this up. Tab
+    VibeStudio supports tab autocomplete, and this is how to set this up. Tab
     autocomplete predicts/suggests what you would type next as you're coding!
   </p>
 
@@ -487,7 +487,7 @@ export const posts = [
       <h3
         class="mb-2 text-xl font-bold text-primary-600 dark:text-primary-400 sm:mb-4 sm:text-2xl"
       >
-        Add to PearAI config.json
+        Add to VibeStudio config.json
       </h3>
       <p class="mb-4 mt-2">
         Fill in
@@ -511,13 +511,13 @@ export const posts = [
       <figure class="my-6 sm:my-8">
         <img
           src="/images/blog/open-pearai-config.png"
-          alt="Command Palette in PearAI (Cmd/Ctrl+Shift+P)"
+          alt="Command Palette in VibeStudio (Cmd/Ctrl+Shift+P)"
           class="w-full rounded-xl shadow-lg"
         />
         <figcaption
           class="mt-2 text-center text-xs italic text-gray-600 dark:text-gray-400 sm:mt-4 sm:text-sm"
         >
-          Command Palette in PearAI (Cmd/Ctrl+Shift+P)
+          Command Palette in VibeStudio (Cmd/Ctrl+Shift+P)
         </figcaption>
       </figure>
     </li>
@@ -541,14 +541,14 @@ export const posts = [
   >
     <p class="mb-2 text-base font-bold sm:text-lg">Pro Tip:</p>
     <p class="text-sm sm:text-base">
-      You can customize the autocomplete behavior in PearAI's settings.
+      You can customize the autocomplete behavior in VibeStudio's settings.
       Experiment with different options to find the setup that works best for
       your coding style!
     </p>
   </div>
 
   <p class="mt-6 text-base sm:mt-8 sm:text-lg">
-    Setting up autocomplete in PearAI is a game-changer for your development
+    Setting up autocomplete in VibeStudio is a game-changer for your development
     workflow. It combines the power of AI with your coding expertise, resulting
     in faster and more efficient coding sessions. Give it a try and experience
     the difference for yourself!
@@ -557,20 +557,20 @@ export const posts = [
 `,
   },
   {
-    title: "Enhancing PearAI with Anthropic's Claude 3.5",
-    url: "/blog/enhancing-pearai-with-anthropic-claude-3-5",
+    title: "Enhancing VibeStudio with Anthropic's Claude 3.5",
+    url: "/blog/enhancing-vibestudio-with-anthropic-claude-3-5",
     excerpt:
       "How we leveraged Claude 3.5 to improve code syntax and logic in our open source AI code editor, and the unique challenges we faced in implementation.",
     date: "2024-08-20",
     author: "Conor Quinlan",
     readingTime: "3 min",
     thumbnail: "/images/blog/claude.png",
-    tags: ["AI", "Claude 3.5", "PearAI", "Code Editor"],
+    tags: ["AI", "Claude 3.5", "VibeStudio", "Code Editor"],
     content: `<article
   class="mx-auto max-w-4xl space-y-6 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8"
 >
   <p class="text-base font-semibold leading-relaxed sm:text-lg md:text-xl">
-    At PearAI, we're constantly striving to improve our open source AI code
+    At VibeStudio, we're constantly striving to improve our open source AI code
     editor. Our latest advancement involves integrating Anthropic's Claude 3.5
     model to enhance code syntax and logic understanding when providing AI
     context to a user's codebase. This integration presented unique challenges
@@ -660,7 +660,7 @@ export const posts = [
       Benefits of the Integration
     </h2>
     <p class="text-sm sm:text-base">
-      The integration of Claude 3.5 has brought several improvements to PearAI:
+      The integration of Claude 3.5 has brought several improvements to VibeStudio:
     </p>
     <ul class="list-disc space-y-2 pl-4 text-sm sm:pl-6 sm:text-base">
       <li>More accurate and context-aware code suggestions</li>
@@ -679,9 +679,9 @@ export const posts = [
   <blockquote
     class="border-l-4 border-primary-500 pl-4 text-sm italic text-gray-700 dark:text-gray-300 sm:text-base"
   >
-    "The integration of Claude 3.5 has significantly elevated PearAI's
+    "The integration of Claude 3.5 has significantly elevated VibeStudio's
     capabilities, allowing us to provide an even more powerful and intuitive
-    coding experience for our users." - Nang, PearAI Founder
+    coding experience for our users." - Nang, VibeStudio Founder
   </blockquote>
 
   <section class="space-y-4">
@@ -710,7 +710,7 @@ export const posts = [
   </section>
 
   <p class="mt-6 text-base font-semibold sm:text-lg">
-    We're excited about the possibilities that Claude 3.5 brings to PearAI and
+    We're excited about the possibilities that Claude 3.5 brings to VibeStudio and
     look forward to continuing our journey of making AI-assisted coding more
     powerful and accessible. Stay tuned for more updates and features as we push
     the boundaries of what's possible in AI-powered code editing!
@@ -720,15 +720,15 @@ export const posts = [
   },
 
   {
-    title: "Install PearAI on Linux: Simple Guide for All Distros",
-    url: "/blog/download-pearai-on-linux",
+    title: "Install VibeStudio on Linux: Simple Guide for All Distros",
+    url: "/blog/download-vibestudio-on-linux",
     excerpt:
-      "An easy-to-follow guide for downloading and installing PearAI on a wide range of Linux distributions, ensuring a smooth setup for both beginners and experienced users.",
+      "An easy-to-follow guide for downloading and installing VibeStudio on a wide range of Linux distributions, ensuring a smooth setup for both beginners and experienced users.",
     date: "2024-09-11",
     author: "Maximiliano Farfán",
     readingTime: "2 min",
     thumbnail: "/images/blog/linux.jpg",
-    tags: ["Guide", "PearAI", "Linux"],
+    tags: ["Guide", "VibeStudio", "Linux"],
     content: `<article
   class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8"
 >
@@ -736,7 +736,7 @@ export const posts = [
     <h2
       class="text-xl font-bold text-primary-600 dark:text-primary-400 sm:text-2xl"
     >
-      Download PearAI on Linux
+      Download VibeStudio on Linux
     </h2>
         <ol class="list-decimal space-y-4 pl-4 text-sm sm:pl-6 sm:text-base">
           <li>
@@ -748,15 +748,15 @@ export const posts = [
             <p class="my-4"> If your result is:</p>
             <pre class="my-2 overflow-x-auto rounded bg-gray-100 p-2 text-xs text-foreground sm:text-sm md:text-base"><code>avx avx2 fma</code></pre>
             <p class="my-4">
-            or just <code>avx</code>, your CPU should be compatible with the PearAI app.
+            or just <code>avx</code>, your CPU should be compatible with the VibeStudio app.
             </p>
           </li>
           <li>
-            Download the PearAI installation file:
+            Download the VibeStudio installation file:
             <ul class="list-disc pl-5 my-4">
               <li>
-                <strong>PearAI Linux Version (AVX/AVX2)</strong>:
-                <a href="https://github.com/trypear/pearai-app/releases/latest/download/PearAI-linux.tar.gz" class="break-words text-primary-500 underline dark:text-primary-400">Download PearAI (AVX)</a>
+                <strong>VibeStudio Linux Version (AVX/AVX2)</strong>:
+                <a href="https://github.com/trypear/pearai-app/releases/latest/download/VibeStudio-linux.tar.gz" class="break-words text-primary-500 underline dark:text-primary-400">Download VibeStudio (AVX)</a>
               </li>
             </ul>
           </li>
@@ -764,13 +764,13 @@ export const posts = [
             Extract the contents by running the following command:
         <pre
           class="my-4 overflow-x-auto rounded bg-gray-100 p-2 text-xs text-foreground sm:text-sm md:text-base"
-        ><code>tar -xvf PearAI-linux.tar.gz</code></pre>
+        ><code>tar -xvf VibeStudio-linux.tar.gz</code></pre>
           </li>
           <li>
             Navigate to the extracted folder:
         <pre
           class="my-4 overflow-x-auto rounded bg-gray-100 p-2 text-xs text-foreground sm:text-sm md:text-base"
-        ><code class="language-bash">cd PearAI/</code></pre>
+        ><code class="language-bash">cd VibeStudio/</code></pre>
           </li>
           <li>
             Run the installation script with superuser permissions:
@@ -782,8 +782,8 @@ export const posts = [
             Select your desired option:
             <pre
           class="my-4 overflow-x-auto rounded bg-gray-100 p-2 text-xs text-foreground sm:text-sm md:text-base"
-        ><code class="language-bash">1. Install PearAI
-2. Uninstall PearAI
+        ><code class="language-bash">1. Install VibeStudio
+2. Uninstall VibeStudio
 3. Exit</code></pre>
           </li>
           <li>
@@ -791,10 +791,10 @@ export const posts = [
         <code class="rounded bg-gray-200 px-1 text-gray-800 dark:bg-gray-700 dark:text-gray-200">~/.bashrc</code>
         or
         <code class="rounded bg-gray-200 px-1 text-gray-800 dark:bg-gray-700 dark:text-gray-200">~/.zshrc</code>
-        to run PearAI from any directory:
+        to run VibeStudio from any directory:
         <pre
           class="my-4 overflow-x-auto rounded bg-gray-100 p-2 text-xs text-foreground sm:text-sm md:text-base"
-        ><code class="language-bash">alias pearai='PearAI'</code></pre>
+        ><code class="language-bash">alias pearai='VibeStudio'</code></pre>
         After adding the alias, run
         <code class="rounded bg-gray-200 px-1 text-gray-800 dark:bg-gray-700 dark:text-gray-200"
           >source ~/.bashrc</code
@@ -815,7 +815,7 @@ export const posts = [
       Notes
     </h2>
         <p class="text-sm sm:text-base">
-      Once the installation is complete, PearAI will be ready to use! If you
+      Once the installation is complete, VibeStudio will be ready to use! If you
       have any questions or run into issues, feel free to join our community and
       get support through our official
       <a
@@ -828,15 +828,15 @@ export const posts = [
       This installation method has been tested on multiple Linux distributions,
       including Arch Linux, Ubuntu 24, Ubuntu 22, Fedora 40 and NixOS. It was compiled using GCC
       10, so most distributions with this or newer version should be able to
-      run PearAI without any issues.
+      run VibeStudio without any issues.
         </p>
                 <p class="mt-4 text-sm sm:text-base">
-     Note that PearAI Linux is packaged and distributed by the open source community. Please report any issues to the <a href="https://github.com/trypear/pearai-app/issues" class="text-primary-500 underline dark:text-primary-400">GitHub repository</a>.
+     Note that VibeStudio Linux is packaged and distributed by the open source community. Please report any issues to the <a href="https://github.com/trypear/pearai-app/issues" class="text-primary-500 underline dark:text-primary-400">GitHub repository</a>.
         </p>
       </section>
 
       <p class="mt-8 text-base font-semibold sm:text-lg">
-    We're thrilled to bring PearAI to the Linux community, stay tuned for more
+    We're thrilled to bring VibeStudio to the Linux community, stay tuned for more
     exciting updates and features on the horizon!
       </p>
 </article>
@@ -844,15 +844,15 @@ export const posts = [
   },
 
   {
-    title: "How to use GPT o1-mini and o1-preview in PearAI",
+    title: "How to use GPT o1-mini and o1-preview in VibeStudio",
     url: "/blog/gpt-o1",
     excerpt:
-      "Learn how to integrate and effectively use GPT o1-mini and o1-preview models in PearAI, along with important considerations for optimal usage.",
+      "Learn how to integrate and effectively use GPT o1-mini and o1-preview models in VibeStudio, along with important considerations for optimal usage.",
     date: "2024-09-15",
-    author: "PearAI Team",
+    author: "VibeStudio Team",
     readingTime: "3 min",
     thumbnail: "/images/blog/o1-doc-thumbnail.webp",
-    tags: ["Guide", "PearAI", "GPT", "OpenAI", "o1-mini", "o1-preview"],
+    tags: ["Guide", "VibeStudio", "GPT", "OpenAI", "o1-mini", "o1-preview"],
     content: `<article
   class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8"
 >
@@ -860,7 +860,7 @@ export const posts = [
     <h2
       class="text-xl font-bold text-primary-600 dark:text-primary-400 sm:text-2xl"
     >
-      Adding GPT o1-mini and o1-preview to PearAI
+      Adding GPT o1-mini and o1-preview to VibeStudio
     </h2>
     <ol class="list-decimal space-y-4 pl-4 text-sm sm:pl-6 sm:text-base">
       <li>
@@ -868,7 +868,7 @@ export const posts = [
         <code class="rounded bg-gray-200 px-1 dark:bg-gray-700"
           >config.json</code
         >
-        file in PearAI through the command palette (<kbd
+        file in VibeStudio through the command palette (<kbd
           class="rounded bg-gray-300 px-1 text-xs dark:bg-gray-600 sm:text-sm"
           >Ctrl/Cmd+Shift+P</kbd
         >).
@@ -880,13 +880,13 @@ export const posts = [
           class="my-4 overflow-x-auto rounded bg-gray-100 p-2 text-xs text-foreground sm:text-sm md:text-base"
         ><code class="language-bash">{
     "model": "o1-mini",
-    "title": "GPTo1 Mini (PearAI)",
+    "title": "GPTo1 Mini (VibeStudio)",
     "provider": "pearai_server",
     "isDefault": true
   },
   {
     "model": "o1-preview",
-    "title": "GPTo1 Preview (PearAI)",
+    "title": "GPTo1 Preview (VibeStudio)",
     "provider": "pearai_server",
     "isDefault": true
   }</code></pre>
@@ -896,7 +896,7 @@ export const posts = [
     <figure class="mt-4">
       <img
         src="/images/blog/o1config-doc.png"
-        alt="Command Palette in PearAI (Cmd/Ctrl+Shift+P)"
+        alt="Command Palette in VibeStudio (Cmd/Ctrl+Shift+P)"
         class="w-full rounded-xl shadow-lg"
       />
       <figcaption
@@ -924,7 +924,7 @@ export const posts = [
         use fewer of your credits while providing similar performance.
       </li>
       <li>
-        Due to current rate limits, only annual subscribers of PearAI can use o1
+        Due to current rate limits, only annual subscribers of VibeStudio can use o1
         models. We'll open it up to all subscribers soon!
       </li>
     </ul>
@@ -934,10 +934,10 @@ export const posts = [
   },
   {
     title:
-      "New Leetcode Feature in PearAI - Supercharge Your Interview Prep With AI",
+      "New Leetcode Feature in VibeStudio - Supercharge Your Interview Prep With AI",
     url: "/blog/introducing-leetcode-feature",
     excerpt:
-      "Improve your coding skills and interview readiness with PearAI's LeetCode integration. A practical tool for efficient technical interview preparation.",
+      "Improve your coding skills and interview readiness with VibeStudio's LeetCode integration. A practical tool for efficient technical interview preparation.",
     date: "2024-09-15",
     author: "Nang, Mohammed Abdelaziz",
     readingTime: "4 min",
@@ -955,10 +955,10 @@ export const posts = [
           A Practical Tool for Interview Readiness
         </h2>
         <p>
-          At PearAI, we're always looking for ways to support developers in their professional growth. Today, we're introducing our latest feature: the LeetCode Slash Command. This integration brings LeetCode problems directly into your PearAI workspace, offering a streamlined approach to technical interview preparation.
+          At VibeStudio, we're always looking for ways to support developers in their professional growth. Today, we're introducing our latest feature: the LeetCode Slash Command. This integration brings LeetCode problems directly into your VibeStudio workspace, offering a streamlined approach to technical interview preparation.
         </p>
         <p>
-          The LeetCode Slash Command is designed to complement your existing interview preparation routine. By providing easy access to LeetCode problems within PearAI, it helps you practice more efficiently and consistently.
+          The LeetCode Slash Command is designed to complement your existing interview preparation routine. By providing easy access to LeetCode problems within VibeStudio, it helps you practice more efficiently and consistently.
         </p>
       </section>
 
@@ -969,11 +969,11 @@ export const posts = [
         <p>Using the LeetCode Slash Command is straightforward:</p>
         <ol class="list-decimal space-y-4 pl-4 text-sm sm:pl-6 sm:text-base">
           <li>
-            <strong>Coding LeetCode Problems in PearAI</strong>: You can now solve LeetCode problems directly in PearAI. Create a new file for your solution and start coding as you would in a real interview setting.
+            <strong>Coding LeetCode Problems in VibeStudio</strong>: You can now solve LeetCode problems directly in VibeStudio. Create a new file for your solution and start coding as you would in a real interview setting.
           </li>
           <li>
-            <strong>PearAI LeetCode Command</strong>:
-            Type into the PearAI chatbox:
+            <strong>VibeStudio LeetCode Command</strong>:
+            Type into the VibeStudio chatbox:
             <br /><br />
             <code class="rounded bg-gray-200 px-1 dark:bg-gray-700">/leetcode [LINK_TO_LEETCODE_PROBLEM] @[YOUR_SOLUTION_FILE]</code>
             <br /><br />
@@ -981,7 +981,7 @@ export const posts = [
           </li>
 
           <li>
-            <strong>Get Helpful Guidance</strong>: As you work on the problem, PearAI provides suggestions and hints, similar to what you might experience in an actual interview setting. This helps you improve your problem-solving skills and learn best practices.
+            <strong>Get Helpful Guidance</strong>: As you work on the problem, VibeStudio provides suggestions and hints, similar to what you might experience in an actual interview setting. This helps you improve your problem-solving skills and learn best practices.
           </li>
         </ol>
       </section>
@@ -1020,10 +1020,10 @@ export const posts = [
     </article>`,
   },
   {
-    title: "How to setup WSL in PearAI",
+    title: "How to setup WSL in VibeStudio",
     url: "/blog/wsl-setup",
     excerpt:
-      "Easy step by step guide to setup WSL in PearAI, and get started with AI-powered coding in WSL.",
+      "Easy step by step guide to setup WSL in VibeStudio, and get started with AI-powered coding in WSL.",
     date: "2024-09-19",
     author: "Himanshu and LaansDole",
     readingTime: "30 seconds",
@@ -1056,12 +1056,12 @@ export const posts = [
     <figure class="mt-4">
       <img
         src="/images/blog/wsl-blog-eol-sequence.png"
-        alt="Change End of Line Sequence in PearAI"
+        alt="Change End of Line Sequence in VibeStudio"
         class="rounded-xl shadow-lg object-cover w-full"
       />
     </figure>
     <p class="mt-4">
-      In PearAI, click on the Search Bar at the top of the app and enter
+      In VibeStudio, click on the Search Bar at the top of the app and enter
       <code>&gt;Change End of Line Sequence</code>. Choose <strong>LF</strong> to sucessfully run the next step.
     </p>
   </section>
@@ -1107,9 +1107,9 @@ export const posts = [
     title: "Why Open Source Matters for AI Code Editors",
     url: "/blog/why-open-source",
     excerpt:
-      "Discover why open source is crucial for AI code editors and how PearAI leverages this approach to create a superior product with a thriving community.",
+      "Discover why open source is crucial for AI code editors and how VibeStudio leverages this approach to create a superior product with a thriving community.",
     date: "2024-09-26",
-    author: "PearAI Team",
+    author: "VibeStudio Team",
     readingTime: "3 minutes",
     thumbnail: "/images/blog/blog-default.png",
     tags: ["Open Source"],
@@ -1127,13 +1127,13 @@ export const posts = [
       </p>
       <ul class="list-disc pl-6">
         <li>User Interface and User Experience Extensibility
-          <p class="text-gray-600 text-base mb-4">Open source allows for community-driven UI/UX improvements; with an extremely tight user feedback loop, we know exactly what you want. Code editors are uniquely suited for open source development because the developers themselves are users of the product! <br/><br/> This almost means that for our PearAI Inventory, where we integrate the best AI tools on the market within PearAI, other contributors can suggest AI tools to integrate on their own.</p>
+          <p class="text-gray-600 text-base mb-4">Open source allows for community-driven UI/UX improvements; with an extremely tight user feedback loop, we know exactly what you want. Code editors are uniquely suited for open source development because the developers themselves are users of the product! <br/><br/> This almost means that for our VibeStudio Inventory, where we integrate the best AI tools on the market within VibeStudio, other contributors can suggest AI tools to integrate on their own.</p>
         </li>
         <li>Trust and Transparency
           <p class="text-gray-600 text-base mb-4">With open source, the codebase is visible to all, fostering trust through transparency and allowing for independent security audits.</p>
         </li>
         <li>Community Support
-          <p class="text-base text-gray-600 mt-1 mb-4">Open source projects benefit from a global community of developers, leading to faster bug fixes, feature requests, and overall product improvement. For example, during our launch, we had no Linux version, but many people who only use Linux wanted to use PearAI. Someone from our community (s/o to Max!) single-handedly developed a Linux distribution, which is now available today for everyone to use.</p>
+          <p class="text-base text-gray-600 mt-1 mb-4">Open source projects benefit from a global community of developers, leading to faster bug fixes, feature requests, and overall product improvement. For example, during our launch, we had no Linux version, but many people who only use Linux wanted to use VibeStudio. Someone from our community (s/o to Max!) single-handedly developed a Linux distribution, which is now available today for everyone to use.</p>
         </li>
         <li>Distribution
           <p class="text-base text-gray-600 mt-1 mb-4">Due to the underlying models being similar between products, the team with the coolest and strongest community will be the most popular.</p>
@@ -1148,13 +1148,13 @@ export const posts = [
       <h2
         class="text-xl mt-4 font-bold text-primary-600 dark:text-primary-400 sm:text-2xl"
       >
-        Why Us: PearAI's Thriving Open Source Community
+        Why Us: VibeStudio's Thriving Open Source Community
       </h2>
       <p>
-        PearAI stands out with one of the most active open source community among AI code editors. Unlike many open source projects that rely on just one or two contributors, PearAI boasts an impressive statistic after only 4 month of development (as of the date of this blog):
+        VibeStudio stands out with one of the most active open source community among AI code editors. Unlike many open source projects that rely on just one or two contributors, VibeStudio boasts an impressive statistic after only 4 month of development (as of the date of this blog):
       </p>
       <figure class="mt-4">
-        <figcaption class="text-center text-sm mt-2">Around 40% of contributions of the PearAI project are made by the communtiy.</figcaption>
+        <figcaption class="text-center text-sm mt-2">Around 40% of contributions of the VibeStudio project are made by the communtiy.</figcaption>
       </figure>
       <p>
         This <a href="https://github.com/trypear/pearai-master" target="_blank">diverse contribution</a> spans across our landing page, server, app, designs, and general ideation, driving our rapid development cycle (the statistic does not include contributions of the people of the underlying forks!).
@@ -1168,7 +1168,7 @@ export const posts = [
         Beyond Code: Open Source Founders
       </h2>
       <p>
-        At PearAI, our commitment to openness extends beyond our codebase. As founders, we embrace an "open source" approach to our journey:
+        At VibeStudio, our commitment to openness extends beyond our codebase. As founders, we embrace an "open source" approach to our journey:
       </p>
       <ul class="list-disc pl-6">
         <li>We share our entire development process online</li>
@@ -1190,12 +1190,12 @@ export const posts = [
   `,
   },
   {
-    title: "Open Source Bounties at PearAI",
+    title: "Open Source Bounties at VibeStudio",
     url: "/blog/open-source-bounties",
     excerpt:
-      "PearAI introduces monetary bounties for significant open source contributions. Solve big issues, get paid, and help build the best AI code editor in the world.",
+      "VibeStudio introduces monetary bounties for significant open source contributions. Solve big issues, get paid, and help build the best AI code editor in the world.",
     date: "2024-09-28",
-    author: "PearAI Team",
+    author: "VibeStudio Team",
     readingTime: "2 min",
     thumbnail: "/images/blog/blog-default.png",
     tags: [
@@ -1208,22 +1208,22 @@ export const posts = [
     content: `<article class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8">
       <section class="space-y-6">
         <h2 class="text-xl font-bold text-primary-600 dark:text-primary-400 sm:text-2xl">
-          Open Source Bounties At PearAI 🗣️
+          Open Source Bounties At VibeStudio 🗣️
         </h2>
         <p class="font-bold">
           TLDR: 🍐 Solve big issues, get PAID 💸 🍐
         </p>
         <p>
-          As you may know, PearAI is an Open Source AI Code Editor and fully transparent to the public. We are driven by our open source community that is working under the shared goal of making the best AI code editor in the world. However, sometimes we have bigger tasks that need more expertise and time from a contributor. This requires a lot of effort, so we want to provide more incentive and rewards for these contributors.
+          As you may know, VibeStudio is an Open Source AI Code Editor and fully transparent to the public. We are driven by our open source community that is working under the shared goal of making the best AI code editor in the world. However, sometimes we have bigger tasks that need more expertise and time from a contributor. This requires a lot of effort, so we want to provide more incentive and rewards for these contributors.
         </p>
       </section>
 
       <section class="space-y-6">
         <h2 class="text-xl mt-4 font-bold text-primary-600 dark:text-primary-400 sm:text-2xl">
-          Introducing PearAI's Open Source Bounties!
+          Introducing VibeStudio's Open Source Bounties!
         </h2>
         <p>
-          For some larger tasks, we will add a monetary bounty, defined in the issue description. Simply put, if you complete the issue (i.e. your code gets merged), you will get money as a reward. Due to the fast pace we need for PearAI, multiple people may work on the same task at the same time independently. However, if only one gets merged, a certain other amount of worthy attempts should be compensated as well for the efforts.
+          For some larger tasks, we will add a monetary bounty, defined in the issue description. Simply put, if you complete the issue (i.e. your code gets merged), you will get money as a reward. Due to the fast pace we need for VibeStudio, multiple people may work on the same task at the same time independently. However, if only one gets merged, a certain other amount of worthy attempts should be compensated as well for the efforts.
         </p>
         <p>
           If you have a worthy attempt (and we will be generous with this), you will be rewarded as well by the attempt bounty, which is also pre-set in the issue description.
@@ -1235,7 +1235,7 @@ export const posts = [
           How to Participate
         </h2>
         <p>
-          Simply look for tickets tagged with "Bounty" <a href="https://github.com/trypear/pearai-app/labels/Bounty" class="text-primary-600 hover:underline">here</a>. These larger tasks often require context for PearAI and expertise, so they will likely be application-based to start. The link to apply (takes less than a minute) will also be in the issue description.
+          Simply look for tickets tagged with "Bounty" <a href="https://github.com/trypear/pearai-app/labels/Bounty" class="text-primary-600 hover:underline">here</a>. These larger tasks often require context for VibeStudio and expertise, so they will likely be application-based to start. The link to apply (takes less than a minute) will also be in the issue description.
         </p>
         <p>
           We hope that this adds even more whimsy to bringing the best AI code editor into existence together.
@@ -1245,22 +1245,22 @@ export const posts = [
   },
 
   {
-    title: "PearAI Open Source Fixes",
-    author: "PearAI Team, Jyoutir",
+    title: "VibeStudio Open Source Fixes",
+    author: "VibeStudio Team, Jyoutir",
     readingTime: "4 min",
     date: "2024-10-12",
     excerpt:
-      "View PearAI's changes to correct past mistakes and ensure compliance with open source standards.",
+      "View VibeStudio's changes to correct past mistakes and ensure compliance with open source standards.",
     thumbnail: "/images/blog/blog-default.png",
     tags: ["open-source", "Continue.dev", "spreading love", "accountability"],
-    url: "/blog/pearai-open-source-fixes",
+    url: "/blog/vibestudio-open-source-fixes",
     content: `<article
       class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8"
     >
       <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">
         We have made a mistake, and for this we apologize to Continue and the Open Source community. We genuinely want to learn from our mistakes and grow.
         To fix this, we made big changes, and we had them reviewed by friends in the open source space, along with a law team to ensure we did everything the right way this time.
-        These are the changes PearAI made in attempts to correct our mistakes.
+        These are the changes VibeStudio made in attempts to correct our mistakes.
       </p>
 
       <h2 class="my-4 text-2xl font-bold text-primary-600 dark:text-primary-400 sm:mb-6 sm:mt-12 sm:text-3xl">
@@ -1274,7 +1274,7 @@ export const posts = [
       <figure class="my-8 sm:my-12">
         <img
           src="/images/blog/continue-forked.jpg"
-          alt="PearAI's temp-repo forked from continuedev/continue"
+          alt="VibeStudio's temp-repo forked from continuedev/continue"
           class="w-full rounded-xl shadow-lg"
         />
         <figcaption class="mt-4 text-center text-sm italic text-gray-600 mb-4">
@@ -1285,7 +1285,7 @@ export const posts = [
       <figure class="my-8 sm:my-12">
         <img
           src="/images/blog/vscode-forked.png"
-          alt="PearAI's pearai-app forked from microsoft/vscode"
+          alt="VibeStudio's pearai-app forked from microsoft/vscode"
           class="w-full rounded-xl shadow-lg"
         />
       </figure>
@@ -1343,35 +1343,35 @@ export const posts = [
     </article>`,
   },
   {
-    title: "Introducing PearAI Creator (Beta) — Powered By aider*",
-    url: "/blog/introducing-pearai-creator-beta",
+    title: "Introducing VibeStudio Creator (Beta) — Powered By aider*",
+    url: "/blog/introducing-vibestudio-creator-beta",
     excerpt:
-      "PearAI Creator can build apps, fix your bugs, and implement new features for you — all automatically. Learn how to use this powerful new feature powered by aider.",
+      "VibeStudio Creator can build apps, fix your bugs, and implement new features for you — all automatically. Learn how to use this powerful new feature powered by aider.",
     date: "2024-10-23",
-    author: "PearAI Team",
+    author: "VibeStudio Team",
     readingTime: "2 min",
     thumbnail: "/images/blog/blog-default.png",
-    tags: ["PearAI Creator", "aider", "feature announcement", "beta"],
+    tags: ["VibeStudio Creator", "aider", "feature announcement", "beta"],
     content: `<article class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8">
       <section class="space-y-6">
         <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">
-          PearAI Creator can build apps, fix your bugs, and implement new features for you — all automatically.
+          VibeStudio Creator can build apps, fix your bugs, and implement new features for you — all automatically.
         </p>
 
-        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">PearAI is an open-source AI code editor. We just introduced PearAI Inventory, which includes the best-on-market tools for every part of coding with AI.</p>
+        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">VibeStudio is an open-source AI code editor. We just introduced VibeStudio Inventory, which includes the best-on-market tools for every part of coding with AI.</p>
 
-        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl"><a href="https://aider.chat/" class="text-primary-600 hover:underline">aider</a> is one of the most powerful code generation tools right now. It scored one of the highest <a href="https://aider.chat/2024/06/02/main-swe-bench.html" class="text-primary-600 hover:underline">SWE Bench</a> benchmark. We're excited to announce it is now added to the PearAI Inventory!</p>
+        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl"><a href="https://aider.chat/" class="text-primary-600 hover:underline">aider</a> is one of the most powerful code generation tools right now. It scored one of the highest <a href="https://aider.chat/2024/06/02/main-swe-bench.html" class="text-primary-600 hover:underline">SWE Bench</a> benchmark. We're excited to announce it is now added to the VibeStudio Inventory!</p>
 
         <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">When you ask for a new feature, bug fix, or new app — it can do just that! It has full context of your codebase, has ability to create and edit multiple files.</p>
 
-        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Try it out for free here: <a href="https://trypear.ai" class="text-primary-600 hover:underline">https://trypear.ai</a></p>
+        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Try it out for free here: <a href="https://vibestudio.online" class="text-primary-600 hover:underline">https://vibestudio.online</a></p>
 
         <h2 class="text-xl font-bold text-primary-600 dark:text-primary-400 sm:text-2xl">Quick Demo</h2>
         <div class="aspect-video">
           <iframe
             class="w-full h-full"
             src="https://www.youtube.com/embed/OnerjUzIddY?si=H_dfqmnGIHd1eBm-"
-            title="PearAI Creator (Powered by aider) Beta Demo"
+            title="VibeStudio Creator (Powered by aider) Beta Demo"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -1380,15 +1380,15 @@ export const posts = [
         </div>
 
         <h2 class="text-xl font-bold text-primary-600 dark:text-primary-400 sm:text-2xl">
-          How to Use PearAI Creator (for free!)
+          How to Use VibeStudio Creator (for free!)
         </h2>
         <ol class="list-decimal pl-6 space-y-4">
           <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">
-            If you already have PearAI installed, simply go to "Help" at the top and search "Update". It will automatically update you to the newest version of PearAI.
+            If you already have VibeStudio installed, simply go to "Help" at the top and search "Update". It will automatically update you to the newest version of VibeStudio.
             <br/><br/>
-            Otherwise, download the new PearAI here: <a href="https://trypear.ai/download" class="text-primary-600 hover:underline break-all">https://trypear.ai/download</a>
+            Otherwise, download the new VibeStudio here: <a href="https://vibestudio.online/download" class="text-primary-600 hover:underline break-all">https://vibestudio.online/download</a>
           </li>
-          <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Open up command pallette (CMD/CTRL + Shift + P) and select "PearAI Creator"</li>
+          <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Open up command pallette (CMD/CTRL + Shift + P) and select "VibeStudio Creator"</li>
           <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">The first time it runs, it will likely take a second to install and run aider. Every time after, it should be instant!</li>
           <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Try it out! Ask for a new feature, a bug fix, or to start a new app. Please let us know your feedback!</li>
         </ol>
@@ -1397,13 +1397,13 @@ export const posts = [
           [Option] Use Your Own API Key
         </h2>
         <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">
-          PearAI Creator will work out of the box using our servers, but as always, you can use your own API key from OpenAI or Anthropic . Simply add the following to the "models" section in your ~/.pearai/config.json file:
+          VibeStudio Creator will work out of the box using our servers, but as always, you can use your own API key from OpenAI or Anthropic . Simply add the following to the "models" section in your ~/.pearai/config.json file:
         </p>
         <div class="overflow-x-auto rounded-lg bg-gray-100 p-4 my-4">
           <pre class="text-sm"><code>{
   "model": "claude-3-5-sonnet-20240620",
   "contextLength": 300000,
-  "title": "claude (PearAI Creator)",
+  "title": "claude (VibeStudio Creator)",
   "provider": "aider",
   "apiKey": "{YOUR_API_KEY}"
 }</code></pre>
@@ -1413,44 +1413,44 @@ export const posts = [
           Troubleshooting
         </h2>
         <div class="space-y-4">
-          <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">PearAI Creator is still in beta mode, so there may be a few rough edges.</p>
-          <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">If PearAI Creator is not working at all (ie. lags with no response), it is likely due to an issue with the aider installation.</p>
-          <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">If you are running into this, please message this in the PearAI Discord, as it will help us improve.</p>
+          <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">VibeStudio Creator is still in beta mode, so there may be a few rough edges.</p>
+          <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">If VibeStudio Creator is not working at all (ie. lags with no response), it is likely due to an issue with the aider installation.</p>
+          <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">If you are running into this, please message this in the VibeStudio Discord, as it will help us improve.</p>
           <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">To fix this, you may need to manually install aider here: <a href="https://aider.chat/docs/install.html" class="text-primary-600 hover:underline">https://aider.chat/docs/install.html</a>.</p>
-          <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Once you can type in 'aider' or 'python -m aider' into your terminal and aider runs well, then PearAI should work on its next run! If you have further issues, please reach out on Discord.</p>
+          <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Once you can type in 'aider' or 'python -m aider' into your terminal and aider runs well, then VibeStudio should work on its next run! If you have further issues, please reach out on Discord.</p>
         </div>
       </section>
-      <p class="text-sm text-gray-500 italic">*View PearAI Disclaimer page <a href="/disclaimer" class="text-primary-600 hover:underline">here</a>.</p>
+      <p class="text-sm text-gray-500 italic">*View VibeStudio Disclaimer page <a href="/disclaimer" class="text-primary-600 hover:underline">here</a>.</p>
     </article>`,
   },
   {
-    title: "Introducing PearAI Memory (Beta) — Powered By Mem0*",
-    url: "/blog/introducing-pearai-memory-beta",
+    title: "Introducing VibeStudio Memory (Beta) — Powered By Mem0*",
+    url: "/blog/introducing-vibestudio-memory-beta",
     excerpt:
-      "PearAI Memory adds a memory layer to your conversation with PearAI Chat. It can intelligently remember facts about you based on your prompt and LLM response.",
+      "VibeStudio Memory adds a memory layer to your conversation with VibeStudio Chat. It can intelligently remember facts about you based on your prompt and LLM response.",
     date: "2024-12-01",
-    author: "PearAI Team",
+    author: "VibeStudio Team",
     readingTime: "2 min",
     thumbnail: "/images/blog/blog-default.png",
-    tags: ["PearAI Memory", "mem0", "feature announcement", "beta"],
+    tags: ["VibeStudio Memory", "mem0", "feature announcement", "beta"],
     content: `<article class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8">
       <section class="space-y-6">
         <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">
-          PearAI Memory adds a memory layer to your conversation with PearAI Chat. It can intelligently remember facts about you based on your prompt and LLM response.
+          VibeStudio Memory adds a memory layer to your conversation with VibeStudio Chat. It can intelligently remember facts about you based on your prompt and LLM response.
         </p>
 
-        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">The new Memory integration enables a more personalized and context-aware interaction, allowing PearAI to remember your coding preferences and codebase settings across sessions.</p>
-        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">PearAI is an open-source AI code editor. PearAI Memory is the latest integration in the suite of tools currently available on PearAI, alongside Search and Creator.</p>
-        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">PearAI Memory is powered by <a href="https://mem0.ai/" class="text-primary-600 hover:underline">mem0</a>, a self-improving memory layer, which adapts to and learns from your interactions with the LLM. </p>
+        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">The new Memory integration enables a more personalized and context-aware interaction, allowing VibeStudio to remember your coding preferences and codebase settings across sessions.</p>
+        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">VibeStudio is an open-source AI code editor. VibeStudio Memory is the latest integration in the suite of tools currently available on VibeStudio, alongside Search and Creator.</p>
+        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">VibeStudio Memory is powered by <a href="https://mem0.ai/" class="text-primary-600 hover:underline">mem0</a>, a self-improving memory layer, which adapts to and learns from your interactions with the LLM. </p>
 
-        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Try it out for free here: <a href="https://trypear.ai" class="text-primary-600 hover:underline">https://trypear.ai</a></p>
+        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Try it out for free here: <a href="https://vibestudio.online" class="text-primary-600 hover:underline">https://vibestudio.online</a></p>
 
         <h2 class="text-xl font-bold text-primary-600 dark:text-primary-400 sm:text-2xl">Quick Demo</h2>
          <div class="aspect-video">
           <iframe
             class="w-full h-full"
             src="https://www.youtube.com/embed/kLYhV0Fu3xY"
-            title="PearAI Creator (Powered by aider) Beta Demo"
+            title="VibeStudio Creator (Powered by aider) Beta Demo"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -1459,28 +1459,28 @@ export const posts = [
         </div>
 
         <h2 class="text-xl font-bold text-primary-600 dark:text-primary-400 sm:text-2xl">
-          How to Use PearAI Memory (for free!)
+          How to Use VibeStudio Memory (for free!)
         </h2>
         <ol class="list-decimal pl-6 space-y-4">
           <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">
-            If you already have PearAI installed, simply go to "Help" at the top and search "Update". It will automatically update you to the newest version of PearAI.
+            If you already have VibeStudio installed, simply go to "Help" at the top and search "Update". It will automatically update you to the newest version of VibeStudio.
             <br/><br/>
-            Otherwise, download the new PearAI here: <a href="https://trypear.ai/download" class="text-primary-600 hover:underline break-all">https://trypear.ai/download</a>
+            Otherwise, download the new VibeStudio here: <a href="https://vibestudio.online/download" class="text-primary-600 hover:underline break-all">https://vibestudio.online/download</a>
           </li>
           <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Open up Inventory Settings (CMD/CTRL + Shift + 1).</li>
           <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Locate the Memory card in the inventory, and flick the toggle to on.</li>
-          <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">You're all set! PearAI Memory will now automatically get to know you as you interact with PearAI Chat. Note that you can access the Memory control panel to add, edit, or delete memories (CMD/CTRL + 4).</li>
+          <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">You're all set! VibeStudio Memory will now automatically get to know you as you interact with VibeStudio Chat. Note that you can access the Memory control panel to add, edit, or delete memories (CMD/CTRL + 4).</li>
         </ol>
       </section>
       &nbsp;
-      <p class="text-sm text-gray-500 italic">*View PearAI Disclaimer page <a href="/disclaimer" class="text-primary-600 hover:underline">here</a>.</p>
+      <p class="text-sm text-gray-500 italic">*View VibeStudio Disclaimer page <a href="/disclaimer" class="text-primary-600 hover:underline">here</a>.</p>
     </article>`,
   },
   {
-    title: "PearAI Coding Agent — Powered By Roo Code / Cline*",
-    url: "/blog/pearai-coding-agent",
+    title: "VibeStudio Coding Agent — Powered By Roo Code / Cline*",
+    url: "/blog/vibestudio-coding-agent",
     excerpt:
-      "PearAI Coding Agent is a new feature that allows you to write code with PearAI Chat. It can intelligently write code based on your prompt and LLM response.",
+      "VibeStudio Coding Agent is a new feature that allows you to write code with VibeStudio Chat. It can intelligently write code based on your prompt and LLM response.",
     date: "2025-02-18",
     author: "Mohammed Abdelaziz, Nang",
     readingTime: "2 min",
@@ -1489,23 +1489,23 @@ export const posts = [
     content: `<article class="mx-auto max-w-4xl space-y-8 px-4 py-8 text-gray-800 dark:text-gray-200 sm:px-6 lg:px-8">
       <section class="space-y-6">
         <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">
-          We're thrilled to announce PearAI v1.8, featuring our groundbreaking PearAI Coding Agent! This new feature represents a significant leap forward in AI-assisted development, powered by Roo Code / Cline technology.
+          We're thrilled to announce VibeStudio v1.8, featuring our groundbreaking VibeStudio Coding Agent! This new feature represents a significant leap forward in AI-assisted development, powered by Roo Code / Cline technology.
         </p>
 
-        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">The PearAI Coding Agent is a powerful AI assistant that can directly interact with your development environment (with your explicit permission) to write code for you. Through an intelligent feedback loop, it understands your project context and can generate, modify, and improve code based on your requirements.</p>
+        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">The VibeStudio Coding Agent is a powerful AI assistant that can directly interact with your development environment (with your explicit permission) to write code for you. Through an intelligent feedback loop, it understands your project context and can generate, modify, and improve code based on your requirements.</p>
 
         <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">After extensive conversations with our pear users, we've discovered that many of our most engaged users are developers with less than 3 years of experience, primarily focused on building personal projects and software. This insight has shaped our vision moving forward.</p>
 
         <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">We believe that AI will significantly lower the barriers to software development, making personal software as commonplace as personal computers. With this vision in mind, we're focusing our efforts on becoming the best AI code editor for project building, while maintaining support for all development use cases.</p>
 
-        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Try it out for free here: <a href="https://trypear.ai" class="text-primary-600 hover:underline">https://trypear.ai</a></p>
+        <p class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Try it out for free here: <a href="https://vibestudio.online" class="text-primary-600 hover:underline">https://vibestudio.online</a></p>
 
         <h2 class="text-xl font-bold text-primary-600 dark:text-primary-400 sm:text-2xl">Quick Demo</h2>
         <div class="relative w-full" style="padding-top: 56.25%">
           <iframe
             class="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/wcaWUeaeqiA"
-            title="PearAI Coding Agent Demo"
+            title="VibeStudio Coding Agent Demo"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -1514,21 +1514,21 @@ export const posts = [
         </div>
 
         <h2 class="text-xl font-bold text-primary-600 dark:text-primary-400 sm:text-2xl">
-          How to Get Started with PearAI v1.8
+          How to Get Started with VibeStudio v1.8
         </h2>
         <ol class="list-decimal pl-6 space-y-4">
           <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">
-            If you already have PearAI installed, simply go to "Help" at the top and search "Update". It will automatically update you to v1.8.
+            If you already have VibeStudio installed, simply go to "Help" at the top and search "Update". It will automatically update you to v1.8.
             <br/><br/>
-            New users can download PearAI here: <a href="https://trypear.ai/download" class="text-primary-600 hover:underline break-all">https://trypear.ai/download</a>
+            New users can download VibeStudio here: <a href="https://vibestudio.online/download" class="text-primary-600 hover:underline break-all">https://vibestudio.online/download</a>
           </li>
           <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Open up Inventory Settings (CMD/CTRL + Shift + 1).</li>
           <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">Find the Coding Agent card in the inventory and enable it.</li>
-          <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">You're ready to go! Start by describing what you want to build, and watch as PearAI Coding Agent brings your ideas to life.</li>
+          <li class="text-base font-light leading-relaxed sm:text-lg md:text-xl">You're ready to go! Start by describing what you want to build, and watch as VibeStudio Coding Agent brings your ideas to life.</li>
         </ol>
       </section>
       &nbsp;
-      <p class="text-sm text-gray-500 italic">*View PearAI Disclaimer page <a href="/disclaimer" class="text-primary-600 hover:underline">here</a>.</p>
+      <p class="text-sm text-gray-500 italic">*View VibeStudio Disclaimer page <a href="/disclaimer" class="text-primary-600 hover:underline">here</a>.</p>
     </article>`,
   },
 ];

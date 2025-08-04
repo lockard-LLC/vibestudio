@@ -11,7 +11,7 @@
   "rewrites": [
     {
       "source": "/docs/:path*",
-      "destination": "https://documentation-page-pearai-landing-chi.vercel.app/:path*"
+      "destination": "https://docs.vibestudio.online/:path*"
     }
   ]
 }

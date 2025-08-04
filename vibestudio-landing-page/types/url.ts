@@ -1,7 +1,7 @@
 export type AllowedProtocol =
   | "http:"
   | "https:"
-  | "pearai:"
+  | "vibestudio:"
   | "vscode:"
   | "code-oss:"
   | "vscode-insiders:";

@@ -1670,20 +1670,20 @@
 	"cesSurveyUrl": "https://aka.ms/new-to-vscode-feedback",
 	"checksumFailMoreInfoUrl": "https://go.microsoft.com/fwlink/?LinkId=828886",
 	"settingsSearchUrl": "https://bingsettingssearch.trafficmanager.net/api/Search",
-	"pearAIHomepageURL": "https://trypear.ai",
-	"pearAILinks": {
-		"homepage": "https://trypear.ai",
-		"dashboard": "https://trypear.ai/dashboard",
-		"faq": "https://trypear.ai/faq",
-		"docs": "https://trypear.ai/docs",
-		"github": "https://github.com/orgs/trypear/repositories",
-		"changelog": "https://trypear.ai/changelog"
+	"vibeStudioHomepageURL": "https://vibestudio.online",
+	"vibeStudioLinks": {
+		"homepage": "https://vibestudio.online",
+		"dashboard": "https://vibestudio.online/dashboard",
+		"faq": "https://vibestudio.online/faq",
+		"docs": "https://vibestudio.online/docs",
+		"github": "https://github.com/lockard-LLC/vibestudio",
+		"changelog": "https://vibestudio.online/changelog"
 	},
 	"extensionsEnabledWithApiProposalVersion": [
 		"GitHub.copilot-chat"
 	],
 	"extensionEnabledApiProposals": {
-		"pearai.pearai": [
+		"vibestudio.vibestudio": [
 			"editorInsets"
 		],
 		"ms-vscode.vscode-selfhost-test-provider": [
@@ -2148,7 +2148,7 @@
 		}
 	},
 	"linkProtectionTrustedDomains": [
-		"https://trypear.ai",
+		"https://vibestudio.online",
 		"https://*.visualstudio.com",
 		"https://*.microsoft.com",
 		"https://aka.ms",

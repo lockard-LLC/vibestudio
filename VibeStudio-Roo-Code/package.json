@@ -3,7 +3,7 @@
 	"displayName": "VibeStudio Roo Code / Cline",
 	"description": "VibeStudio's integration of Roo Code / Cline, a coding agent.",
 	"publisher": "VibeStudio",
-	"icon": "assets/icons/pear.png",
+	"icon": "assets/icons/vibestudio.png",
 	"version": "3.10.2",
 	"galleryBanner": {
 		"color": "#617A91",
@@ -64,17 +64,17 @@
 		"viewsContainers": {
 			"auxiliarybar": [
 				{
-					"id": "pearai-roo-cline",
-					"title": "PearAI Agent",
-					"icon": "assets/icons/pear.png"
+					"id": "vibestudio-roo-cline",
+					"title": "VibeStudio Agent",
+					"icon": "assets/icons/vibestudio.png"
 				}
 			]
 		},
 		"views": {
-			"pearai-roo-cline": [
+			"vibestudio-roo-cline": [
 				{
 					"type": "webview",
-					"id": "pearai-roo-cline.SidebarProvider",
+					"id": "vibestudio-roo-cline.SidebarProvider",
 					"name": ""
 				}
 			]
@@ -228,37 +228,37 @@
 				{
 					"command": "roo-cline.plusButtonClicked",
 					"group": "navigation@1",
-					"when": "view == pearai-roo-cline.SidebarProvider"
+					"when": "view == vibestudio-roo-cline.SidebarProvider"
 				},
 				{
 					"command": "roo-cline.promptsButtonClicked",
 					"group": "navigation@2",
-					"when": "view == pearai-roo-cline.SidebarProvider"
+					"when": "view == vibestudio-roo-cline.SidebarProvider"
 				},
 				{
 					"command": "roo-cline.mcpButtonClicked",
 					"group": "navigation@3",
-					"when": "view == pearai-roo-cline.SidebarProvider"
+					"when": "view == vibestudio-roo-cline.SidebarProvider"
 				},
 				{
 					"command": "roo-cline.historyButtonClicked",
 					"group": "navigation@4",
-					"when": "view == pearai-roo-cline.SidebarProvider"
+					"when": "view == vibestudio-roo-cline.SidebarProvider"
 				},
 				{
 					"command": "roo-cline.popoutButtonClicked",
 					"group": "navigation@5",
-					"when": "view == pearai-roo-cline.SidebarProvider"
+					"when": "view == vibestudio-roo-cline.SidebarProvider"
 				},
 				{
 					"command": "roo-cline.settingsButtonClicked",
 					"group": "navigation@6",
-					"when": "view == pearai-roo-cline.SidebarProvider"
+					"when": "view == vibestudio-roo-cline.SidebarProvider"
 				},
 				{
 					"command": "roo-cline.helpButtonClicked",
 					"group": "navigation@7",
-					"when": "view == pearai-roo-cline.SidebarProvider"
+					"when": "view == vibestudio-roo-cline.SidebarProvider"
 				}
 			]
 		},

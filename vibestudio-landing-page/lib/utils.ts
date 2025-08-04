@@ -23,9 +23,9 @@ interface OSType {
 }
 
 const defaultMetadata = {
-  title: "PearAI - The AI Code Editor For Your Next Project",
+  title: "VibeStudio - The AI Mood Adaptive IDE For Your Next Project",
   description:
-    "PearAI is an open source AI code editor with powerful features like AI chat, PearAI Creator, and AI debugging to help you make what excites.",
+    "VibeStudio is an AI-powered mood adaptive development environment that brings your ideas to life with intelligent features and seamless workflow integration.",
 };
 
 export const normalizeDate = (dateString: string) => {
@@ -36,7 +36,7 @@ export const normalizeDate = (dateString: string) => {
 const allowedProtocols: AllowedProtocol[] = [
   "http:",
   "https:",
-  "pearai:",
+  "vibestudio:",
   "vscode:",
   "code-oss:",
   "vscode-insiders:",
@@ -59,15 +59,16 @@ export const constructMetadata = ({
   ogImage = "/images/og-image.png",
 }: MetadataProps) => {
   return {
-    metadataBase: new URL("https://trypear.ai/"),
-    title: title ? `${title} - PearAI` : defaultMetadata.title,
+    metadataBase: new URL("https://vibestudio.online/"),
+    title: title ? `${title} - VibeStudio` : defaultMetadata.title,
     description,
     keywords: [
-      "code editor",
-      "ai code editor",
-      "ai",
-      "pearai",
-      "open source code editor",
+      "ai ide",
+      "mood adaptive ide",
+      "ai development environment",
+      "vibestudio",
+      "ai-powered coding",
+      "intelligent code editor",
     ],
     alternates: {
       canonical,

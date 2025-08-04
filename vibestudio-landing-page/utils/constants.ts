@@ -10,14 +10,14 @@ export const TEST_MODE_ENABLED = ["true", "True", "TRUE"].includes(
   process.env.NEXT_PUBLIC_TEST_MODE_ENABLED ?? "",
 );
 
-export const BUNNY_CDN_HOST = "https://pearai.b-cdn.net";
+export const BUNNY_CDN_HOST = "https://vibestudio.b-cdn.net";
 
 export const MACOS_SILICON_APP_URL =
-  "https://pearai-app.nyc3.digitaloceanspaces.com/PearAI-latest/darwin-arm64/PearAI-Installer.dmg";
+  "https://vibestudio-app.nyc3.digitaloceanspaces.com/VibeStudio-latest/darwin-arm64/VibeStudio-Installer.dmg";
 export const MACOS_INTEL_APP_URL =
-  "https://pearai-app.nyc3.digitaloceanspaces.com/PearAI-latest/darwin-x64/PearAI-Installer.dmg";
+  "https://vibestudio-app.nyc3.digitaloceanspaces.com/VibeStudio-latest/darwin-x64/VibeStudio-Installer.dmg";
 export const WINDOWS_APP_URL =
-  "https://pearai-app.nyc3.digitaloceanspaces.com/PearAI-latest/windows-x64/PearAISetup.exe";
+  "https://vibestudio-app.nyc3.digitaloceanspaces.com/VibeStudio-latest/windows-x64/VibeStudioSetup.exe";
 
 export const DOWNLOAD_URLS = {
   "darwin-arm64": MACOS_SILICON_APP_URL, // MacOS Apple Silicon
@@ -33,7 +33,7 @@ export const getDownloadUrl = (osType: keyof typeof DOWNLOAD_URLS) => {
   return DOWNLOAD_URLS[osType] || null;
 };
 
-export const CONTACT_EMAIL = "pear@trypear.ai";
+export const CONTACT_EMAIL = "hello@vibestudio.online";
 
 const NEXT_PUBLIC_STRIPE_WAITLIST_PRICE_ID = "price_1PZ9X608N4O93LU5yqMbGDtu";
 const NEXT_PUBLIC_STRIPE_WAITLIST_PRICE_ID_TEST =
@@ -138,7 +138,7 @@ export const PRICING_TIERS: {
       description:
         "Get the monthly subscription, and we'll take care of you. 😎",
       features: [
-        "Full access to PearAI Router & Hosted Servers",
+        "Full access to VibeStudio AI Router & Hosted Servers",
         "custom-standard",
         "Full privacy: zero data retention policy with Anthropic",
         "Direct customer support by the founders and contributors",
@@ -224,7 +224,7 @@ export const footerSections = [
       },
       {
         text: "Email",
-        href: "mailto:pear@trypear.ai",
+        href: "mailto:hello@vibestudio.online",
       },
       {
         text: "Discord",
@@ -240,7 +240,7 @@ export const HCAPTCHA_SITE_KEY_PUBLIC = "fa6c8c52-7694-45b0-97ec-7814072256b4";
 export const socialMediaLinks = [
   {
     icon: GitHubLogo,
-    link: "https://github.com/trypear/pearai-master",
+    link: "https://github.com/lockard-LLC/vibestudio",
   },
   {
     icon: DiscordLogo,
@@ -248,10 +248,10 @@ export const socialMediaLinks = [
   },
   {
     icon: TwitterLogo,
-    link: "https://x.com/trypearai",
+    link: "https://x.com/vibestudioai",
   },
   {
     icon: LinkedInLogo,
-    link: "https://www.linkedin.com/company/trypearai",
+    link: "https://www.linkedin.com/company/vibestudio",
   },
 ];

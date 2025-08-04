@@ -13,18 +13,15 @@ This guide will walk you through deploying the VibeStudio landing page to Vercel
 ### Method 1: Vercel Dashboard (Recommended)
 
 1. **Go to Vercel Dashboard**
-
    - Visit [vercel.com/dashboard](https://vercel.com/dashboard)
    - Click "New Project"
 
 2. **Import Repository**
-
    - Connect your GitHub account if not already connected
    - Select your repository containing the VS landing page
    - Click "Import"
 
 3. **Configure Project**
-
    - **Framework Preset**: Next.js (auto-detected)
    - **Root Directory**: `vs-lp` (if deploying from monorepo)
    - **Build Command**: `yarn build` (auto-detected)
@@ -42,6 +39,8 @@ This guide will walk you through deploying the VibeStudio landing page to Vercel
    PEARAI_SERVER_URL=your_pearai_server_url
    NEXT_PUBLIC_TEST_MODE_ENABLED=false
    GITHUB_TOKEN=your_github_token
+
+   ```
 
 5. **Deploy**
    - Click "Deploy"

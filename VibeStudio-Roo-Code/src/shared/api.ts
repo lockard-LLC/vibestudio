@@ -16,7 +16,7 @@ export type ApiProvider =
 	| "mistral"
 	| "unbound"
 	| "requesty"
-	| "pearai"
+	| "vibestudio"
 	| "human-relay"
 	| "fake-ai"
 
@@ -77,10 +77,10 @@ export interface ApiHandlerOptions {
 	requestyModelInfo?: ModelInfo
 	modelTemperature?: number | null
 	modelMaxTokens?: number
-	pearaiApiKey?: string
-	pearaiBaseUrl?: string
-	pearaiModelId?: string
-	pearaiModelInfo?: ModelInfo
+	vibestudioApiKey?: string
+	vibestudioBaseUrl?: string
+	vibestudioModelId?: string
+	vibestudioModelInfo?: ModelInfo
 	modelMaxThinkingTokens?: number
 	fakeAi?: unknown
 }
@@ -1043,14 +1043,14 @@ export const unboundDefaultModelInfo: ModelInfo = {
 }
 // CHANGE AS NEEDED FOR TESTING
 // PROD:
-export const PEARAI_URL = "https://stingray-app-gb2an.ondigitalocean.app/pearai-server-api2/integrations/cline"
+export const VIBESTUDIO_URL = "https://api.vibestudio.online/vibestudio-server-api2/integrations/cline"
 // DEV:
-// export const PEARAI_URL = "http://localhost:8000/integrations/cline"
+// export const VIBESTUDIO_URL = "http://localhost:8000/integrations/cline"
 
-// PearAI
-export type PearAiModelId = keyof typeof pearAiModels
-export const pearAiDefaultModelId: PearAiModelId = "pearai-model"
-export const pearAiDefaultModelInfo: ModelInfo = {
+// VibeStudio
+export type VibeStudioModelId = keyof typeof vibestudioModels
+export const vibestudioDefaultModelId: VibeStudioModelId = "vibestudio-model"
+export const vibestudioDefaultModelInfo: ModelInfo = {
 	maxTokens: 8192,
 	contextWindow: 200_000,
 	supportsImages: true,
@@ -1060,11 +1060,11 @@ export const pearAiDefaultModelInfo: ModelInfo = {
 	cacheWritesPrice: 3.75,
 	cacheReadsPrice: 0.3,
 	description:
-		"PearAI Model automatically routes you to the most best / most suitable model on the market. Recommended for most users.",
+		"VibeStudio Model automatically routes you to the most suitable AI model based on your mood and project context. Recommended for most users.",
 }
 
-export const pearAiModels = {
-	"pearai-model": {
+export const vibestudioModels = {
+	"vibestudio-model": {
 		maxTokens: 8192,
 		contextWindow: 200_000,
 		supportsImages: true,
@@ -1074,6 +1074,6 @@ export const pearAiModels = {
 		cacheWritesPrice: 3.75,
 		cacheReadsPrice: 0.3,
 		description:
-			"PearAI Model automatically routes you to the most best / most suitable model on the market. Recommended for most users.",
+			"VibeStudio Model automatically routes you to the most suitable AI model based on your mood and project context. Recommended for most users.",
 	},
 } as const satisfies Record<string, ModelInfo>

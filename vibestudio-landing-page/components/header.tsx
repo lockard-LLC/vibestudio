@@ -1,6 +1,6 @@
 import { ReactNode, forwardRef, ComponentPropsWithoutRef } from "react";
 import Link from "next/link";
-import PearDark from "./ui/PearDark.svg";
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -98,10 +98,18 @@ export default async function Header() {
           <Link
             href="/"
             className="flex flex-shrink-0 items-center"
-            aria-label="PearAI Home"
+            aria-label="VibeStudio Home"
           >
-            <PearDark />
-            <div className="ml-1 mt-[2px] text-xl font-semibold">PearAI</div>
+            <Image
+              src="/images/vibestudio-logo.png"
+              alt="VibeStudio Logo"
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
+            <div className="ml-1 mt-[2px] text-xl font-semibold tracking-tight">
+              VibeStudio
+            </div>
           </Link>
           <nav className="ml-4 hidden md:block" aria-label="Main menu">
             <NavigationMenu>
@@ -109,17 +117,16 @@ export default async function Header() {
                 <DropdownNavItem trigger="Resources">
                   <ul className="grid w-[400px] gap-3 bg-background p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     <ListItem href="/about" title="About">
-                      Learn more about PearAI
+                      Discover the AI-powered mood adaptive IDE
                     </ListItem>
                     <ListItem href="/blog" title="Blog">
-                      Read insights on PearAI&apos;s development by our
-                      contributors
+                      Insights on AI development and productivity
                     </ListItem>
                     <ListItem href="/faq" title="FAQ">
-                      Frequently asked questions about PearAI
+                      Everything you need to know about VibeStudio
                     </ListItem>
                     <ListItem href="/changelog" title="Changelog">
-                      See what&apos;s new in PearAI
+                      Latest features and improvements
                     </ListItem>
                     <ListItem href="/beta" title="Beta">
                       Download the latest beta version
@@ -132,20 +139,20 @@ export default async function Header() {
                       href="/programs/oss-contributor-benefit"
                       title="OSS Contributor Program"
                     >
-                      Contribute to PearAI and get rewards!
+                      Contribute to VibeStudio and get exclusive benefits!
                     </ListItem>
                     <ListItem
                       href="/programs/beta-tester"
                       title="Beta Tester Program"
                     >
-                      Join PearAI Beta Tester Program for free PearAI
-                      subscription and more!
+                      Join our Beta Program for early access and premium
+                      features!
                     </ListItem>
                   </ul>
                 </DropdownNavItem>
                 <NavItem href="/pricing">Pricing</NavItem>
                 <NavItem
-                  href="https://github.com/trypear/pearai-master"
+                  href="https://github.com/lockard-LLC/vibestudio"
                   target="_blank"
                 >
                   GitHub
