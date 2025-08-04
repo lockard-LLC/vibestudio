@@ -78,7 +78,6 @@ export default async function Header() {
   const supabase = createClient();
   const {
     data: { user },
-    error,
   } = await supabase.auth.getUser();
 
   const handleSignOut = async () => {
@@ -101,7 +100,7 @@ export default async function Header() {
             aria-label="VibeStudio Home"
           >
             <Image
-              src="/images/vibestudio-logo.png"
+              src="/images/vibestudio-logo.svg"
               alt="VibeStudio Logo"
               width={32}
               height={32}

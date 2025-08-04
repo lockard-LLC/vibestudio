@@ -1,159 +1,196 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <div align="center">
-    <img src="components/ui/PearHeroLogo.svg" alt="VibeStudio Logo" />
-  </div>
-  <h3 align="center">VibeStudio Landing Page</h3>
+  <img src="components/ui/PearHeroLogo.svg" alt="VibeStudio Logo" width="150" />
+
+  <h1 align="center">VibeStudio</h1>
+
   <p align="center">
-    The AI-powered development environment that curates cutting-edge tools
-    <br />
-    <a href="https://vibestudio.online"><strong>Explore the Website »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/lockard-LLC/vibestudio/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/lockard-LLC/vibestudio/issues">Request Feature</a>
+    🌈 A mood-adaptive, AI-powered web IDE <br />
+    Code the vibe. Launch your vision.
+  </p>
+
+  <p align="center">
+    <a href="https://vibestudio.online"><strong>🌐 Visit the Website »</strong></a> ·
+    <a href="https://github.com/lockard-LLC/vibestudio/issues">🐛 Report Bug</a> ·
+    <a href="https://github.com/lockard-LLC/vibestudio/issues">💡 Request Feature</a>
   </p>
 </div>
 
 ---
 
-## Table of Contents
+## 📚 Table of Contents
 
-- [About the Project](#about-the-project)
-  - [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Environment Variables](#environment-variables-description)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+- [📌 About the Project](#-about-the-project)
+- [🛠️ Built With](#-built-with)
+- [🚀 Getting Started](#-getting-started)
+- [🧪 Usage](#-usage)
+- [🤝 Contributing](#-contributing)
+- [📬 Contact](#-contact)
+- [🎓 Acknowledgements](#-acknowledgements)
 
-## About The Project
+---
 
-This is the landing page for [VibeStudio:](https://vibestudio.online) the AI-powered development environment that curates leading, cutting-edge AI tools in one unified interface, allowing users to effortlessly switch between tools without hunting for alternatives.
+## 📌 About the Project
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[VibeStudio](https://vibestudio.online) is a browser-native IDE that adapts to your energy, style, and workflow. Think VSCode.dev — but built for vibes.
 
-### Built With
+✨ **Key Features:**
+- 🎨 Mood-adaptive interface
+- 🧠 AI-enhanced animated cursor
+- 🌊 UI inspired by Windsurf
+- ⚡ Blazing-fast in-browser code editing
+- 🧩 Seamless tool switching
 
-- [![nextjs][nextjs]][nextjs-url]
-- [![vercel][vercel]][vercel-url]
-- [![tailwindcss][tailwindcss]][tailwindcss-url]
-- [![typescript][typescript]][typescripturl]
+Built with love for creators, learners, and indie devs.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
 
-## Getting Started
+---
 
-To get a local copy up and running follow these simple steps.
+## 🛠️ Built With
 
-### Prerequisites
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-%23000000?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-%231a202c?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-%23000000?style=for-the-badge&logo=vercel&logoColor=white" />
+</div>
 
-- Yarn
-  ```sh
-  npm install --global yarn
-  ```
+- 🌀 **Framer Motion** – Smooth transitions and motion magic
+- 🧩 **ShadCN UI** – Headless UI built on Radix
+- ✨ **Lucide Icons** – Beautiful icon system
+- 🌗 **next-themes** – Dark/light/vibe mode switching
 
-### Installation
+<p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
 
-1.  Clone the repo
-    ```sh
-    git clone https://github.com/lockard-LLC/vibestudio.git
-    cd vibestudio/vs-lp
-    ```
-2.  Install NPM packages
-    ```sh
-    yarn install
-    ```
-    <p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
 
-### Project Configuration
+## 🚀 Getting Started
 
-This project requires environment variables to be set up in a `.env.local` file for proper configuration and operation. Below are the required environment variables and instructions on how to set them up.
+### 🔧 Prerequisites
 
-### Required Environment Variables
+- [Yarn](https://classic.yarnpkg.com/lang/en/)
+```bash
+npm install --global yarn
+````
 
-1. `NEXT_PUBLIC_SUPABASE_URL`
-2. `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+### 📥 Installation
 
-### Environment Variables Description
+1. Clone the repository
 
-- **NEXT_PUBLIC_SUPABASE_URL**: This is the URL of your Supabase project.
+```bash
+git clone https://github.com/lockard-LLC/vibestudio.git
+cd vibestudio/vs-lp
+```
 
-  Example: `NEXT_PUBLIC_SUPABASE_URL=https://xyzcompany.supabase.co`
+2. Install dependencies
 
-- **NEXT_PUBLIC_SUPABASE_ANON_KEY**: This is the anonymous public key for your Supabase project. This key allows your frontend application to interact with the Supabase backend.
+```bash
+yarn install
+```
 
-  Example: `NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key`
+3. Start the development server
 
-- **NEXT_PUBLIC_VERCEL_URL**: This is the URL to which users will be redirected after certain actions, such as authentication. During local development, this is typically `http://localhost:3000`. For Vercel preview/dev deployments, it will be whatever URL Vercel generates. For production, we should use `NEXT_PUBLIC_SITE_URL` instead. Both `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_VERCEL_URL` are auto-generated by Vercel, so no need to worry about it.
+```bash
+yarn dev
+```
 
-  Example: `NEXT_PUBLIC_REDIRECT_URL=http://localhost:3000`
+4. Visit `http://localhost:3000` in your browser
 
-## Usage
+<p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
 
-To run the project locally:
+---
 
-1. Start the development server
-   ```sh
-   yarn dev
-   ```
-2. Visit `http://localhost:3000` in your browser.
+## 🔐 Environment Variables
 
-### Recommended Extensions
+Create a `.env.local` file in the root of the repo:
 
-- Prettier
-  - Open your command palette, choose your default formatter to be Prettier, and enable format on save.
-- ESLint
-  - When you push a commit, we have a pre-commit hook that automatically runs prettier, eslint, and builds your project to make sure everything is ok.
-- JavaScript and TypeScript Nightly
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+NEXT_PUBLIC_REDIRECT_URL=http://localhost:3000
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### 🌱 Variable Descriptions
 
-## Contributing
+* `NEXT_PUBLIC_SUPABASE_URL` – Your Supabase project URL
+* `NEXT_PUBLIC_SUPABASE_ANON_KEY` – Your anonymous Supabase API key
+* `NEXT_PUBLIC_REDIRECT_URL` – Local or deployment callback domain
 
-Contributions are what make the open source community such an amazing place to be, learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+These are required for authentication and backend integration.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request.
+<p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
 
-1. Fork the repo
-2. Clone the repo
-   ```sh
-   git clone https://github.com/<USERNAME>/vibestudio.git
-   ```
-3. Navigate to the project directory
-   ```sh
-   cd vibestudio/vs-lp
-   ```
-4. Create a new branch
-   ```sh
-   git checkout -b my-new-branch
-   ```
-5. Install dependencies
-   ```sh
-   yarn install
-   ```
+---
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 🧪 Usage
 
-## Contact
+### 🧬 Run Locally
 
-- [Discord](https://discord.com/invite/7QMraJUsQt)
-- Website - [vibestudio.online](https://vibestudio.online)
-- GitHub - [lockard-LLC/vibestudio](https://github.com/lockard-LLC/vibestudio)
+```bash
+yarn dev
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Then open your browser to:
 
-[typescript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
-[typescripturl]: https://www.typescriptlang.org/
-[vercel]: https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white
-[vercel-url]: https://vercel.com/
-[nextjs]: https://img.shields.io/badge/Next.js-%23000000.svg?style=for-the-badge&logo=next.js&logoColor=white
-[nextjs-url]: https://nextjs.org/
-[tailwindcss]: https://img.shields.io/badge/Tailwind_CSS-%231a202c.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
-[tailwindcss-url]: https://tailwindcss.com/
-[discord]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=discord&logoColor=white
+```
+http://localhost:3000
+```
+
+### 💡 Recommended VSCode Extensions
+
+* Prettier — Format on save
+* ESLint — Code linting
+* TypeScript Nightly — Latest language features
+
+<p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
+
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open source world 🌍 amazing. All pull requests are welcome!
+
+### 🔁 How to Contribute
+
+```bash
+# Fork the repo and clone
+git clone https://github.com/<your-username>/vibestudio.git
+cd vibestudio/vs-lp
+
+# Create a feature branch
+git checkout -b feature/my-feature
+
+# Make your changes
+yarn install
+yarn dev
+
+# Push and open PR
+git push origin feature/my-feature
+```
+
+<p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
+
+---
+
+## 📬 Contact
+
+Have a question or want to collaborate?
+
+* 🧠 Discord: [Join the community](https://discord.com/invite/7QMraJUsQt)
+* 🌐 Website: [vibestudio.online](https://vibestudio.online)
+* 🐙 GitHub: [lockard-LLC/vibestudio](https://github.com/lockard-LLC/vibestudio)
+
+<p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
+
+---
+
+## 🎓 Acknowledgements
+
+* [Pear AI](https://github.com/trypear/pear-landing-page) — Original template inspiration
+* [Monaco Editor](https://github.com/microsoft/monaco-editor) — Planned IDE foundation
+* [StackBlitz WebContainers](https://webcontainers.io/) — Vision inspiration
+
+<p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
+```

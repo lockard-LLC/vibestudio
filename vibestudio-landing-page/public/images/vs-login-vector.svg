@@ -1,0 +1,71 @@
+<svg width="380" height="300" viewBox="0 0 380 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="loginGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="authGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="secureGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="shieldGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.2" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Login Interface Background -->
+  <rect x="50" y="60" width="280" height="180" rx="20" fill="url(#authGradient)" opacity="0.1"/>
+  <rect x="52" y="62" width="276" height="176" rx="18" stroke="url(#loginGradient)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Security Shield -->
+  <path d="M190 20 L220 35 L220 70 Q220 85, 190 95 Q160 85, 160 70 L160 35 Z" fill="url(#shieldGradient)"/>
+  <path d="M190 30 L210 40 L210 65 Q210 75, 190 82 Q170 75, 170 65 L170 40 Z" fill="url(#loginGradient)" opacity="0.8"/>
+  <circle cx="190" cy="57" r="8" fill="white" opacity="0.9"/>
+  <path d="M185 57 L188 60 L195 53" stroke="url(#loginGradient)" stroke-width="2" fill="none"/>
+  
+  <!-- Login Form -->
+  <rect x="80" y="100" width="220" height="25" rx="12" fill="white" opacity="0.8"/>
+  <rect x="85" y="105" width="30" height="3" rx="1.5" fill="url(#loginGradient)" opacity="0.4"/>
+  <text x="90" y="118" font-size="8" fill="url(#loginGradient)" opacity="0.6" font-family="monospace">Username</text>
+  
+  <rect x="80" y="140" width="220" height="25" rx="12" fill="white" opacity="0.8"/>
+  <rect x="85" y="145" width="25" height="3" rx="1.5" fill="url(#loginGradient)" opacity="0.4"/>
+  <text x="90" y="158" font-size="8" fill="url(#loginGradient)" opacity="0.6" font-family="monospace">Password</text>
+  
+  <!-- Biometric Login Options -->
+  <circle cx="120" cy="190" r="15" fill="url(#secureGradient)" opacity="0.7"/>
+  <path d="M115 185 Q120 180, 125 185 Q120 190, 115 185" fill="white" opacity="0.8"/>
+  <text x="120" y="212" text-anchor="middle" font-size="6" fill="url(#loginGradient)" opacity="0.6">Face ID</text>
+  
+  <circle cx="190" cy="190" r="15" fill="url(#secureGradient)" opacity="0.7"/>
+  <rect x="185" y="185" width="10" height="10" rx="2" fill="white" opacity="0.8"/>
+  <text x="190" y="212" text-anchor="middle" font-size="6" fill="url(#loginGradient)" opacity="0.6">Touch ID</text>
+  
+  <circle cx="260" cy="190" r="15" fill="url(#secureGradient)" opacity="0.7"/>
+  <circle cx="260" cy="190" r="6" fill="white" opacity="0.8"/>
+  <circle cx="260" cy="190" r="3" fill="url(#loginGradient)" opacity="0.8"/>
+  <text x="260" y="212" text-anchor="middle" font-size="6" fill="url(#loginGradient)" opacity="0.6">Mood Auth</text>
+  
+  <!-- Login Button -->
+  <rect x="130" y="230" width="120" height="35" rx="17" fill="url(#loginGradient)" opacity="0.8"/>
+  <text x="190" y="250" text-anchor="middle" font-size="10" fill="white" font-family="monospace" font-weight="bold">Login to VibeStudio</text>
+  
+  <!-- Security Indicators -->
+  <circle cx="320" cy="80" r="4" fill="#4ecdc4" opacity="0.8"/>
+  <circle cx="330" cy="90" r="3" fill="#ff6b6b" opacity="0.8"/>
+  <circle cx="340" cy="100" r="3.5" fill="#45b7d1" opacity="0.8"/>
+  
+  <!-- Connection Lines -->
+  <path d="M320 80 Q325 85, 330 90 Q335 95, 340 100" stroke="url(#authGradient)" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Mood Adaptive Background -->
+  <circle cx="50" cy="50" r="20" fill="#ff6b6b" opacity="0.1"/>
+  <circle cx="330" cy="30" r="25" fill="#4ecdc4" opacity="0.1"/>
+  <circle cx="30" cy="250" r="30" fill="#45b7d1" opacity="0.1"/>
+  <circle cx="350" cy="270" r="20" fill="#96ceb4" opacity="0.1"/>
+</svg>

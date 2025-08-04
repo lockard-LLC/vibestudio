@@ -1,0 +1,93 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="routerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="networkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="hubGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Central AI Router Hub -->
+  <circle cx="200" cy="150" r="50" fill="url(#hubGradient)"/>
+  <circle cx="200" cy="150" r="35" fill="url(#routerGradient)" opacity="0.8"/>
+  <circle cx="200" cy="150" r="20" fill="white" opacity="0.9"/>
+  
+  <!-- VibeStudio Core -->
+  <circle cx="200" cy="150" r="12" fill="url(#networkGradient)"/>
+  <circle cx="200" cy="150" r="6" fill="white" opacity="0.8"/>
+  
+  <!-- AI App Nodes -->
+  <circle cx="80" cy="80" r="25" fill="url(#dataGradient)" opacity="0.8"/>
+  <circle cx="320" cy="80" r="25" fill="url(#dataGradient)" opacity="0.8"/>
+  <circle cx="80" cy="220" r="25" fill="url(#dataGradient)" opacity="0.8"/>
+  <circle cx="320" cy="220" r="25" fill="url(#dataGradient)" opacity="0.8"/>
+  
+  <!-- App Icons -->
+  <rect x="70" y="70" width="20" height="20" rx="5" fill="white" opacity="0.8"/>
+  <rect x="74" y="74" width="4" height="4" rx="1" fill="#ff6b6b"/>
+  <rect x="80" y="74" width="6" height="2" rx="1" fill="#4ecdc4"/>
+  <rect x="74" y="80" width="8" height="2" rx="1" fill="#45b7d1"/>
+  <rect x="74" y="84" width="6" height="2" rx="1" fill="#96ceb4"/>
+  
+  <rect x="310" y="70" width="20" height="20" rx="5" fill="white" opacity="0.8"/>
+  <circle cx="320" cy="80" r="6" fill="url(#networkGradient)" opacity="0.7"/>
+  <circle cx="320" cy="80" r="3" fill="white"/>
+  
+  <rect x="70" y="210" width="20" height="20" rx="5" fill="white" opacity="0.8"/>
+  <path d="M75 215 L80 220 L85 215 M80 220 L80 225" stroke="url(#routerGradient)" stroke-width="2" fill="none"/>
+  
+  <rect x="310" y="210" width="20" height="20" rx="5" fill="white" opacity="0.8"/>
+  <rect x="314" y="214" width="12" height="8" rx="2" fill="url(#dataGradient)" opacity="0.7"/>
+  <rect x="316" y="216" width="8" height="1" rx="0.5" fill="white"/>
+  <rect x="316" y="218" width="6" height="1" rx="0.5" fill="white"/>
+  <rect x="316" y="220" width="4" height="1" rx="0.5" fill="white"/>
+  
+  <!-- Connection Pathways -->
+  <path d="M105 80 Q150 50, 200 150" stroke="url(#networkGradient)" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M295 80 Q250 50, 200 150" stroke="url(#networkGradient)" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M105 220 Q150 250, 200 150" stroke="url(#networkGradient)" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M295 220 Q250 250, 200 150" stroke="url(#networkGradient)" stroke-width="3" fill="none" opacity="0.6"/>
+  
+  <!-- Data Flow Particles -->
+  <circle cx="130" cy="95" r="3" fill="#4ecdc4" opacity="0.8">
+    <animateMotion dur="3s" repeatCount="indefinite">
+      <path d="M0,0 Q70,-45 70,55"/>
+    </animateMotion>
+  </circle>
+  
+  <circle cx="270" cy="95" r="3" fill="#ff6b6b" opacity="0.8">
+    <animateMotion dur="3s" begin="1s" repeatCount="indefinite">
+      <path d="M0,0 Q-70,-45 -70,55"/>
+    </animateMotion>
+  </circle>
+  
+  <!-- Network Status Indicators -->
+  <rect x="160" y="30" width="80" height="20" rx="10" fill="url(#routerGradient)" opacity="0.7"/>
+  <text x="200" y="42" text-anchor="middle" font-size="8" fill="white" font-family="monospace">AI Network Active</text>
+  
+  <!-- Mood Adaptive Signals -->
+  <circle cx="50" cy="150" r="8" fill="url(#networkGradient)" opacity="0.6">
+    <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="350" cy="150" r="8" fill="url(#dataGradient)" opacity="0.6">
+    <animate attributeName="r" values="8;12;8" dur="2s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Secondary Connections -->
+  <path d="M80 105 Q50 150, 80 195" stroke="url(#networkGradient)" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M320 105 Q350 150, 320 195" stroke="url(#networkGradient)" stroke-width="2" fill="none" opacity="0.4"/>
+</svg>

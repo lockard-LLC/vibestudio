@@ -1,0 +1,116 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="moodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a9e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fecfef;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffeaa7;stop-opacity:0.6" />
+    </linearGradient>
+    <linearGradient id="ideGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="ambientGradient" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.05" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background Ambient -->
+  <rect width="800" height="500" fill="url(#ambientGradient)"/>
+  
+  <!-- Main IDE Interface -->
+  <rect x="50" y="50" width="700" height="400" rx="20" fill="white" opacity="0.95"/>
+  <rect x="52" y="52" width="696" height="396" rx="18" stroke="url(#heroGradient)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Title Bar -->
+  <rect x="50" y="50" width="700" height="40" rx="20" fill="url(#heroGradient)" opacity="0.8"/>
+  <rect x="50" y="70" width="700" height="20" fill="url(#heroGradient)" opacity="0.8"/>
+  
+  <!-- Window Controls -->
+  <circle cx="70" cy="70" r="6" fill="#ff6b6b" opacity="0.8"/>
+  <circle cx="90" cy="70" r="6" fill="#ffeaa7" opacity="0.8"/>
+  <circle cx="110" cy="70" r="6" fill="#4ecdc4" opacity="0.8"/>
+  
+  <!-- VibeStudio Logo in Title -->
+  <circle cx="400" cy="70" r="12" fill="url(#moodGradient)"/>
+  <circle cx="400" cy="70" r="8" fill="white" opacity="0.9"/>
+  <circle cx="400" cy="70" r="4" fill="url(#heroGradient)"/>
+  <text x="420" y="75" font-size="14" fill="white" font-family="monospace" font-weight="bold">VibeStudio</text>
+  
+  <!-- Side Panel -->
+  <rect x="60" y="100" width="150" height="340" rx="10" fill="url(#ideGradient)" opacity="0.1"/>
+  <rect x="62" y="102" width="146" height="336" rx="8" stroke="url(#ideGradient)" stroke-width="1" opacity="0.2"/>
+  
+  <!-- File Explorer -->
+  <rect x="70" y="110" width="130" height="20" rx="5" fill="url(#heroGradient)" opacity="0.6"/>
+  <text x="75" y="122" font-size="8" fill="white" font-family="monospace">📁 AI Projects</text>
+  
+  <rect x="80" y="140" width="110" height="15" rx="3" fill="white" opacity="0.8"/>
+  <text x="85" y="150" font-size="6" fill="url(#heroGradient)" font-family="monospace">🤖 mood-detector.ai</text>
+  
+  <rect x="80" y="160" width="110" height="15" rx="3" fill="white" opacity="0.8"/>
+  <text x="85" y="170" font-size="6" fill="url(#heroGradient)" font-family="monospace">💡 creative-assistant.js</text>
+  
+  <rect x="80" y="180" width="110" height="15" rx="3" fill="white" opacity="0.8"/>
+  <text x="85" y="190" font-size="6" fill="url(#heroGradient)" font-family="monospace">🎨 vibe-generator.py</text>
+  
+  <!-- Main Code Editor -->
+  <rect x="230" y="100" width="500" height="280" rx="10" fill="#1e1e1e" opacity="0.95"/>
+  <rect x="232" y="102" width="496" height="276" rx="8" stroke="url(#ideGradient)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Code Editor Tabs -->
+  <rect x="240" y="110" width="80" height="25" rx="5" fill="url(#moodGradient)" opacity="0.8"/>
+  <text x="245" y="125" font-size="7" fill="white" font-family="monospace">mood.ai</text>
+  
+  <rect x="325" y="110" width="80" height="25" rx="5" fill="white" opacity="0.3"/>
+  <text x="330" y="125" font-size="7" fill="url(#heroGradient)" font-family="monospace">app.js</text>
+  
+  <!-- Code Content -->
+  <text x="245" y="155" font-size="8" fill="#4ecdc4" font-family="monospace">class MoodAdaptiveIDE {</text>
+  <text x="255" y="170" font-size="8" fill="#ff6b6b" font-family="monospace">constructor() {</text>
+  <text x="265" y="185" font-size="8" fill="#ffeaa7" font-family="monospace">this.mood = new MoodDetector();</text>
+  <text x="265" y="200" font-size="8" fill="#96ceb4" font-family="monospace">this.theme = new AdaptiveTheme();</text>
+  <text x="265" y="215" font-size="8" fill="#45b7d1" font-family="monospace">this.ai = new CreativeAssistant();</text>
+  <text x="255" y="230" font-size="8" fill="#ff6b6b" font-family="monospace">}</text>
+  
+  <text x="255" y="250" font-size="8" fill="#4ecdc4" font-family="monospace">adaptToMood(userMood) {</text>
+  <text x="265" y="265" font-size="8" fill="#ffeaa7" font-family="monospace">this.theme.adjust(userMood);</text>
+  <text x="265" y="280" font-size="8" fill="#96ceb4" font-family="monospace">this.ai.generateIdeas(userMood);</text>
+  <text x="255" y="295" font-size="8" fill="#4ecdc4" font-family="monospace">}</text>
+  <text x="245" y="310" font-size="8" fill="#4ecdc4" font-family="monospace">}</text>
+  
+  <!-- AI Assistant Panel -->
+  <rect x="230" y="390" width="500" height="50" rx="10" fill="url(#moodGradient)" opacity="0.1"/>
+  <rect x="232" y="392" width="496" height="46" rx="8" stroke="url(#moodGradient)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- AI Chat -->
+  <circle cx="250" cy="415" r="8" fill="url(#heroGradient)" opacity="0.8"/>
+  <circle cx="250" cy="415" r="4" fill="white"/>
+  <text x="265" y="420" font-size="8" fill="url(#heroGradient)" font-family="monospace">AI: I notice you're in a creative mood! Let me suggest some vibrant themes...</text>
+  
+  <!-- Mood Indicators -->
+  <circle cx="680" cy="120" r="8" fill="#ff6b6b" opacity="0.8"/>
+  <text x="695" y="125" font-size="6" fill="#ff6b6b" font-family="monospace">Energetic</text>
+  
+  <circle cx="680" cy="140" r="8" fill="#4ecdc4" opacity="0.8"/>
+  <text x="695" y="145" font-size="6" fill="#4ecdc4" font-family="monospace">Focused</text>
+  
+  <circle cx="680" cy="160" r="8" fill="#45b7d1" opacity="0.8"/>
+  <text x="695" y="165" font-size="6" fill="#45b7d1" font-family="monospace">Creative</text>
+  
+  <!-- Floating Elements -->
+  <circle cx="150" cy="300" r="15" fill="url(#moodGradient)" opacity="0.3">
+    <animate attributeName="cy" values="300;280;300" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="600" cy="250" r="20" fill="url(#ideGradient)" opacity="0.2">
+    <animate attributeName="cy" values="250;230;250" dur="4s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Connection Lines -->
+  <path d="M400 415 Q500 400, 680 130" stroke="url(#moodGradient)" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+</svg>
