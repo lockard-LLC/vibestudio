@@ -47,10 +47,10 @@ export class TestingChatAgentToolContribution extends Disposable implements IWor
 		@IContextKeyService contextKeyService: IContextKeyService
 	) {
 		super();
-		const runInTerminalTool = instantiationService.createInstance(RunTestTool);
+		const runTestTool = instantiationService.createInstance(RunTestTool);
 		this._register(toolsService.registerToolData(RunTestTool.DEFINITION));
 		this._register(
-			toolsService.registerToolImplementation(RunTestTool.ID, runInTerminalTool)
+			toolsService.registerToolImplementation(RunTestTool.ID, runTestTool)
 		);
 
 		// todo@connor4312: temporary for 1.103 release during changeover
@@ -110,7 +110,7 @@ class RunTestTool implements IToolImpl {
 	) { }
 
 	async invoke(invocation: IToolInvocation, countTokens: CountTokensCallback, progress: ToolProgress, token: CancellationToken): Promise<IToolResult> {
-		const params: IRunTestToolParams = invocation.parameters;
+		const params: IRunTestToolParams = invocation.input.parameters;
 		const testFiles = await this._getFileTestsToRun(params, progress);
 		const testCases = await this._getTestCasesToRun(params, testFiles, progress);
 		if (!testCases.length) {
@@ -299,7 +299,7 @@ class RunTestTool implements IToolImpl {
 		return tests;
 	}
 
-	prepareToolInvocation(context: IToolInvocationPreparationContext, token: CancellationToken): Promise<IPreparedToolInvocation | undefined> {
+	prepareToolInvocation(context: IToolInvocationPreparationContext, token: CancellationToken): Promise<IPreparedToolInvocation> {
 		const params: IRunTestToolParams = context.parameters;
 		const title = localize('runTestTool.confirm.title', 'Allow test run?');
 		const inFiles = params.files?.map((f: string) => '`' + basename(f) + '`');

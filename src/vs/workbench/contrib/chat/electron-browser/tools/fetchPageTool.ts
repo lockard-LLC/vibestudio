@@ -46,7 +46,7 @@ export class FetchWebPageTool implements IToolImpl {
 	) { }
 
 	async invoke(invocation: IToolInvocation, _countTokens: CountTokensCallback, _progress: ToolProgress, token: CancellationToken): Promise<IToolResult> {
-		const urls = (invocation.parameters as { urls?: string[] }).urls || [];
+		const urls = (invocation.input.parameters as { urls?: string[] }).urls || [];
 		const { webUris, fileUris, invalidUris } = this._parseUris(urls);
 		const allValidUris = [...webUris.values(), ...fileUris.values()];
 
@@ -131,7 +131,7 @@ export class FetchWebPageTool implements IToolImpl {
 		};
 	}
 
-	async prepareToolInvocation(context: IToolInvocationPreparationContext, token: CancellationToken): Promise<IPreparedToolInvocation | undefined> {
+	async prepareToolInvocation(context: IToolInvocationPreparationContext, token: CancellationToken): Promise<IPreparedToolInvocation> {
 		const { webUris, fileUris, invalidUris } = this._parseUris(context.parameters.urls);
 
 		// Check which file URIs can actually be read

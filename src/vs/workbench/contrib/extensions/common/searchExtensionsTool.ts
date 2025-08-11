@@ -9,7 +9,7 @@ import { ThemeIcon } from '../../../../base/common/themables.js';
 import { localize } from '../../../../nls.js';
 import { SortBy } from '../../../../platform/extensionManagement/common/extensionManagement.js';
 import { EXTENSION_CATEGORIES } from '../../../../platform/extensions/common/extensions.js';
-import { CountTokensCallback, IToolData, IToolImpl, IToolInvocation, IToolResult, ToolDataSource, ToolProgress } from '../../chat/common/languageModelToolsService.js';
+import { CountTokensCallback, IPreparedToolInvocation, IToolData, IToolImpl, IToolInvocation, IToolInvocationPreparationContext, IToolResult, ToolDataSource, ToolProgress } from '../../chat/common/languageModelToolsService.js';
 import { ExtensionState, IExtension, IExtensionsWorkbenchService } from '../common/extensions.js';
 
 export const SearchExtensionsToolId = 'vscode_searchExtensions_internal';
@@ -73,7 +73,7 @@ export class SearchExtensionsTool implements IToolImpl {
 	) { }
 
 	async invoke(invocation: IToolInvocation, _countTokens: CountTokensCallback, _progress: ToolProgress, token: CancellationToken): Promise<IToolResult> {
-		const params = invocation.parameters as InputParams;
+		const params = invocation.input.parameters as InputParams;
 		if (!params.keywords?.length && !params.category && !params.ids?.length) {
 			return {
 				content: [{
@@ -146,5 +146,10 @@ export class SearchExtensionsTool implements IToolImpl {
 				output: [{ type: 'embed', isText: true, value: JSON.stringify(result.map(extension => extension.id)) }]
 			}
 		};
+	}
+
+	async prepareToolInvocation(context: IToolInvocationPreparationContext, token: CancellationToken): Promise<IPreparedToolInvocation> {
+		// TODO
+		return {};
 	}
 }

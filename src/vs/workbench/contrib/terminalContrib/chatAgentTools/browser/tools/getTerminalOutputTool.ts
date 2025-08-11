@@ -34,7 +34,7 @@ export interface IGetTerminalOutputInputParams {
 }
 
 export class GetTerminalOutputTool extends Disposable implements IToolImpl {
-	async prepareToolInvocation(context: IToolInvocationPreparationContext, token: CancellationToken): Promise<IPreparedToolInvocation | undefined> {
+	async prepareToolInvocation(context: IToolInvocationPreparationContext, token: CancellationToken): Promise<IPreparedToolInvocation> {
 		return {
 			invocationMessage: localize('bg.progressive', "Checking background terminal output"),
 			pastTenseMessage: localize('bg.past', "Checked background terminal output"),
@@ -42,7 +42,7 @@ export class GetTerminalOutputTool extends Disposable implements IToolImpl {
 	}
 
 	async invoke(invocation: IToolInvocation, _countTokens: CountTokensCallback, _progress: ToolProgress, token: CancellationToken): Promise<IToolResult> {
-		const args = invocation.parameters as IGetTerminalOutputInputParams;
+		const args = invocation.input.parameters as IGetTerminalOutputInputParams;
 		return {
 			content: [{
 				kind: 'text',

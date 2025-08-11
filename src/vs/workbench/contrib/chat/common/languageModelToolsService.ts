@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+import { VSBuffer } from '../../../../base/common/buffer.js';
 import { CancellationToken } from '../../../../base/common/cancellation.js';
 import { Event } from '../../../../base/common/event.js';
 import { IMarkdownString } from '../../../../base/common/htmlContent.js';
+import { Iterable } from '../../../../base/common/iterator.js';
 import { IJSONSchema } from '../../../../base/common/jsonSchema.js';
 import { Disposable, IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';
 import { Schemas } from '../../../../base/common/network.js';
+import { derived, IObservable, IReader, ITransaction, ObservableSet } from '../../../../base/common/observable.js';
 import { ThemeIcon } from '../../../../base/common/themables.js';
 import { URI } from '../../../../base/common/uri.js';
 import { Location } from '../../../../editor/common/languages.js';
+import { localize } from '../../../../nls.js';
 import { ContextKeyExpression } from '../../../../platform/contextkey/common/contextkey.js';
 import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
 import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
 import { IProgress } from '../../../../platform/progress/common/progress.js';
-import { IChatExtensionsContent, IChatToolInputInvocationData, IChatTodoListContent, type IChatTerminalToolInvocationData } from './chatService.js';
-import { PromptElementJSON, stringifyPromptElementJSON } from './tools/promptTsxTypes.js';
-import { VSBuffer } from '../../../../base/common/buffer.js';
-import { derived, IObservable, IReader, ITransaction, ObservableSet } from '../../../../base/common/observable.js';
-import { Iterable } from '../../../../base/common/iterator.js';
-import { localize } from '../../../../nls.js';
+import { IChatExtensionsContent, IChatTodoListContent, IChatToolInputInvocationData, type IChatTerminalToolInvocationData } from './chatService.js';
 import { LanguageModelPartAudience } from './languageModels.js';
+import { PromptElementJSON, stringifyPromptElementJSON } from './tools/promptTsxTypes.js';
 
 export interface IToolData {
 	id: string;
@@ -106,20 +106,26 @@ export namespace ToolDataSource {
 	}
 }
 
-export interface IToolInvocation {
-	callId: string;
-	toolId: string;
-	parameters: Object;
-	tokenBudget?: number;
-	context: IToolInvocationContext | undefined;
-	chatRequestId?: string;
-	chatInteractionId?: string;
-	toolSpecificData?: IChatTerminalToolInvocationData | IChatToolInputInvocationData | IChatExtensionsContent | IChatTodoListContent;
-	modelId?: string;
+export interface IInvokeToolInput {
+	readonly callId: string;
+	readonly toolId: string;
+	readonly parameters: Object;
+	readonly tokenBudget?: number;
+	readonly context: IToolInvocationContext | undefined;
+
+	// Plumbing telemetry data through from the extension
+	readonly chatRequestId?: string;
+}
+
+export interface IToolInvocation<T = void> {
+	readonly input: IInvokeToolInput;
+	readonly modelId?: string;
+	readonly toolSpecificData?: IChatTerminalToolInvocationData | IChatToolInputInvocationData | IChatExtensionsContent | IChatTodoListContent;
+	readonly preparedData: T;
 }
 
 export interface IToolInvocationContext {
-	sessionId: string;
+	readonly sessionId: string;
 }
 
 export function isToolInvocationContext(obj: any): obj is IToolInvocationContext {
@@ -127,10 +133,9 @@ export function isToolInvocationContext(obj: any): obj is IToolInvocationContext
 }
 
 export interface IToolInvocationPreparationContext {
-	parameters: any;
-	chatRequestId?: string;
-	chatSessionId?: string;
-	chatInteractionId?: string;
+	readonly parameters: any;
+	readonly chatRequestId?: string;
+	readonly chatSessionId?: string;
 }
 
 export type ToolInputOutputBase = {
@@ -227,9 +232,21 @@ export interface IPreparedToolInvocation {
 	toolSpecificData?: IChatTerminalToolInvocationData | IChatToolInputInvocationData | IChatExtensionsContent | IChatTodoListContent;
 }
 
-export interface IToolImpl {
-	invoke(invocation: IToolInvocation, countTokens: CountTokensCallback, progress: ToolProgress, token: CancellationToken): Promise<IToolResult>;
-	prepareToolInvocation?(context: IToolInvocationPreparationContext, token: CancellationToken): Promise<IPreparedToolInvocation | undefined>;
+// Note: preparedData only exists when T is not void
+export type IPreparedToolInvocationWithData<T> = IPreparedToolInvocation & ([T] extends [void] ? {} : { preparedData: T });
+
+export interface IToolImpl<TToolData = void> {
+	/**
+	 * This method is where the real work of the tool implementation should be done.
+	 */
+	invoke(invocation: IToolInvocation<TToolData>, countTokens: CountTokensCallback, progress: ToolProgress, token: CancellationToken): Promise<IToolResult>;
+
+	/**
+	 * Produce display metadata for the tool invocation. This should generally be fast so we can move on to showing a proper progress message in the chat view.
+	 * Can optionally return `preparedData` when data needs to be shared with the `invoke` call.
+	 * This should not do any work or have any side effects.
+	 */
+	prepareToolInvocation(context: IToolInvocationPreparationContext, token: CancellationToken): Promise<IPreparedToolInvocationWithData<TToolData>>;
 }
 
 export type IToolAndToolSetEnablementMap = ReadonlyMap<IToolData | ToolSet, boolean>;
@@ -293,12 +310,12 @@ export interface ILanguageModelToolsService {
 	_serviceBrand: undefined;
 	onDidChangeTools: Event<void>;
 	registerToolData(toolData: IToolData): IDisposable;
-	registerToolImplementation(id: string, tool: IToolImpl): IDisposable;
+	registerToolImplementation<T>(id: string, tool: IToolImpl<T>): IDisposable;
 	flushToolChanges(): void;
 	getTools(): Iterable<Readonly<IToolData>>;
 	getTool(id: string): IToolData | undefined;
 	getToolByName(name: string, includeDisabled?: boolean): IToolData | undefined;
-	invokeTool(invocation: IToolInvocation, countTokens: CountTokensCallback, token: CancellationToken): Promise<IToolResult>;
+	invokeTool(invocation: IInvokeToolInput, countTokens: CountTokensCallback, token: CancellationToken): Promise<IToolResult>;
 	setToolAutoConfirmation(toolId: string, scope: 'workspace' | 'profile' | 'memory', autoConfirm?: boolean): void;
 	resetToolAutoConfirmation(): void;
 	cancelToolCallsForRequest(requestId: string): void;
