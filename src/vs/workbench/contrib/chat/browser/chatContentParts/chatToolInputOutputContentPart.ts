@@ -7,7 +7,7 @@ import * as dom from '../../../../../base/browser/dom.js';
 import { ButtonWithIcon } from '../../../../../base/browser/ui/button/button.js';
 import { Codicon } from '../../../../../base/common/codicons.js';
 import { Emitter } from '../../../../../base/common/event.js';
-import { IMarkdownString } from '../../../../../base/common/htmlContent.js';
+import { IMarkdownString, MarkdownString } from '../../../../../base/common/htmlContent.js';
 import { Disposable } from '../../../../../base/common/lifecycle.js';
 import { autorun, ISettableObservable, observableValue } from '../../../../../base/common/observable.js';
 import { basename, joinPath } from '../../../../../base/common/resources.js';
@@ -16,6 +16,7 @@ import { URI } from '../../../../../base/common/uri.js';
 import { generateUuid } from '../../../../../base/common/uuid.js';
 import { MarkdownRenderer } from '../../../../../editor/browser/widget/markdownRenderer/browser/markdownRenderer.js';
 import { ITextModel } from '../../../../../editor/common/model.js';
+import { ILanguageService } from '../../../../../editor/common/languages/language.js';
 import { localize, localize2 } from '../../../../../nls.js';
 import { MenuWorkbenchToolBar } from '../../../../../platform/actions/browser/toolbar.js';
 import { Action2, MenuId, registerAction2 } from '../../../../../platform/actions/common/actions.js';
@@ -24,6 +25,7 @@ import { IContextKeyService } from '../../../../../platform/contextkey/common/co
 import { IContextMenuService } from '../../../../../platform/contextview/browser/contextView.js';
 import { IFileDialogService } from '../../../../../platform/dialogs/common/dialogs.js';
 import { IFileService } from '../../../../../platform/files/common/files.js';
+import { IExtensionService } from '../../../../../platform/extensions/common/extensions.js';
 import { IInstantiationService, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';
 import { ILabelService } from '../../../../../platform/label/common/label.js';
 import { INotificationService } from '../../../../../platform/notification/common/notification.js';
@@ -101,6 +103,8 @@ export class ChatCollapsibleInputOutputContentPart extends Disposable {
 		@IContextKeyService private readonly contextKeyService: IContextKeyService,
 		@IInstantiationService private readonly _instantiationService: IInstantiationService,
 		@IContextMenuService private readonly _contextMenuService: IContextMenuService,
+		@IExtensionService private readonly _extensionService: IExtensionService,
+		@ILanguageService private readonly _languageService: ILanguageService,
 	) {
 		super();
 		this._currentWidth = width;
@@ -205,38 +209,58 @@ export class ChatCollapsibleInputOutputContentPart extends Disposable {
 			dom.h('.chat-collapsible-io-resource-actions@actions'),
 		]);
 
-		const entries = parts.map((part): IChatRequestVariableEntry => {
-			if (part.mimeType && getAttachableImageExtension(part.mimeType)) {
-				return { kind: 'image', id: generateUuid(), name: basename(part.uri), value: part.value, mimeType: part.mimeType, isURL: false, references: [{ kind: 'reference', reference: part.uri }] };
+		// Separate markdown parts from other parts
+		const markdownParts: IChatCollapsibleIODataPart[] = [];
+		const otherParts: IChatCollapsibleIODataPart[] = [];
+		
+		for (const part of parts) {
+			if (part.mimeType === 'text/markdown' && part.value) {
+				markdownParts.push(part);
 			} else {
-				return { kind: 'file', id: generateUuid(), name: basename(part.uri), fullName: part.uri.path, value: part.uri };
+				otherParts.push(part);
 			}
-		});
+		}
 
-		const attachments = this._register(this._instantiationService.createInstance(
-			ChatAttachmentsContentPart,
-			entries,
-			undefined,
-			undefined,
-		));
+		// Handle non-markdown parts with the existing attachment system
+		if (otherParts.length > 0) {
+			const entries = otherParts.map((part): IChatRequestVariableEntry => {
+				if (part.mimeType && getAttachableImageExtension(part.mimeType)) {
+					return { kind: 'image', id: generateUuid(), name: basename(part.uri), value: part.value, mimeType: part.mimeType, isURL: false, references: [{ kind: 'reference', reference: part.uri }] };
+				} else {
+					return { kind: 'file', id: generateUuid(), name: basename(part.uri), fullName: part.uri.path, value: part.uri };
+				}
+			});
 
-		attachments.contextMenuHandler = (attachment, event) => {
-			const index = entries.indexOf(attachment);
-			const part = parts[index];
-			if (part) {
-				event.preventDefault();
-				event.stopPropagation();
+			const attachments = this._register(this._instantiationService.createInstance(
+				ChatAttachmentsContentPart,
+				entries,
+				undefined,
+				undefined,
+			));
 
-				this._contextMenuService.showContextMenu({
-					menuId: MenuId.ChatToolOutputResourceContext,
-					menuActionOptions: { shouldForwardArgs: true },
-					getAnchor: () => ({ x: event.pageX, y: event.pageY }),
-					getActionsContext: () => ({ parts: [part] } satisfies IChatToolOutputResourceToolbarContext),
-				});
-			}
-		};
+			attachments.contextMenuHandler = (attachment, event) => {
+				const index = entries.indexOf(attachment);
+				const part = otherParts[index];
+				if (part) {
+					event.preventDefault();
+					event.stopPropagation();
 
-		el.items.appendChild(attachments.domNode!);
+					this._contextMenuService.showContextMenu({
+						menuId: MenuId.ChatToolOutputResourceContext,
+						menuActionOptions: { shouldForwardArgs: true },
+						getAnchor: () => ({ x: event.pageX, y: event.pageY }),
+						getActionsContext: () => ({ parts: [part] } satisfies IChatToolOutputResourceToolbarContext),
+					});
+				}
+			};
+
+			el.items.appendChild(attachments.domNode!);
+		}
+
+		// Handle markdown parts by rendering them directly
+		for (const markdownPart of markdownParts) {
+			this.addMarkdownContent(markdownPart, el.items);
+		}
 
 		const toolbar = this._register(this._instantiationService.createInstance(MenuWorkbenchToolBar, el.actions, MenuId.ChatToolOutputResourceToolbar, {
 			menuOptions: {
@@ -264,6 +288,38 @@ export class ChatCollapsibleInputOutputContentPart extends Disposable {
 		this._register(editorReference.object.onDidChangeContentHeight(() => this._onDidChangeHeight.fire()));
 		container.appendChild(editorReference.object.element);
 		this._editorReferences.push(editorReference);
+	}
+
+	private addMarkdownContent(part: IChatCollapsibleIODataPart, container: HTMLElement) {
+		if (!part.value) {
+			return;
+		}
+
+		// Convert Uint8Array to string
+		const decoder = new TextDecoder();
+		const markdownText = decoder.decode(part.value);
+
+		// Create a container for the markdown content
+		const markdownContainer = dom.$('.chat-markdown-content');
+
+		// Add a title showing the filename
+		const titleElement = dom.$('.chat-markdown-title');
+		titleElement.textContent = basename(part.uri.path);
+		markdownContainer.appendChild(titleElement);
+
+		// Create content element
+		const contentElement = dom.$('.chat-markdown-body');
+		markdownContainer.appendChild(contentElement);
+
+		// Create a MarkdownRenderer and render the content
+		const renderer = this._instantiationService.createInstance(MarkdownRenderer, {});
+		const markdownString = new MarkdownString(markdownText);
+		const renderResult = this._register(renderer.render(markdownString, {
+			asyncRenderCallback: () => this._onDidChangeHeight.fire()
+		}));
+		
+		contentElement.appendChild(renderResult.element);
+		container.appendChild(markdownContainer);
 	}
 
 	hasSameContent(other: IChatRendererContent, followingContent: IChatRendererContent[], element: ChatTreeItem): boolean {
