@@ -51,7 +51,7 @@ export default function DownloadFeedbackForm({
             While You Wait, Mind Telling Us About Your Next Project?
           </DialogTitle>
           <DialogDescription>
-            We&apos;re excited to see what you&apos;ll make with PearAI. Share
+            We&apos;re excited to see what you&apos;ll make with VibeStudio. Share
             your vision with us and help us improve the product. And remember to
             make what excites!
           </DialogDescription>
@@ -104,7 +104,7 @@ export default function DownloadFeedbackForm({
 
           <div className="space-y-2">
             <label className="text-sm font-medium">
-              Primary use case for PearAI?
+              Primary use case for VibeStudio?
             </label>
             <select
               value={primaryUse}
@@ -124,7 +124,7 @@ export default function DownloadFeedbackForm({
 
           <div className="space-y-2">
             <label className="text-sm font-medium">
-              What are you planning to make with PearAI, and why are you making
+              What are you planning to make with VibeStudio, and why are you making
               it?
             </label>
             <textarea

@@ -15,12 +15,12 @@ import CTA from "./cta";
 const faqData: FAQItem[] = [
   {
     id: "name",
-    question: "Why is it called PearAI?!",
-    answer: <p>Pair programming... Pear Programming... PearAI! 🍐💡</p>,
+    question: "Why is it called VibeStudio?!",
+    answer: <p>It's all about capturing the right vibe for your coding sessions! VibeStudio adapts to your mood and creative flow. ✨💻</p>,
   },
   {
     id: "privacy",
-    question: "Does PearAI store my code?!",
+    question: "Does VibeStudio store my code?!",
     answer: (
       <p>
         No. All codebase indexing occurs and remains strictly local on your
@@ -28,7 +28,7 @@ const faqData: FAQItem[] = [
         <Link
           target="_blank"
           className="underline underline-offset-4"
-          href="https://github.com/trypear/pearai-submodule/tree/main/core/indexing"
+          href="https://github.com/vibestudio/vibestudio-submodule/tree/main/core/indexing"
         >
           source
         </Link>
@@ -40,7 +40,7 @@ const faqData: FAQItem[] = [
   },
   {
     id: "contribute",
-    question: "How can I contribute to PearAI?!",
+    question: "How can I contribute to VibeStudio?!",
     answer: (
       <p>
         See the contributor&apos;s section:{" "}
@@ -103,7 +103,7 @@ const FAQComponent: React.FC = () => {
                   Discord
                 </Link>{" "}
                 or through{" "}
-                <a href="mailto:pear@trypear.ai" className="underline">
+                <a href="mailto:hello@vibestudio.online" className="underline">
                   email
                 </a>
                 .
@@ -111,10 +111,10 @@ const FAQComponent: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-black">Why PearAI?</h3>
+              <h3 className="text-xl font-semibold text-black">Why VibeStudio?</h3>
               <p className="text-xl text-[#666666]">
-                You just want to be able to make what you want, fast. PearAI
-                gets you that.
+                You just want to be able to make what you want, fast. VibeStudio
+                gets you that with mood-adaptive AI assistance.
               </p>
             </div>
           </div>

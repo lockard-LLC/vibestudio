@@ -9,7 +9,7 @@ export default function PayAsYouGoPage() {
         <div className="flex flex-col items-center space-y-6 sm:space-y-8 md:space-y-6 lg:space-y-6">
           <header className="mx-auto mt-16 max-w-4xl space-y-4 text-center sm:mt-0 sm:space-y-6">
             <h1 className="mt-8 text-4xl font-medium leading-tight sm:text-4xl md:text-4xl lg:text-4xl">
-              No More Quota Limits on PearAI
+              No More Quota Limits on VibeStudio
             </h1>
           </header>
 
@@ -19,8 +19,8 @@ export default function PayAsYouGoPage() {
               introduced usage-based billing.
             </p>
             <p className="mb-8">
-              Your PearAI Subscription includes monthly PearAI Credits that
-              automatically apply to your PearAI usage. Most people don&apos;t
+              Your VibeStudio Subscription includes monthly VibeStudio Credits that
+              automatically apply to your VibeStudio usage. Most people don&apos;t
               even exhaust their credits, but in the rare case you can
               pay-as-you-go to keep building without limits. Additional usage
               based on LLM costs will be billed to your payment method. If you

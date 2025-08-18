@@ -18,7 +18,7 @@ const getDashboardUsage = async (request: NextRequest) => {
     }
 
     const token = session.access_token;
-    const res = await fetch(`${process.env.PEARAI_SERVER_URL}/get-usage`, {
+    const res = await fetch(`${process.env.VIBESTUDIO_SERVER_URL}/get-usage`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

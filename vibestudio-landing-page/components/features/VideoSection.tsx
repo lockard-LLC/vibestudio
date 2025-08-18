@@ -25,10 +25,10 @@ export default function VideoSection() {
   }, []);
 
   return (
-    <div className="lg:mb-14">
+    <section className="py-16 md:py-24">
       <div className="mx-auto w-full">
         {isMobile ? <MobileVideoSection /> : <DesktopVideoSection />}
       </div>
-    </div>
+    </section>
   );
 }

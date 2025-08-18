@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "",
     },
-    sitemap: "https://trypear.ai/sitemap.xml",
+    sitemap: "https://vibestudio.online/sitemap.xml",
   };
 }

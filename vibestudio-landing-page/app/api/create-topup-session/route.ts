@@ -5,7 +5,7 @@ import { User } from "@supabase/supabase-js";
 import { STRIPE_PRICE_IDS } from "@/utils/constants";
 import { TEST_MODE_ENABLED } from "@/utils/constants";
 
-const PEARAI_SERVER_URL = process.env.PEARAI_SERVER_URL;
+const VIBESTUDIO_SERVER_URL = process.env.VIBESTUDIO_SERVER_URL;
 
 async function createTopUpSession(request: NextRequest & { user: User }) {
   const supabase = createClient();
@@ -36,7 +36,7 @@ async function createTopUpSession(request: NextRequest & { user: User }) {
     }
 
     const token = session.access_token;
-    const url = `${PEARAI_SERVER_URL}/payment/create-topup-session`;
+    const url = `${VIBESTUDIO_SERVER_URL}/payment/create-topup-session`;
 
     const response = await fetch(url, {
       method: "POST",

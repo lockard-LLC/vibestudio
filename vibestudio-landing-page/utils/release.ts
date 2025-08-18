@@ -51,12 +51,12 @@ export async function getAllReleases(): Promise<Releases> {
   try {
     const [windowsAndM1Release, linuxRelease] = await Promise.all([
       fetchRelease("getLatestRelease", {
-        owner: "trypear",
-        repo: "pearai-master",
+        owner: "lockard-LLC",
+        repo: "vibestudio",
       }),
       fetchRelease("getReleaseByTag", {
-        owner: "trypear",
-        repo: "pearai-app",
+        owner: "lockard-LLC",
+        repo: "vibestudio-app",
         tag: "v1.8.0-Linux",
       }),
     ]);

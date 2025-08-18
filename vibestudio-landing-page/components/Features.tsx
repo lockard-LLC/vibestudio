@@ -203,7 +203,7 @@ export default function Features() {
                 className="relative flex items-center justify-center"
               >
                 <Image
-                  src="/images/VibeStudioCreatorVector.svg"
+                  src="/images/vs-creator-vector.svg"
                   alt="VibeStudio Creator"
                   className="h-full w-full"
                   width={240}
@@ -270,7 +270,7 @@ export default function Features() {
                 className="flex items-center justify-center"
               >
                 <Image
-                  src="/images/VibeStudioAgentVector.svg"
+                  src="/images/vs-agent-vector.svg"
                   alt="VibeStudio Agent"
                   className="h-auto w-full lg:pb-7"
                   width={240}
@@ -345,7 +345,7 @@ export default function Features() {
                 className="relative flex-col items-center justify-center"
               >
                 <Image
-                  src="/images/VibeStudioAuthVector.svg"
+                  src="/images/vs-login-vector.svg"
                   alt="VibeStudio Auth"
                   className="h-auto w-full lg:pb-7"
                   width={240}
@@ -419,7 +419,7 @@ export default function Features() {
                 className="relative flex items-center justify-center"
               >
                 <Image
-                  src="/images/VibeStudioDeployVector.svg"
+                  src="/images/vs-launch-vector.svg"
                   alt="VibeStudio Deploy"
                   className="h-auto w-full"
                   width={240}

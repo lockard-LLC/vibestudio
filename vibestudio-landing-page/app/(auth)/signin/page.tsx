@@ -23,7 +23,7 @@ export default async function SignIn({ searchParams }: SignInProps) {
   const { data } = await supabase.auth.getUser();
 
   if (data?.user) {
-    if (searchParams.callback?.includes("://pearai.pearai/auth")) {
+    if (searchParams.callback?.includes("://vibestudio.vibestudio/auth")) {
       // Redirect to dashboard page with callback for desktop app
       redirect("/dashboard?callback=" + searchParams.callback);
     } else {

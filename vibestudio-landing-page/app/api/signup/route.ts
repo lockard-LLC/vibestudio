@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const data = await request.json();
-    const response = await fetch(`${process.env.PEARAI_SERVER_URL}/signup`, {
+    const response = await fetch(`${process.env.VIBESTUDIO_SERVER_URL}/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

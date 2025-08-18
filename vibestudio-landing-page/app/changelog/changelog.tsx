@@ -26,7 +26,7 @@ const updates: ChangelogEntry[] = [
         <ul className="mt-2 list-disc space-y-3 ps-6 text-lg">
           <li>Settings Page</li>
           <li>Roo Code 3.10.2</li>
-          <li>New Pear Themes</li>
+          <li>New VibeStudio Themes</li>
           <li>Fixed various minor bugs</li>
         </ul>
       </>
@@ -40,7 +40,7 @@ const updates: ChangelogEntry[] = [
     description: (
       <>
         <ul className="mt-2 list-disc space-y-3 ps-6 text-lg">
-          <li>Introducing PearAI Coding Agent, powered by Roo Code / Cline.</li>
+          <li>Introducing VibeStudio Coding Agent, powered by Roo Code / Cline.</li>
           <li>
             This coding agent, with your permission, accesses your development
             environment to facilitate a feedback loop, enabling it to code on
@@ -49,7 +49,7 @@ const updates: ChangelogEntry[] = [
           <li className="flex items-center gap-6">
             <Image
               src="/images/changelogs/pearai-cline_v1.8.png"
-              alt="PearAI Cline v1.8"
+              alt="VibeStudio Cline v1.8"
               width={800}
               height={0}
               sizes="100vw"
@@ -86,7 +86,7 @@ const updates: ChangelogEntry[] = [
         <ul className="mt-2 list-disc space-y-3 ps-6 text-lg">
           <li>
             <strong>VS Code 1.96.2: </strong>
-            PearAI updated to vscode release 1.96.2 ✨
+            VibeStudio updated to vscode release 1.96.2 ✨
           </li>
           <li>
             <strong>Added 🐋 deepseek models</strong>
@@ -212,7 +212,7 @@ const updates: ChangelogEntry[] = [
         <h2 className="mt-6 text-xl font-semibold">New Features</h2>
         <ul className="mt-2 list-disc space-y-3 ps-6 text-lg">
           <li>
-            <strong>PearAI Memory:</strong>
+            <strong>VibeStudio Memory:</strong>
             Integrated Mem0 for up-to-date AI web search
           </li>
         </ul>
@@ -230,7 +230,7 @@ const updates: ChangelogEntry[] = [
   // =================================================================
   {
     date: "23 November 2024",
-    title: "Major Architecture Overhaul & PearAI Inventory: Creator, Search",
+    title: "Major Architecture Overhaul & VibeStudio Inventory: Creator, Search",
     version: "v1.5.2",
     description: (
       <>
@@ -244,15 +244,15 @@ const updates: ChangelogEntry[] = [
         <h2 className="mt-6 text-xl font-semibold">New Features 🎉</h2>
         <ul className="mt-2 list-disc space-y-3 ps-6 text-lg">
           <li>
-            <strong>PearAI Creator:</strong> No-code feature for direct codebase
+            <strong>VibeStudio Creator:</strong> No-code feature for direct codebase
             modifications. Aider integration!
           </li>
           <li>
-            <strong>PearAI Search:</strong> Integrated Perplexity for up-to-date
+            <strong>VibeStudio Search:</strong> Integrated Perplexity for up-to-date
             AI web search
           </li>
           <li>
-            <strong>PearAI Chat:</strong> multiple bug fixes
+            <strong>VibeStudio Chat:</strong> multiple bug fixes
           </li>
         </ul>
 
@@ -348,7 +348,7 @@ const updates: ChangelogEntry[] = [
             directly from pearai
           </li>
           <li className="">Auto Updating for Mac 📦</li>
-          <li className="">PearAI Theme</li>
+          <li className="">VibeStudio Theme</li>
         </ul>
 
         <h2 className="mt-6 text-xl font-semibold">Improvements</h2>
@@ -367,7 +367,7 @@ const updates: ChangelogEntry[] = [
             slash command, it will help you learn by guiding like a interviewer
           </li>
           <li className="">Preserve extension state on import from vscode</li>
-          <li className="">Default PearAI Themes</li>
+          <li className="">Default VibeStudio Themes</li>
         </ul>
       </>
     ),
@@ -375,7 +375,7 @@ const updates: ChangelogEntry[] = [
   // =================================================================
   {
     date: "30 August 2024",
-    title: "PearAI v1.0.0 - The Cupertino v1 Launch",
+    title: "VibeStudio v1.0.0 - The Cupertino v1 Launch",
     version: "🎉 v1.0.0",
     description: (
       <>
@@ -385,7 +385,7 @@ const updates: ChangelogEntry[] = [
         {/* <div className="relative w-20"> */}
         <Image
           src="/images/changelogs/CupertinoV1 - v1.0.0.png"
-          alt="PearAI v1.0.0 Dashboard"
+          alt="VibeStudio v1.0.0 Dashboard"
           width={800}
           height={0}
           sizes="100vw"
@@ -402,7 +402,7 @@ const updates: ChangelogEntry[] = [
           <li className="font-medium">
             🛠 Fixed &quot;Continue generating&quot; feature
           </li>
-          <li className="font-medium">🔄 Model Choice on PearAI Server</li>
+          <li className="font-medium">🔄 Model Choice on VibeStudio Server</li>
           <li className="font-medium">⌨️ Improved shortcuts</li>
           <li className="font-medium">🆘 Improved help window</li>
           <li className="font-medium">🔓 Enabled free trials</li>
@@ -443,7 +443,7 @@ const updates: ChangelogEntry[] = [
           </span>{" "}
           searching enhanced
         </li>
-        <li>PearAI token refresh bug fixed</li>
+        <li>VibeStudio token refresh bug fixed</li>
         <li>Onboarding flow revamp</li>
       </ul>
     ),
@@ -483,7 +483,7 @@ const updates: ChangelogEntry[] = [
         </ul>
         <Image
           src="/images/changelogs/includeFile - v0.0.1.png"
-          alt="PearAI v1.0.0 Dashboard"
+          alt="VibeStudio v1.0.0 Dashboard"
           width={800}
           height={0}
           sizes="100vw"

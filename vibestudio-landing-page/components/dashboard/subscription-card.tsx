@@ -46,7 +46,7 @@ type SubscriptionCardProps = {
   loading: boolean;
 };
 
-const DEFAULT_OPEN_APP_CALLBACK = "pearai://pearai.pearai/auth";
+const DEFAULT_OPEN_APP_CALLBACK = "vibestudio://vibestudio.vibestudio/auth";
 
 export default function SubscriptionCard({
   subscription,
@@ -203,7 +203,7 @@ export default function SubscriptionCard({
                     <strong>
                       {usage?.percent_credit_used != null
                         ? `${Math.min(usage.percent_credit_used, 100)}%`
-                        : "Usage info not found. Contact PearAI support"}
+                        : "Usage info not found. Contact VibeStudio support"}
                     </strong>
                   )}
                 </p>
@@ -217,7 +217,7 @@ export default function SubscriptionCard({
                 <p className="text-sm text-muted-foreground">
                   {loading
                     ? "-"
-                    : `${Math.min(usage?.percent_credit_used ?? 0, 100)}% of PearAI Credits used`}
+                    : `${Math.min(usage?.percent_credit_used ?? 0, 100)}% of VibeStudio Credits used`}
                 </p>
                 <p className="text-right text-sm text-muted-foreground">
                   Credits refills monthly ({timeLeftUntilRefill})
@@ -364,7 +364,7 @@ export default function SubscriptionCard({
                   href={DEFAULT_OPEN_APP_CALLBACK + "?" + openAppQueryParams}
                   target="_parent"
                 >
-                  Open PearAI App
+                  Open VibeStudio App
                 </Link>
               </Button>
               <TopUpModal />
@@ -476,7 +476,7 @@ export default function SubscriptionCard({
           <div className="mt-4 flex items-start text-xs text-muted-foreground">
             <InfoIcon className="mr-1 mt-0.5 h-3 w-3 flex-shrink-0" />
             <div>
-              Make sure PearAI is
+              Make sure VibeStudio is
               <Link href="/pricing" className="mx-1">
                 <span className="text-primary-800 hover:underline">
                   installed.

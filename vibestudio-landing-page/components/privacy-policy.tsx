@@ -22,8 +22,8 @@ export default function PrivacyPolicyComponent() {
             <div className="text-base font-normal">
               <p>
                 This privacy policy (“Privacy Policy”) applies to all visitors
-                and users of the PearAI desktop app and websites (collectively,
-                “PearAI”, “App” or “Apps”), which are offered by PearAI Inc.
+                and users of the VibeStudio desktop app and websites (collectively,
+                “VibeStudio”, “App” or “Apps”), which are offered by VibeStudio Inc.
                 and/or any of its affiliates (“Anysphere” or “we” or “us”) and
                 describes how we process your personal information in connection
                 with those Apps, and how we collect information through the use
@@ -42,7 +42,7 @@ export default function PrivacyPolicyComponent() {
             </h2>
             <div className="space-y-4 text-base font-normal">
               <p>
-                If you are a customer of PearAI, this Privacy Policy does not
+                If you are a customer of VibeStudio, this Privacy Policy does not
                 apply to personal information or other data and information that
                 we process on your behalf (if any) as your service provider
                 (collectively, “Customer Data”). We will only use Customer Data
@@ -73,20 +73,20 @@ export default function PrivacyPolicyComponent() {
                 with your personal information. In some instances, a User ID is
                 generated for form and URL tracking, page views, page pings and
                 usage counts in order to ascertain product performance and
-                development. The amount and type of information that PearAI
+                development. The amount and type of information that VibeStudio
                 gathers depends on the nature of your interaction with us, as
                 well as the amount of information you choose to share. For
                 example, we ask visitors who use our community Discord, or our
                 forum, to provide a username and email address. We will also
                 collect the information you provide with us in connection with
-                creating an account on the App. In each case, PearAI collects
+                creating an account on the App. In each case, VibeStudio collects
                 such personal information only insofar as is necessary or
                 appropriate to fulfill the purpose of your interaction with or
-                your request to PearAI. We will not disclose your personal
+                your request to VibeStudio. We will not disclose your personal
                 information other than as described in this Privacy Policy.
               </p>
               <p>
-                Like most website operators, PearAI automatically collects (i)
+                Like most website operators, VibeStudio automatically collects (i)
                 technical information about your device including your
                 device&apos;s internet protocol (IP) address, device type (e.g.,
                 phone, tablet), unique identifiers (including identifiers used
@@ -113,17 +113,17 @@ export default function PrivacyPolicyComponent() {
             </div>
 
             <h2 className="mb-7 mt-14 text-3xl font-medium text-gray-900">
-              Information PearAI does not collect
+              Information VibeStudio does not collect
             </h2>
             <div className="space-y-4 text-base font-normal">
               <p>
-                PearAI does not intentionally collect sensitive or special
+                VibeStudio does not intentionally collect sensitive or special
                 category personal information, such as genetic data, biometric
                 data for the purposes of uniquely identifying a natural person,
                 health information, or religious information.
               </p>
               <p>
-                PearAI does not knowingly collect information from or direct any
+                VibeStudio does not knowingly collect information from or direct any
                 of our App or content specifically to children under the age of
                 18. If we learn or have reason to suspect that a user is under
                 the age of 18, we will close that account.
@@ -227,37 +227,37 @@ export default function PrivacyPolicyComponent() {
                 You may withdraw your consent at any time through the
                 unsubscribe feature provided with the relevant marketing email
                 or by contacting us using the details in the &apos;Contacting
-                PearAI About Your Privacy&apos; section of this Privacy Policy.
+                VibeStudio About Your Privacy&apos; section of this Privacy Policy.
               </p>
             </div>
 
             <h2 className="mb-7 mt-14 text-3xl font-medium text-gray-900">
-              How PearAI uses and protects your personal information
+              How VibeStudio uses and protects your personal information
             </h2>
             <div className="thin-bullets space-y-4 text-base font-normal">
               <p>
                 <strong>Sharing your information</strong>
               </p>
               <p>
-                PearAI may share your personal information with the
+                VibeStudio may share your personal information with the
                 third-parties listed below for the purposes that are described
                 in this Privacy Policy or otherwise with your consent.
               </p>
               <p>
-                PearAI only shares your personal information with those of its
+                VibeStudio only shares your personal information with those of its
                 employees, contractors, and affiliated organizations that (i)
                 need to know that personal information in order to process it on
-                PearAI&apos;s behalf or to provide services available on the
+                VibeStudio&apos;s behalf or to provide services available on the
                 App, and (ii) that have agreed not to disclose it to others.
               </p>
               <p>
-                PearAI may disclose your personal information to professional
+                VibeStudio may disclose your personal information to professional
                 advisors, such as lawyers, bankers, auditors and insurers, where
                 necessary in the course of the professional services that they
                 render to us.
               </p>
               <p>
-                PearAI may sell, transfer or otherwise share some or all of our
+                VibeStudio may sell, transfer or otherwise share some or all of our
                 business or assets, including your personal information, in
                 connection with a business transaction (or potential business
                 transaction) such as a corporate divestiture, merger,
@@ -268,7 +268,7 @@ export default function PrivacyPolicyComponent() {
               </p>
               <p>
                 <strong>Service Providers and partners. </strong>
-                PearAI engages a number of service providers or partners to
+                VibeStudio engages a number of service providers or partners to
                 manage or support certain aspects of our business operations on
                 our behalf. For instance, we currently use the following service
                 providers who will handle your personal information:
@@ -289,7 +289,7 @@ export default function PrivacyPolicyComponent() {
                 Our service providers and partners are required by contract to
                 safeguard any personal information they receive from us and are
                 prohibited from using the personal information for any purpose
-                other than to perform the services as instructed by PearAI.
+                other than to perform the services as instructed by VibeStudio.
               </p>
               <p>
                 <strong>Legal Requirements. </strong>
@@ -304,7 +304,7 @@ export default function PrivacyPolicyComponent() {
                 otherwise required or permitted by law.
               </p>
               <p>
-                PearAI takes measures reasonably necessary to protect your
+                VibeStudio takes measures reasonably necessary to protect your
                 personal information against any unauthorized access, use,
                 alteration, or destruction.
               </p>
@@ -334,21 +334,21 @@ export default function PrivacyPolicyComponent() {
                 Clauses (“SCCs”) approved by the EU Commission or by the UK
                 Government. A copy of the relevant mechanism can be obtained for
                 your review on request by using the contact details in the
-                &apos;Contacting PearAI About Your Privacy&apos; section of this
+                &apos;Contacting VibeStudio About Your Privacy&apos; section of this
                 Privacy Policy.
               </p>
             </div>
 
             <h2 className="mb-7 mt-14 text-3xl font-medium text-gray-900">
-              PearAI communications with you
+              VibeStudio communications with you
             </h2>
             <div className="space-y-4 text-base font-normal">
               <p>
                 If you are a registered user of the Apps and have supplied your
-                email address, PearAI may occasionally send you an email to tell
+                email address, VibeStudio may occasionally send you an email to tell
                 you about security, system information, new features, solicit
                 your feedback, or just keep you up to date with what&apos;s
-                going on with PearAI and our products. We primarily use our blog
+                going on with VibeStudio and our products. We primarily use our blog
                 to communicate this type of information, so we expect to keep
                 this type of email to a minimum. There&apos;s an unsubscribe
                 link located at the bottom of each of the marketing emails we
@@ -655,7 +655,7 @@ export default function PrivacyPolicyComponent() {
               </p>
               <p>
                 To exercise your privacy rights, you can email us at the address
-                given below in the &apos;Contacting PearAI About Your
+                given below in the &apos;Contacting VibeStudio About Your
                 Privacy&apos; section of this Privacy Policy.
               </p>
             </div>
@@ -670,7 +670,7 @@ export default function PrivacyPolicyComponent() {
                 logging into your account and updating profile settings.
               </p>
               <p>
-                PearAI will retain your information for as long as your account
+                VibeStudio will retain your information for as long as your account
                 is active or as needed to perform our contractual obligations,
                 provide you services through the App, to comply with legal
                 obligations, resolve disputes, preserve legal rights, or enforce
@@ -686,7 +686,7 @@ export default function PrivacyPolicyComponent() {
                 may rectify, update or remove incomplete or inaccurate
                 information, at any time and at our own discretion. For more
                 information on our retention periods you can contact us using
-                the details in the &apos;Contacting PearAI About Your
+                the details in the &apos;Contacting VibeStudio About Your
                 Privacy&apos; section of this Privacy Policy.
               </p>
               <p>
@@ -702,12 +702,12 @@ export default function PrivacyPolicyComponent() {
             </div>
 
             <h2 className="mb-7 mt-14 text-3xl font-medium text-gray-900">
-              Contacting PearAI About Your Privacy
+              Contacting VibeStudio About Your Privacy
             </h2>
             <div className="space-y-4 text-base font-normal">
               <p>
                 The relevant data controller for any personal information
-                processed in connection with our Apps is PearAI Inc.
+                processed in connection with our Apps is VibeStudio Inc.
               </p>
               <p>
                 If you have any questions about this Privacy Policy or our
@@ -747,8 +747,8 @@ export default function PrivacyPolicyComponent() {
             </h2>
             <div className="space-y-4 text-base font-normal">
               <p>
-                PearAI may change its privacy policy from time to time, and in
-                PearAI&apos;s sole discretion.
+                VibeStudio may change its privacy policy from time to time, and in
+                VibeStudio&apos;s sole discretion.
               </p>
               <p>
                 If we make material changes to this Privacy Policy, we will

@@ -3,7 +3,7 @@ import { createClient } from "@/utils/supabase/server";
 import { DownloadFeedback } from "@/types/download-feedback";
 import { TEST_MODE_ENABLED } from "@/utils/constants";
 
-const PEARAI_SERVER_URL = process.env.PEARAI_SERVER_URL;
+const VIBESTUDIO_SERVER_URL = process.env.VIBESTUDIO_SERVER_URL;
 
 export async function POST(request: NextRequest) {
   const supabase = createClient();
@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
       data: { session },
     } = await supabase.auth.refreshSession();
 
-    const url = `${PEARAI_SERVER_URL}/feedback/download`;
+    const url = `${VIBESTUDIO_SERVER_URL}/feedback/download`;
     const headers: HeadersInit = {
       "Content-Type": "application/json",
     };

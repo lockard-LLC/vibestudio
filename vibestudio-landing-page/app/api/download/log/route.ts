@@ -10,7 +10,7 @@ export async function GET(request: Request) {
 
   try {
     const res = await fetch(
-      `${process.env.PEARAI_SERVER_URL}/log_download?os_type=${os_type}`,
+      `${process.env.VIBESTUDIO_SERVER_URL}/log_download?os_type=${os_type}`,
       {
         method: "GET",
         headers: {

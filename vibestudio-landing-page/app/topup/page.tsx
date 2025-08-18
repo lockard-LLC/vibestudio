@@ -59,7 +59,7 @@ export default function TopUpPage() {
               </h1>
               <p className="text-[#666666]">
                 Pay-as-you-go is temporarily paused. Top up credits never expire
-                and are only used after your Monthly PearAI credits are
+                and are only used after your Monthly VibeStudio credits are
                 exhausted. Usage cost varies based on prompt size and LLM model
                 used.
               </p>
@@ -110,7 +110,7 @@ export default function TopUpPage() {
 
           <div className="mx-auto mt-8 flex max-w-3xl flex-col gap-4">
             <div className="mx-auto">
-              Please contact us on the PearAI Discord server if you have any
+              Please contact us on the VibeStudio Discord server if you have any
               questions - we&apos;re here to help!
             </div>
             <div className="mx-auto flex w-full gap-6">

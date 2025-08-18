@@ -27,7 +27,7 @@ const TroubleshootingPage: React.FC = () => {
             rel="noopener noreferrer"
             className="text-white inline-block rounded bg-primary-600 px-6 py-3 font-normal shadow-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-opacity-50"
           >
-            Join PearAI Discord
+            Join VibeStudio Discord
           </a>
         </div>
       </div>

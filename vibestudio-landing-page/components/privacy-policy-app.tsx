@@ -8,28 +8,28 @@ export default function PrivacyPolicyComponent() {
         <div className="relative pb-10 pt-32 md:pb-16 md:pt-40">
           <div className="mx-auto max-w-3xl pb-8 text-left text-gray-800 md:pb-8">
             <h1 className="mb-4 text-3xl font-extrabold leading-tight tracking-tight md:text-5xl">
-              PearAI App Privacy Policy
+              VibeStudio App Privacy Policy
             </h1>
             <p className="mb-6 leading-relaxed text-gray-600">
               <strong>Last updated: April 1st, 2025</strong>
             </p>
             <p className="text-xl text-gray-600">
-              Welcome to the PearAI Privacy Policy regarding the main PearAI
+              Welcome to the VibeStudio Privacy Policy regarding the main VibeStudio
               app.
             </p>
           </div>
           <div className="mx-auto max-w-3xl text-lg">
             <p className="mb-6 leading-relaxed text-gray-600">
-              PearAI aims to be a gold standard in transparency and good
+              VibeStudio aims to be a gold standard in transparency and good
               intentions as a company, and so here we&apos;ll outline exactly
               what we track. We aren&apos;t here to steal or sell your data, but
               just allow you to make what you want.
             </p>
             <p className="mb-6 leading-relaxed text-gray-600">
-              This Privacy Policy outlines how PearAI (referred to as
-              &quot;PearAI,&quot; &quot;we,&quot; &quot;us,&quot; or
+              This Privacy Policy outlines how VibeStudio (referred to as
+              &quot;VibeStudio,&quot; &quot;we,&quot; &quot;us,&quot; or
               &quot;our&quot;) handles personal information in relation to our
-              main app, PearAI. This Privacy Notice is meant to provide
+              main app, VibeStudio. This Privacy Notice is meant to provide
               information about our privacy practices, but it is not a contract
               and does not create any legal rights or obligations not otherwise
               provided by law.
@@ -45,7 +45,7 @@ export default function PrivacyPolicyComponent() {
               open-source software
             </p>
             <p className="mb-6 leading-relaxed text-gray-600">
-              If you opt to use PearAI&apos;s hosted services (e.g., PearAI
+              If you opt to use VibeStudio&apos;s hosted services (e.g., VibeStudio
               Server), the only personal data we store is the information you
               provide during registration, such as your name, email address,
               company name (if applicable), and any other optional details you
@@ -63,7 +63,7 @@ export default function PrivacyPolicyComponent() {
           <div className="mx-auto max-w-3xl text-lg">
             <h2 className="mb-4 text-2xl font-bold text-gray-900">Your Code</h2>
             <p className="mb-6 leading-relaxed text-gray-600">
-              Your codebase is not directly stored by PearAI. As a technical
+              Your codebase is not directly stored by VibeStudio. As a technical
               necessity of our prompt logging system, any content within your
               prompts - including any incidental code snippets - is captured as
               part of the prompt text. This logging is solely used for debugging
@@ -75,7 +75,7 @@ export default function PrivacyPolicyComponent() {
               pending for other models.
             </p>
             <p className="mb-6 leading-relaxed text-gray-600">
-              All indexing for your codebase (for PearAI to have codebase
+              All indexing for your codebase (for VibeStudio to have codebase
               knowledge) happens locally on your machine, ensuring your complete
               codebase remains private and secure on your system.
             </p>
@@ -86,8 +86,8 @@ export default function PrivacyPolicyComponent() {
               Anonymous Logging
             </h2>
             <p className="mb-6 leading-relaxed text-gray-600">
-              When using PearAI, we collect anonymous usage information to help
-              us improve the product. All data collected by PearAI is anonymized
+              When using VibeStudio, we collect anonymous usage information to help
+              us improve the product. All data collected by VibeStudio is anonymized
               and stripped of any personally identifiable information (PII)
               before being processed by Telemetry. For full transparency, you
               can review the code for this{" "}
@@ -119,7 +119,7 @@ export default function PrivacyPolicyComponent() {
             </p>
             <p className="mb-6 leading-relaxed text-gray-600">
               We do not track your actual request contents to LLM when you use
-              your own API key. On PearAI&apos;s hosted servers, if you opt to
+              your own API key. On VibeStudio&apos;s hosted servers, if you opt to
               use them, we do not store this information either. We are
               committed to protecting the security and privacy of your data.
             </p>
@@ -133,7 +133,7 @@ export default function PrivacyPolicyComponent() {
             <p className="mb-6 leading-relaxed text-gray-600">
               to disable this. Note that within the pearai-submodule, there may
               be lingering Telemetry calls from the Continue fork - these have
-              been disabled, as PearAI does not want to track that data.
+              been disabled, as VibeStudio does not want to track that data.
             </p>
           </div>
 

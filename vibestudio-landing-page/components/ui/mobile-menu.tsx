@@ -75,7 +75,7 @@ export default function MobileMenu({
       >
         <div>
           <SheetHeader className="mb-4">
-            <SheetTitle className="text-center">PearAI Menu</SheetTitle>
+            <SheetTitle className="text-center">VibeStudio Menu</SheetTitle>
           </SheetHeader>
           <nav aria-label="Mobile menu">
             <ul className="space-y-1">
@@ -134,7 +134,7 @@ export default function MobileMenu({
                         className="mt-4 w-full justify-start"
                       >
                         <SquareArrowRight className="mr-2 h-4 w-4" />
-                        Try PearAI
+                        Try VibeStudio
                       </Button>
                     </Link>
                   </>
@@ -155,7 +155,7 @@ export default function MobileMenu({
                         About
                       </MobileNavItem>
                       <MobileNavItem
-                        href="https://github.com/trypear/pearai-master"
+                        href="https://github.com/lockard-LLC/vibestudio"
                         onClick={() => setIsOpen(false)}
                       >
                         Github

@@ -88,7 +88,7 @@ const PricingTier: React.FC<ExtendedPricingTierProps> = ({
         <div className="flex items-center">
           <span>
             Monthly refill of $15 credits for market-leading AI models
-            <PearCreditsTooltip type="standard" />
+            <VibeCreditsTooltip type="standard" />
           </span>
         </div>
       );
@@ -97,7 +97,7 @@ const PricingTier: React.FC<ExtendedPricingTierProps> = ({
         <div className="flex items-center">
           <span>
             Use our free trial, your own API key, or local models
-            <PearCreditsTooltip type="free" />
+            <VibeCreditsTooltip type="free" />
           </span>
         </div>
       );
@@ -106,8 +106,8 @@ const PricingTier: React.FC<ExtendedPricingTierProps> = ({
         <div className="flex items-center">
           <span>
             Monthly refill of <span className="underline"> increased</span>{" "}
-            PearAI Credits for market-leading AI models
-            <PearCreditsTooltip type="enterprise" />
+            VibeStudio Credits for market-leading AI models
+            <VibeCreditsTooltip type="enterprise" />
           </span>
         </div>
       );
@@ -204,7 +204,7 @@ const PricingTier: React.FC<ExtendedPricingTierProps> = ({
 
               {downloadLink !== undefined && (
                 <p className="text-gray-400">
-                  Thanks for trying out PearAI! Your download should have
+                  Thanks for trying out VibeStudio! Your download should have
                   started, if it hasn&apos;t, click{" "}
                   <a
                     className="cursor-pointer text-primary-700 transition-colors hover:text-primary-800"
@@ -273,7 +273,7 @@ const PricingTier: React.FC<ExtendedPricingTierProps> = ({
                       className="flex w-full items-center gap-2 rounded px-2 py-1.5 font-medium focus:bg-secondary-300/10"
                       onSelect={() =>
                         (window.location.href =
-                          "/blog/download-pearai-on-linux")
+                          "/blog/download-vibestudio-on-linux")
                       }
                     >
                       Linux
@@ -380,7 +380,7 @@ const PricingPage: React.FC<PricingPageProps> = ({ user }) => {
 
 export default PricingPage;
 
-export const PearCreditsTooltip = ({ type }: { type: string }) => {
+export const VibeCreditsTooltip = ({ type }: { type: string }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -396,7 +396,7 @@ export const PearCreditsTooltip = ({ type }: { type: string }) => {
           <p className="max-w-[250px]">
             Current built-in models for this plan include (but not limited to)
             <ul className="list-disc pl-4">
-              <li>PearAI Model</li>
+              <li>VibeStudio Model</li>
               <li>Claude 3.7 Sonnet</li>
               <li>Claude 3.5 Sonnet</li>
               <li>GPT4o</li>
@@ -407,7 +407,7 @@ export const PearCreditsTooltip = ({ type }: { type: string }) => {
               <li>Claude 3.5 Haiku (unlimited)</li>
             </ul>
             <br />
-            Your PearAI Credits usage depends on the price of the underlying
+            Your VibeStudio Credits usage depends on the price of the underlying
             LLM, and your prompt&apos;s input and output sizes.
           </p>
         </TooltipContent>
@@ -460,7 +460,7 @@ export const ServerAccessTooltip = () => {
         <TooltipContent sideOffset={5}>
           <p className="max-w-[250px]">
             No need to configure and manage different API&apos;s and tools,
-            PearAI will work out of the box.
+            VibeStudio will work out of the box.
           </p>
         </TooltipContent>
       </Tooltip>

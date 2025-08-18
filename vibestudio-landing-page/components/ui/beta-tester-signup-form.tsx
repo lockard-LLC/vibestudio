@@ -127,7 +127,7 @@ export function BetaTesterSignupForm() {
                 <FormLabel>
                   Email{" "}
                   <span className="text-xs text-gray-400">
-                    (used for your PearAI Account)
+                    (used for your VibeStudio Account)
                   </span>
                 </FormLabel>
                 <FormControl>
@@ -157,7 +157,7 @@ export function BetaTesterSignupForm() {
                       rel="noopener noreferrer"
                       className="text-primary-700 underline hover:text-primary-800"
                     >
-                      PearAI server
+                      VibeStudio server
                     </a>
                     )
                   </span>
@@ -165,7 +165,7 @@ export function BetaTesterSignupForm() {
 
                 <FormControl>
                   <Input
-                    placeholder="e.g. PearAI#1234"
+                    placeholder="e.g. VibeStudio#1234"
                     disabled={status === "submitting"}
                     {...field}
                   />

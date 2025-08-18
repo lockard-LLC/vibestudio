@@ -12,12 +12,12 @@ const AboutComponent: React.FC = () => {
         <section className="mx-auto mb-[68px] mt-[122px] flex max-w-[1049px] flex-col gap-[68px]">
           <div className="flex flex-col gap-5">
             <div className="font-mono text-sm text-black">
-              PEARAI IS MADE FOR YOUR NEXT PROJECT.
+              VIBESTUDIO IS MADE FOR YOUR NEXT PROJECT.
             </div>
             <h2 className="text-[44px] font-semibold text-black">About Us</h2>
             <p className="text-xl text-[#666666]">
-              Any idea you have, PearAI is here to help you build it. PearAI is
-              an AI code editor with a suite of the best AI tools to allow you
+              Any idea you have, VibeStudio is here to help you build it. VibeStudio is
+              an AI mood-adaptive IDE with a suite of the best AI tools to allow you
               to make what you want. Not just for prototyping, but for a long
               lifespan of added features and growth.
             </p>
@@ -28,7 +28,7 @@ const AboutComponent: React.FC = () => {
 
           <div className="flex flex-col gap-10">
             <span className="text-[44px] font-semibold text-black">
-              Features - stay tuned for PearAI V2!
+              Features - stay tuned for VibeStudio V2!
             </span>
 
             <div className="items-center justify-center lg:flex-col">
@@ -39,7 +39,7 @@ const AboutComponent: React.FC = () => {
                     <div className="space-y-2">
                       <div className="flex items-end justify-between">
                         <span className="text-2xl font-medium">
-                          PearAI Creator
+                          VibeStudio Creator
                           <br />
                           (Coming Soon)
                         </span>
@@ -48,15 +48,15 @@ const AboutComponent: React.FC = () => {
                         </span>
                       </div>
                       <p className="text-base text-[#666666]">
-                        Create new projects from scratch! PearAI ensures your
+                        Create new projects from scratch! VibeStudio ensures your
                         project adheres to the latest technologies and best
                         practices.
                       </p>
                     </div>
                     <div className="flex items-center justify-center">
                       <Image
-                        src="/images/PearAICreatorVector.svg"
-                        alt="PearAI Creator"
+                        src="/images/vs-creator-vector.svg"
+                        alt="VibeStudio Creator"
                         className="h-auto w-full"
                         width={240}
                         height={240}
@@ -70,7 +70,7 @@ const AboutComponent: React.FC = () => {
                     <div className="space-y-2">
                       <div className="flex items-end justify-between">
                         <span className="text-2xl font-medium">
-                          PearAI Agent
+                          VibeStudio Agent
                         </span>
                         <span className="mb-1 text-sm font-normal text-[#b3b3b3]">
                           Powered by Roo Code / Cline
@@ -83,8 +83,8 @@ const AboutComponent: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-center">
                       <Image
-                        src="/images/PearAIAgentVector.svg"
-                        alt="PearAI Agent"
+                        src="/images/vs-agent-vector.svg"
+                        alt="VibeStudio Agent"
                         className="h-auto w-full"
                         width={240}
                         height={240}
@@ -101,7 +101,7 @@ const AboutComponent: React.FC = () => {
                     <div className="space-y-2">
                       <div className="flex items-end justify-between">
                         <span className="text-2xl font-medium">
-                          PearAI Router
+                          VibeStudio Router
                         </span>
                       </div>
                       <p className="text-base text-[#666666]">
@@ -110,8 +110,8 @@ const AboutComponent: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-center">
                       <Image
-                        src="/images/PearAIRouterVector.svg"
-                        alt="PearAI Creator"
+                        src="/images/vs-router-vector.svg"
+                        alt="VibeStudio Router"
                         className="h-auto w-full"
                         width={240}
                         height={240}
@@ -125,7 +125,7 @@ const AboutComponent: React.FC = () => {
                     <div className="space-y-2">
                       <div className="flex items-end justify-between">
                         <span className="text-2xl font-medium">
-                          PearAI Chat
+                          VibeStudio Chat
                         </span>
                         <span className="mb-1 text-sm font-normal text-[#b3b3b3]">
                           Powered by Continue
@@ -137,8 +137,8 @@ const AboutComponent: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-center">
                       <Image
-                        src="/images/PearAIChatVector.svg"
-                        alt="PearAI Agent"
+                        src="/images/vs-chat-vector.svg"
+                        alt="VibeStudio Chat"
                         className="h-auto w-full"
                         width={240}
                         height={240}
@@ -155,24 +155,24 @@ const AboutComponent: React.FC = () => {
                     <div className="space-y-2">
                       <div className="flex items-end justify-between">
                         <span className="text-2xl font-medium">
-                          PearAI Login
+                          VibeStudio Login
                           <br />
                           (Coming Soon)
                         </span>
                         <span className="mb-1 text-sm font-normal text-[#b3b3b3]">
-                          Powered by PearAI
+                          Powered by VibeStudio
                         </span>
                       </div>
                       <p className="text-base text-[#666666]">
-                        Almost all projects require users to login. Let PearAI
+                        Almost all projects require users to login. Let VibeStudio
                         help you with this with best practices and the latest
                         tools.
                       </p>
                     </div>
                     <div className="flex items-center justify-center">
                       <Image
-                        src="/images/PearAILoginVector.svg"
-                        alt="PearAI Creator"
+                        src="/images/vs-login-vector.svg"
+                        alt="VibeStudio Login"
                         className="h-auto w-full"
                         width={240}
                         height={240}
@@ -186,7 +186,7 @@ const AboutComponent: React.FC = () => {
                     <div className="space-y-2">
                       <div className="flex items-end justify-between">
                         <span className="text-2xl font-medium">
-                          PearAI Launch
+                          VibeStudio Launch
                           <br />
                           (Coming Soon)
                         </span>
@@ -201,8 +201,8 @@ const AboutComponent: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-center">
                       <Image
-                        src="/images/PearAILaunchVector.svg"
-                        alt="PearAI Agent"
+                        src="/images/vs-launch-vector.svg"
+                        alt="VibeStudio Launch"
                         className="h-auto w-full"
                         width={240}
                         height={240}

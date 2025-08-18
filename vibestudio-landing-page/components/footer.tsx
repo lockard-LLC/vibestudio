@@ -16,7 +16,7 @@ export default function Footer() {
             <p className="mb-2 text-[#808080]">Make What Excites.</p>
             <p className="mb-4 text-[#808080] sm:mb-2">
               * For more information about how integrations are built into
-              PearAI, see{" "}
+              VibeStudio, see{" "}
               <span className="cursor-pointer text-white-50 underline hover:text-white-50/80">
                 here.
               </span>
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <span className="text-base text-[#808080]">
-            &copy; {new Date().getFullYear()} PearAI - All rights reserved.
+            &copy; {new Date().getFullYear()} VibeStudio - All rights reserved.
           </span>
         </div>
       </div>

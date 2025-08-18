@@ -21,8 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <PHProvider>
-        <body className={`bg-background font-sans tracking-tight antialiased`}>
+      <body className={`bg-background font-sans tracking-tight antialiased`}>
+        <PHProvider>
           <ThemeProvider
             attribute="class"
             enableSystem
@@ -40,8 +40,8 @@ export default function RootLayout({
             </div>
           </ThemeProvider>
           <Analytics />
-        </body>
-      </PHProvider>
+        </PHProvider>
+      </body>
     </html>
   );
 }

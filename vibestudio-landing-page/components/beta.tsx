@@ -17,10 +17,10 @@ const Beta: React.FC<BetaProps> = ({ user }) => {
         <section className="mx-auto mb-[68px] mt-[122px] flex max-w-[1049px] flex-col">
           <div className="mb-16 flex flex-col gap-5">
             <h2 className="text-[44px] font-semibold text-black">
-              Download PearAI Beta Version
+              Download VibeStudio Beta Version
             </h2>
             <p className="text-xl text-[#666666]">
-              Try out the latest beta version of PearAI and let us know what you
+              Try out the latest beta version of VibeStudio and let us know what you
               think in{" "}
               <Link
                 className="underline"
