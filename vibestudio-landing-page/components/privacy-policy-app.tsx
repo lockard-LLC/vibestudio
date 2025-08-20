@@ -14,8 +14,8 @@ export default function PrivacyPolicyComponent() {
               <strong>Last updated: April 1st, 2025</strong>
             </p>
             <p className="text-xl text-gray-600">
-              Welcome to the VibeStudio Privacy Policy regarding the main VibeStudio
-              app.
+              Welcome to the VibeStudio Privacy Policy regarding the main
+              VibeStudio app.
             </p>
           </div>
           <div className="mx-auto max-w-3xl text-lg">
@@ -45,14 +45,15 @@ export default function PrivacyPolicyComponent() {
               open-source software
             </p>
             <p className="mb-6 leading-relaxed text-gray-600">
-              If you opt to use VibeStudio&apos;s hosted services (e.g., VibeStudio
-              Server), the only personal data we store is the information you
-              provide during registration, such as your name, email address,
-              company name (if applicable), and any other optional details you
-              may choose to provide during the registration process. Aside from
-              this, we maintain metrics on activity on servers, such as number
-              of requests, as this is needed to handle abuse and quotas. We do
-              not store the actual contents of your requests.
+              If you opt to use VibeStudio&apos;s hosted services (e.g.,
+              VibeStudio Server), the only personal data we store is the
+              information you provide during registration, such as your name,
+              email address, company name (if applicable), and any other
+              optional details you may choose to provide during the registration
+              process. Aside from this, we maintain metrics on activity on
+              servers, such as number of requests, as this is needed to handle
+              abuse and quotas. We do not store the actual contents of your
+              requests.
             </p>
             <p className="mb-6 leading-relaxed text-gray-600">
               Payment information is securely processed by our payment processor
@@ -86,11 +87,11 @@ export default function PrivacyPolicyComponent() {
               Anonymous Logging
             </h2>
             <p className="mb-6 leading-relaxed text-gray-600">
-              When using VibeStudio, we collect anonymous usage information to help
-              us improve the product. All data collected by VibeStudio is anonymized
-              and stripped of any personally identifiable information (PII)
-              before being processed by Telemetry. For full transparency, you
-              can review the code for this{" "}
+              When using VibeStudio, we collect anonymous usage information to
+              help us improve the product. All data collected by VibeStudio is
+              anonymized and stripped of any personally identifiable information
+              (PII) before being processed by Telemetry. For full transparency,
+              you can review the code for this{" "}
               <a
                 href="https://github.com/trypear/pearai-submodule/pull/16/files#diff-13a0c1fe9c6c6ddec4347498077a92020ff2d64ebc3f70b56e45a8413a8ce0fbR7"
                 target="_blank"
@@ -119,8 +120,8 @@ export default function PrivacyPolicyComponent() {
             </p>
             <p className="mb-6 leading-relaxed text-gray-600">
               We do not track your actual request contents to LLM when you use
-              your own API key. On VibeStudio&apos;s hosted servers, if you opt to
-              use them, we do not store this information either. We are
+              your own API key. On VibeStudio&apos;s hosted servers, if you opt
+              to use them, we do not store this information either. We are
               committed to protecting the security and privacy of your data.
             </p>
             <p className="mb-6 leading-relaxed text-gray-600">

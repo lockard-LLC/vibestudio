@@ -51,9 +51,9 @@ export default function DownloadFeedbackForm({
             While You Wait, Mind Telling Us About Your Next Project?
           </DialogTitle>
           <DialogDescription>
-            We&apos;re excited to see what you&apos;ll make with VibeStudio. Share
-            your vision with us and help us improve the product. And remember to
-            make what excites!
+            We&apos;re excited to see what you&apos;ll make with VibeStudio.
+            Share your vision with us and help us improve the product. And
+            remember to make what excites!
           </DialogDescription>
         </DialogHeader>
 
@@ -124,8 +124,8 @@ export default function DownloadFeedbackForm({
 
           <div className="space-y-2">
             <label className="text-sm font-medium">
-              What are you planning to make with VibeStudio, and why are you making
-              it?
+              What are you planning to make with VibeStudio, and why are you
+              making it?
             </label>
             <textarea
               value={projectDescription}

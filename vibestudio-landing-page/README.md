@@ -36,6 +36,7 @@
 [VibeStudio](https://vibestudio.online) is a browser-native IDE that adapts to your energy, style, and workflow. Think VSCode.dev — but built for vibes.
 
 ✨ **Key Features:**
+
 - 🎨 Mood-adaptive interface
 - 🧠 AI-enhanced animated cursor
 - 🌊 UI inspired by Windsurf
@@ -71,9 +72,10 @@ Built with love for creators, learners, and indie devs.
 ### 🔧 Prerequisites
 
 - [Yarn](https://classic.yarnpkg.com/lang/en/)
+
 ```bash
 npm install --global yarn
-````
+```
 
 ### 📥 Installation
 
@@ -114,9 +116,9 @@ NEXT_PUBLIC_REDIRECT_URL=http://localhost:3000
 
 ### 🌱 Variable Descriptions
 
-* `NEXT_PUBLIC_SUPABASE_URL` – Your Supabase project URL
-* `NEXT_PUBLIC_SUPABASE_ANON_KEY` – Your anonymous Supabase API key
-* `NEXT_PUBLIC_REDIRECT_URL` – Local or deployment callback domain
+- `NEXT_PUBLIC_SUPABASE_URL` – Your Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` – Your anonymous Supabase API key
+- `NEXT_PUBLIC_REDIRECT_URL` – Local or deployment callback domain
 
 These are required for authentication and backend integration.
 
@@ -140,9 +142,9 @@ http://localhost:3000
 
 ### 💡 Recommended VSCode Extensions
 
-* Prettier — Format on save
-* ESLint — Code linting
-* TypeScript Nightly — Latest language features
+- Prettier — Format on save
+- ESLint — Code linting
+- TypeScript Nightly — Latest language features
 
 <p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
 
@@ -178,9 +180,9 @@ git push origin feature/my-feature
 
 Have a question or want to collaborate?
 
-* 🧠 Discord: [Join the community](https://discord.com/invite/7QMraJUsQt)
-* 🌐 Website: [vibestudio.online](https://vibestudio.online)
-* 🐙 GitHub: [lockard-LLC/vibestudio](https://github.com/lockard-LLC/vibestudio)
+- 🧠 Discord: [Join the community](https://discord.com/invite/7QMraJUsQt)
+- 🌐 Website: [vibestudio.online](https://vibestudio.online)
+- 🐙 GitHub: [lockard-LLC/vibestudio](https://github.com/lockard-LLC/vibestudio)
 
 <p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
 
@@ -188,9 +190,9 @@ Have a question or want to collaborate?
 
 ## 🎓 Acknowledgements
 
-* [Pear AI](https://github.com/trypear/pear-landing-page) — Original template inspiration
-* [Monaco Editor](https://github.com/microsoft/monaco-editor) — Planned IDE foundation
-* [StackBlitz WebContainers](https://webcontainers.io/) — Vision inspiration
+- [Pear AI](https://github.com/trypear/pear-landing-page) — Original template inspiration
+- [Monaco Editor](https://github.com/microsoft/monaco-editor) — Planned IDE foundation
+- [StackBlitz WebContainers](https://webcontainers.io/) — Vision inspiration
 
 <p align="right">(<a href="#readme-top">⬆️ back to top</a>)</p>
 ```

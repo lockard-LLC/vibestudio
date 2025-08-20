@@ -40,7 +40,9 @@ const updates: ChangelogEntry[] = [
     description: (
       <>
         <ul className="mt-2 list-disc space-y-3 ps-6 text-lg">
-          <li>Introducing VibeStudio Coding Agent, powered by Roo Code / Cline.</li>
+          <li>
+            Introducing VibeStudio Coding Agent, powered by Roo Code / Cline.
+          </li>
           <li>
             This coding agent, with your permission, accesses your development
             environment to facilitate a feedback loop, enabling it to code on
@@ -230,7 +232,8 @@ const updates: ChangelogEntry[] = [
   // =================================================================
   {
     date: "23 November 2024",
-    title: "Major Architecture Overhaul & VibeStudio Inventory: Creator, Search",
+    title:
+      "Major Architecture Overhaul & VibeStudio Inventory: Creator, Search",
     version: "v1.5.2",
     description: (
       <>
@@ -244,12 +247,12 @@ const updates: ChangelogEntry[] = [
         <h2 className="mt-6 text-xl font-semibold">New Features 🎉</h2>
         <ul className="mt-2 list-disc space-y-3 ps-6 text-lg">
           <li>
-            <strong>VibeStudio Creator:</strong> No-code feature for direct codebase
-            modifications. Aider integration!
+            <strong>VibeStudio Creator:</strong> No-code feature for direct
+            codebase modifications. Aider integration!
           </li>
           <li>
-            <strong>VibeStudio Search:</strong> Integrated Perplexity for up-to-date
-            AI web search
+            <strong>VibeStudio Search:</strong> Integrated Perplexity for
+            up-to-date AI web search
           </li>
           <li>
             <strong>VibeStudio Chat:</strong> multiple bug fixes

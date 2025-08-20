@@ -16,7 +16,12 @@ const faqData: FAQItem[] = [
   {
     id: "name",
     question: "Why is it called VibeStudio?!",
-    answer: <p>It's all about capturing the right vibe for your coding sessions! VibeStudio adapts to your mood and creative flow. ✨💻</p>,
+    answer: (
+      <p>
+        It&apos;s all about capturing the right vibe for your coding sessions!
+        VibeStudio adapts to your mood and creative flow. ✨💻
+      </p>
+    ),
   },
   {
     id: "privacy",
@@ -111,7 +116,9 @@ const FAQComponent: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-black">Why VibeStudio?</h3>
+              <h3 className="text-xl font-semibold text-black">
+                Why VibeStudio?
+              </h3>
               <p className="text-xl text-[#666666]">
                 You just want to be able to make what you want, fast. VibeStudio
                 gets you that with mood-adaptive AI assistance.

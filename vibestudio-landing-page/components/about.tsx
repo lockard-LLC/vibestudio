@@ -16,10 +16,10 @@ const AboutComponent: React.FC = () => {
             </div>
             <h2 className="text-[44px] font-semibold text-black">About Us</h2>
             <p className="text-xl text-[#666666]">
-              Any idea you have, VibeStudio is here to help you build it. VibeStudio is
-              an AI mood-adaptive IDE with a suite of the best AI tools to allow you
-              to make what you want. Not just for prototyping, but for a long
-              lifespan of added features and growth.
+              Any idea you have, VibeStudio is here to help you build it.
+              VibeStudio is an AI mood-adaptive IDE with a suite of the best AI
+              tools to allow you to make what you want. Not just for
+              prototyping, but for a long lifespan of added features and growth.
             </p>
             <span className="text-xl text-[#666666]">
               Just remember to make what excites!
@@ -48,8 +48,8 @@ const AboutComponent: React.FC = () => {
                         </span>
                       </div>
                       <p className="text-base text-[#666666]">
-                        Create new projects from scratch! VibeStudio ensures your
-                        project adheres to the latest technologies and best
+                        Create new projects from scratch! VibeStudio ensures
+                        your project adheres to the latest technologies and best
                         practices.
                       </p>
                     </div>
@@ -164,9 +164,9 @@ const AboutComponent: React.FC = () => {
                         </span>
                       </div>
                       <p className="text-base text-[#666666]">
-                        Almost all projects require users to login. Let VibeStudio
-                        help you with this with best practices and the latest
-                        tools.
+                        Almost all projects require users to login. Let
+                        VibeStudio help you with this with best practices and
+                        the latest tools.
                       </p>
                     </div>
                     <div className="flex items-center justify-center">

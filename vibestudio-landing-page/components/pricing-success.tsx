@@ -35,8 +35,8 @@ export default function PricingSuccess() {
                 aria-hidden="true"
               ></div>
               <div className="text-center text-gray-700">
-                We hope you enjoy using VibeStudio. Feel free to send any suggestions
-                our way at{" "}
+                We hope you enjoy using VibeStudio. Feel free to send any
+                suggestions our way at{" "}
                 <Link
                   href={`mailto:${CONTACT_EMAIL}`}
                   className="font-medium text-gray-900 underline"

@@ -11,7 +11,8 @@ export const videoData = [
   },
   {
     id: 2,
-    title: "Make specific in-line changes and ask questions with VibeStudio Chat",
+    title:
+      "Make specific in-line changes and ask questions with VibeStudio Chat",
     description:
       "Ask questions or generate code with the context of your @codebase for more accurate results with VibeStudio Chat - an AI chat assistant, powered by Continue.",
     videoUrl: `data:video/mp4;base64,`,

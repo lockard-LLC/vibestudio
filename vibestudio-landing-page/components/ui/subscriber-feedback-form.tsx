@@ -70,8 +70,8 @@ export function SubscriberFeedbackForm() {
     <div className="my-8">
       <div className="mb-6 text-center text-gray-700">
         You can start using VibeStudio immediately! But if you have a second,
-        we&apos;d love to learn more about how you plan to use VibeStudio! It&apos;d
-        be very helpful - but totally optional!
+        we&apos;d love to learn more about how you plan to use VibeStudio!
+        It&apos;d be very helpful - but totally optional!
       </div>
 
       <Form {...form}>

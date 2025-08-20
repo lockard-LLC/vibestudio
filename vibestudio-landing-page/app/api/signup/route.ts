@@ -3,14 +3,17 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const data = await request.json();
-    const response = await fetch(`${process.env.VIBESTUDIO_SERVER_URL}/signup`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Frontend-Key": process.env.X_FRONTEND_KEY!,
+    const response = await fetch(
+      `${process.env.VIBESTUDIO_SERVER_URL}/signup`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Frontend-Key": process.env.X_FRONTEND_KEY!,
+        },
+        body: JSON.stringify(data),
       },
-      body: JSON.stringify(data),
-    });
+    );
     if (!response.ok) {
       const error = await response.json();
       return NextResponse.json(

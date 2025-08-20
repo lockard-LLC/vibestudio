@@ -22,18 +22,19 @@ export default function PrivacyPolicyComponent() {
             <div className="text-base font-normal">
               <p>
                 This privacy policy (“Privacy Policy”) applies to all visitors
-                and users of the VibeStudio desktop app and websites (collectively,
-                “VibeStudio”, “App” or “Apps”), which are offered by VibeStudio Inc.
-                and/or any of its affiliates (“Anysphere” or “we” or “us”) and
-                describes how we process your personal information in connection
-                with those Apps, and how we collect information through the use
-                of cookies and related technologies. It also tells you how you
-                can access and update your personal information and describes
-                the data protection rights that may be available under your
-                country&apos;s or state&apos;s laws. Please read this Privacy
-                Policy carefully. By accessing or using any part of the App, you
-                acknowledge you have been informed of and consent to our
-                practices with regard to your personal information and data.
+                and users of the VibeStudio desktop app and websites
+                (collectively, “VibeStudio”, “App” or “Apps”), which are offered
+                by VibeStudio Inc. and/or any of its affiliates (“Anysphere” or
+                “we” or “us”) and describes how we process your personal
+                information in connection with those Apps, and how we collect
+                information through the use of cookies and related technologies.
+                It also tells you how you can access and update your personal
+                information and describes the data protection rights that may be
+                available under your country&apos;s or state&apos;s laws. Please
+                read this Privacy Policy carefully. By accessing or using any
+                part of the App, you acknowledge you have been informed of and
+                consent to our practices with regard to your personal
+                information and data.
               </p>
             </div>
 
@@ -42,9 +43,9 @@ export default function PrivacyPolicyComponent() {
             </h2>
             <div className="space-y-4 text-base font-normal">
               <p>
-                If you are a customer of VibeStudio, this Privacy Policy does not
-                apply to personal information or other data and information that
-                we process on your behalf (if any) as your service provider
+                If you are a customer of VibeStudio, this Privacy Policy does
+                not apply to personal information or other data and information
+                that we process on your behalf (if any) as your service provider
                 (collectively, “Customer Data”). We will only use Customer Data
                 (including any personal information contained therein) to
                 provide you with the Services, and our use of your Customer Data
@@ -79,15 +80,16 @@ export default function PrivacyPolicyComponent() {
                 example, we ask visitors who use our community Discord, or our
                 forum, to provide a username and email address. We will also
                 collect the information you provide with us in connection with
-                creating an account on the App. In each case, VibeStudio collects
-                such personal information only insofar as is necessary or
-                appropriate to fulfill the purpose of your interaction with or
-                your request to VibeStudio. We will not disclose your personal
-                information other than as described in this Privacy Policy.
+                creating an account on the App. In each case, VibeStudio
+                collects such personal information only insofar as is necessary
+                or appropriate to fulfill the purpose of your interaction with
+                or your request to VibeStudio. We will not disclose your
+                personal information other than as described in this Privacy
+                Policy.
               </p>
               <p>
-                Like most website operators, VibeStudio automatically collects (i)
-                technical information about your device including your
+                Like most website operators, VibeStudio automatically collects
+                (i) technical information about your device including your
                 device&apos;s internet protocol (IP) address, device type (e.g.,
                 phone, tablet), unique identifiers (including identifiers used
                 for advertising purposes), language settings, mobile device
@@ -123,10 +125,10 @@ export default function PrivacyPolicyComponent() {
                 health information, or religious information.
               </p>
               <p>
-                VibeStudio does not knowingly collect information from or direct any
-                of our App or content specifically to children under the age of
-                18. If we learn or have reason to suspect that a user is under
-                the age of 18, we will close that account.
+                VibeStudio does not knowingly collect information from or direct
+                any of our App or content specifically to children under the age
+                of 18. If we learn or have reason to suspect that a user is
+                under the age of 18, we will close that account.
               </p>
             </div>
 
@@ -227,7 +229,8 @@ export default function PrivacyPolicyComponent() {
                 You may withdraw your consent at any time through the
                 unsubscribe feature provided with the relevant marketing email
                 or by contacting us using the details in the &apos;Contacting
-                VibeStudio About Your Privacy&apos; section of this Privacy Policy.
+                VibeStudio About Your Privacy&apos; section of this Privacy
+                Policy.
               </p>
             </div>
 
@@ -244,21 +247,22 @@ export default function PrivacyPolicyComponent() {
                 in this Privacy Policy or otherwise with your consent.
               </p>
               <p>
-                VibeStudio only shares your personal information with those of its
-                employees, contractors, and affiliated organizations that (i)
-                need to know that personal information in order to process it on
-                VibeStudio&apos;s behalf or to provide services available on the
-                App, and (ii) that have agreed not to disclose it to others.
+                VibeStudio only shares your personal information with those of
+                its employees, contractors, and affiliated organizations that
+                (i) need to know that personal information in order to process
+                it on VibeStudio&apos;s behalf or to provide services available
+                on the App, and (ii) that have agreed not to disclose it to
+                others.
               </p>
               <p>
-                VibeStudio may disclose your personal information to professional
-                advisors, such as lawyers, bankers, auditors and insurers, where
-                necessary in the course of the professional services that they
-                render to us.
+                VibeStudio may disclose your personal information to
+                professional advisors, such as lawyers, bankers, auditors and
+                insurers, where necessary in the course of the professional
+                services that they render to us.
               </p>
               <p>
-                VibeStudio may sell, transfer or otherwise share some or all of our
-                business or assets, including your personal information, in
+                VibeStudio may sell, transfer or otherwise share some or all of
+                our business or assets, including your personal information, in
                 connection with a business transaction (or potential business
                 transaction) such as a corporate divestiture, merger,
                 consolidation, acquisition, reorganization or sale of assets, or
@@ -334,8 +338,8 @@ export default function PrivacyPolicyComponent() {
                 Clauses (“SCCs”) approved by the EU Commission or by the UK
                 Government. A copy of the relevant mechanism can be obtained for
                 your review on request by using the contact details in the
-                &apos;Contacting VibeStudio About Your Privacy&apos; section of this
-                Privacy Policy.
+                &apos;Contacting VibeStudio About Your Privacy&apos; section of
+                this Privacy Policy.
               </p>
             </div>
 
@@ -345,14 +349,15 @@ export default function PrivacyPolicyComponent() {
             <div className="space-y-4 text-base font-normal">
               <p>
                 If you are a registered user of the Apps and have supplied your
-                email address, VibeStudio may occasionally send you an email to tell
-                you about security, system information, new features, solicit
-                your feedback, or just keep you up to date with what&apos;s
-                going on with VibeStudio and our products. We primarily use our blog
-                to communicate this type of information, so we expect to keep
-                this type of email to a minimum. There&apos;s an unsubscribe
-                link located at the bottom of each of the marketing emails we
-                send you so you can stop receiving such emails at any time.
+                email address, VibeStudio may occasionally send you an email to
+                tell you about security, system information, new features,
+                solicit your feedback, or just keep you up to date with
+                what&apos;s going on with VibeStudio and our products. We
+                primarily use our blog to communicate this type of information,
+                so we expect to keep this type of email to a minimum.
+                There&apos;s an unsubscribe link located at the bottom of each
+                of the marketing emails we send you so you can stop receiving
+                such emails at any time.
               </p>
               <p>
                 If you send us a request (for example via a support email or via
@@ -670,13 +675,13 @@ export default function PrivacyPolicyComponent() {
                 logging into your account and updating profile settings.
               </p>
               <p>
-                VibeStudio will retain your information for as long as your account
-                is active or as needed to perform our contractual obligations,
-                provide you services through the App, to comply with legal
-                obligations, resolve disputes, preserve legal rights, or enforce
-                our agreements. Retention periods will be determined taking into
-                account the type of information that is collected and the
-                purpose for which it is collected, bearing in mind the
+                VibeStudio will retain your information for as long as your
+                account is active or as needed to perform our contractual
+                obligations, provide you services through the App, to comply
+                with legal obligations, resolve disputes, preserve legal rights,
+                or enforce our agreements. Retention periods will be determined
+                taking into account the type of information that is collected
+                and the purpose for which it is collected, bearing in mind the
                 requirements applicable to the situation and the need to destroy
                 outdated, unused information at the earliest reasonable
                 opportunity. For instance, in respect of data held for the
@@ -747,8 +752,8 @@ export default function PrivacyPolicyComponent() {
             </h2>
             <div className="space-y-4 text-base font-normal">
               <p>
-                VibeStudio may change its privacy policy from time to time, and in
-                VibeStudio&apos;s sole discretion.
+                VibeStudio may change its privacy policy from time to time, and
+                in VibeStudio&apos;s sole discretion.
               </p>
               <p>
                 If we make material changes to this Privacy Policy, we will

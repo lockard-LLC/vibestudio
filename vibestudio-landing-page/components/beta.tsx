@@ -20,8 +20,8 @@ const Beta: React.FC<BetaProps> = ({ user }) => {
               Download VibeStudio Beta Version
             </h2>
             <p className="text-xl text-[#666666]">
-              Try out the latest beta version of VibeStudio and let us know what you
-              think in{" "}
+              Try out the latest beta version of VibeStudio and let us know what
+              you think in{" "}
               <Link
                 className="underline"
                 target="_blank"

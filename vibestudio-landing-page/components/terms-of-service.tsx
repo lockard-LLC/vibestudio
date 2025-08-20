@@ -25,7 +25,7 @@ export default function TermsOfServiceComponent() {
 
               <p>
                 Welcome, and thank you for your interest in VibeStudio, Inc.
-                (VibeStudio," "we," or "us") and our website at&nbsp;
+                (VibeStudio,&quot; &quot;we,&quot; or &quot;us&quot;) and our website at&nbsp;
                 <Link
                   href="http://www.vibestudio.online"
                   className="font-medium text-gray-900 underline"
@@ -35,8 +35,8 @@ export default function TermsOfServiceComponent() {
                 , along with the Software (as defined below), our related
                 websites, hosted applications or other downloadable
                 applications, and other services provided by us (collectively,
-                the “Service”). These Terms and Conditions, including VibeStudio’s
-                Privacy Policy (available at:&nbsp;
+                the “Service”). These Terms and Conditions, including
+                VibeStudio’s Privacy Policy (available at:&nbsp;
                 <Link
                   href="https://vibestudio.online/privacy"
                   className="font-medium text-gray-900 underline"
@@ -71,8 +71,8 @@ export default function TermsOfServiceComponent() {
               <p>
                 If you are using the Service in the course of your work for an
                 entity or organization that has a master subscription agreement
-                with VibeStudio in effect, then such master subscription agreement
-                controls in the event of a conflict with these Terms.
+                with VibeStudio in effect, then such master subscription
+                agreement controls in the event of a conflict with these Terms.
               </p>
 
               <p>
@@ -92,10 +92,10 @@ export default function TermsOfServiceComponent() {
                   <strong className="text-gray-900">
                     VibeStudio Service Overview
                   </strong>
-                  . Our VibeStudio platform offers a suite of coding tools driven by
-                  machine learning to help developers write code more easily and
-                  efficiently and can provide suggested code, outputs or other
-                  functions.
+                  . Our VibeStudio platform offers a suite of coding tools
+                  driven by machine learning to help developers write code more
+                  easily and efficiently and can provide suggested code, outputs
+                  or other functions.
                 </li>
 
                 <li>
@@ -154,26 +154,26 @@ export default function TermsOfServiceComponent() {
                   <ol className="list-decimal space-y-4 pl-8">
                     <li>
                       <p>
-                        <strong className="text-gray-900">Price</strong>. VibeStudio
-                        reserves the right to determine pricing for the Service.
-                        VibeStudio will make reasonable efforts to keep pricing
-                        information published on the Service up to date. We
-                        encourage you to check our pricing page periodically for
-                        current pricing information. VibeStudio may change the fees
-                        for any feature of the Service, including additional
-                        fees or charges, if VibeStudio gives you advance notice of
-                        changes before they apply through the Service user
-                        interface, a pop-up notice, email, or through other
-                        reasonable means. Your continued use of the Service
-                        after the price change becomes effective constitutes
-                        your agreement to pay the changed amount. You will be
-                        responsible for all taxes associated with the Service,
-                        other than taxes based on VibeStudio’s net income. VibeStudio,
-                        at its sole discretion, may make promotional offers with
-                        different features and different pricing to any of
-                        VibeStudio’s customers. These promotional offers, unless
-                        made to you, will not apply to your offer or these
-                        Terms.
+                        <strong className="text-gray-900">Price</strong>.
+                        VibeStudio reserves the right to determine pricing for
+                        the Service. VibeStudio will make reasonable efforts to
+                        keep pricing information published on the Service up to
+                        date. We encourage you to check our pricing page
+                        periodically for current pricing information. VibeStudio
+                        may change the fees for any feature of the Service,
+                        including additional fees or charges, if VibeStudio
+                        gives you advance notice of changes before they apply
+                        through the Service user interface, a pop-up notice,
+                        email, or through other reasonable means. Your continued
+                        use of the Service after the price change becomes
+                        effective constitutes your agreement to pay the changed
+                        amount. You will be responsible for all taxes associated
+                        with the Service, other than taxes based on VibeStudio’s
+                        net income. VibeStudio, at its sole discretion, may make
+                        promotional offers with different features and different
+                        pricing to any of VibeStudio’s customers. These
+                        promotional offers, unless made to you, will not apply
+                        to your offer or these Terms.
                       </p>
                     </li>
 
@@ -182,11 +182,11 @@ export default function TermsOfServiceComponent() {
                         <strong className="text-gray-900">
                           Payment Processing
                         </strong>
-                        . Notwithstanding any amounts owed to VibeStudio hereunder,
-                        PEARAI DOES NOT DIRECTLY PROCESS PAYMENT FOR ANY
-                        SERVICES. To facilitate payment for the Service via bank
-                        account, credit card, or debit card, we use Stripe, Inc.
-                        and its affiliates (“
+                        . Notwithstanding any amounts owed to VibeStudio
+                        hereunder, PEARAI DOES NOT DIRECTLY PROCESS PAYMENT FOR
+                        ANY SERVICES. To facilitate payment for the Service via
+                        bank account, credit card, or debit card, we use Stripe,
+                        Inc. and its affiliates (“
                         <strong className="text-gray-900">Stripe</strong>
                         ”), a third-party payment processor. These payment
                         processing services are provided by Stripe and are
@@ -291,9 +291,9 @@ export default function TermsOfServiceComponent() {
                         on language model usage costs. You will be alerted of
                         this within the app, and can view your pay-as-you-go
                         credit used in the landing page. You expressly authorize
-                        VibeStudio to charge your payment method for any additional
-                        usage beyond your subscription plan&apos;s credit
-                        allocation.
+                        VibeStudio to charge your payment method for any
+                        additional usage beyond your subscription plan&apos;s
+                        credit allocation.
                       </p>
                     </li>
 
@@ -302,17 +302,18 @@ export default function TermsOfServiceComponent() {
                         <strong className="text-gray-900">
                           Delinquent Accounts
                         </strong>
-                        . VibeStudio may suspend or terminate access to the Service,
-                        including fee-based portions of the Service, for any
-                        account for which any amount is due but unpaid. In
-                        addition to the amount due for the Service, a delinquent
-                        account will be charged with fees or charges that are
-                        incidental to any chargeback or collection of any unpaid
-                        amount, including collection fees. If your payment
-                        method is no longer valid at the time a renewal
-                        Subscription Fee is due, then VibeStudio reserves the right
-                        to delete your account and any information associated
-                        with your account without any liability to you.
+                        . VibeStudio may suspend or terminate access to the
+                        Service, including fee-based portions of the Service,
+                        for any account for which any amount is due but unpaid.
+                        In addition to the amount due for the Service, a
+                        delinquent account will be charged with fees or charges
+                        that are incidental to any chargeback or collection of
+                        any unpaid amount, including collection fees. If your
+                        payment method is no longer valid at the time a renewal
+                        Subscription Fee is due, then VibeStudio reserves the
+                        right to delete your account and any information
+                        associated with your account without any liability to
+                        you.
                       </p>
                     </li>
                   </ol>
@@ -336,32 +337,34 @@ export default function TermsOfServiceComponent() {
                         or transmit (such actions, collectively,
                         &ldquo;Upload&rdquo;) to the Service are only used to
                         provide Suggestions to you unless you opt-in to allow
-                        VibeStudio to use such Customer Data to improve and enhance
-                        the Service and for other development, diagnostic and
-                        corrective purposes in connection with the Service and
-                        other VibeStudio offerings. Customer Data is transmitted
-                        only to generate Suggestions in real-time and are
-                        deleted once Suggestions are generated. Customer Data is
-                        not used for any other purpose, including the training
-                        of language models. Customer Data is encrypted during
-                        transit and is not stored at rest.
+                        VibeStudio to use such Customer Data to improve and
+                        enhance the Service and for other development,
+                        diagnostic and corrective purposes in connection with
+                        the Service and other VibeStudio offerings. Customer
+                        Data is transmitted only to generate Suggestions in
+                        real-time and are deleted once Suggestions are
+                        generated. Customer Data is not used for any other
+                        purpose, including the training of language models.
+                        Customer Data is encrypted during transit and is not
+                        stored at rest.
                       </p>
                     </li>
 
                     <li>
                       <p>
                         <strong className="text-gray-900">Usage Data</strong>.
-                        VibeStudio may collect, generate, and derive performance,
-                        analytical, or usage data relating to your access to or
-                        use of the Service (&ldquo;
+                        VibeStudio may collect, generate, and derive
+                        performance, analytical, or usage data relating to your
+                        access to or use of the Service (&ldquo;
                         <strong className="text-gray-900">Usage Data</strong>
                         &rdquo;). Usage Data will not include any Customer Data.
-                        VibeStudio will only use Usage Data to provide the Service
-                        to you, to monitor the performance and stability of the
-                        Service, and to prevent or address technical issues with
-                        the Service. VibeStudio may also anonymize Usage Data,
-                        aggregate it with other data, and use that aggregated,
-                        anonymized data to improve its products and services.
+                        VibeStudio will only use Usage Data to provide the
+                        Service to you, to monitor the performance and stability
+                        of the Service, and to prevent or address technical
+                        issues with the Service. VibeStudio may also anonymize
+                        Usage Data, aggregate it with other data, and use that
+                        aggregated, anonymized data to improve its products and
+                        services.
                       </p>
                     </li>
                   </ol>
@@ -438,7 +441,8 @@ export default function TermsOfServiceComponent() {
                         termination by either party in accordance with these
                         Terms, including when terminated as described in Section
                         11.2, or (ii) when no Order Form remains in effect, if
-                        you and VibeStudio had previously executed an Order Form.
+                        you and VibeStudio had previously executed an Order
+                        Form.
                       </p>
                     </li>
 
@@ -447,15 +451,15 @@ export default function TermsOfServiceComponent() {
                         <strong className="text-gray-900">Termination</strong>.
                         If you violate any provision of these Terms, then your
                         authorization to access the Service and these Terms
-                        automatically terminate. In addition, VibeStudio may, at its
-                        sole discretion, terminate these Terms or your account
-                        on the Service, or suspend or terminate your access to
-                        the Service, at any time for any reason or no reason,
-                        with or without notice, and without any liability to you
-                        arising from such termination. If you are using the
-                        Services under a free or trial account, you may
-                        terminate your use of the Services at any time by
-                        deleting your account. If you have purchased a paid
+                        automatically terminate. In addition, VibeStudio may, at
+                        its sole discretion, terminate these Terms or your
+                        account on the Service, or suspend or terminate your
+                        access to the Service, at any time for any reason or no
+                        reason, with or without notice, and without any
+                        liability to you arising from such termination. If you
+                        are using the Services under a free or trial account,
+                        you may terminate your use of the Services at any time
+                        by deleting your account. If you have purchased a paid
                         subscription for the Services, you may only terminate
                         your account following conclusion of your applicable
                         subscription period by providing us with notice of
@@ -478,8 +482,8 @@ export default function TermsOfServiceComponent() {
                         prior to termination and Sections 5.3 (Feedback), 6
                         (Ownership; Proprietary Rights), 11.3 (Effect of
                         Termination), 12 (Indemnity), 13 (Disclaimers; No
-                        Warranties by VibeStudio), 14 (Limitation of Liability), 15
-                        (Dispute Resolution and Arbitration), and 16
+                        Warranties by VibeStudio), 14 (Limitation of Liability),
+                        15 (Dispute Resolution and Arbitration), and 16
                         (Miscellaneous) will survive. You are solely responsible
                         for retaining copies of any content you upload to the
                         Service, including Customer Data. Upon termination of
@@ -497,17 +501,17 @@ export default function TermsOfServiceComponent() {
                         <strong className="text-gray-900">
                           Modification of the Service
                         </strong>
-                        . VibeStudio reserves the right to modify or discontinue all
-                        or any portion of the Service at any time (including by
-                        limiting or discontinuing certain features of the
+                        . VibeStudio reserves the right to modify or discontinue
+                        all or any portion of the Service at any time (including
+                        by limiting or discontinuing certain features of the
                         Service), temporarily or permanently, without notice to
-                        you. VibeStudio will have no liability for any change to the
-                        Service, including any paid-for functionalities of the
-                        Service, or any suspension or termination of your access
-                        to or use of the Service. You should retain copies of
-                        any User Content you Post to the Service so that you
-                        have permanent copies in the event the Service is
-                        modified in such a way that you lose access to User
+                        you. VibeStudio will have no liability for any change to
+                        the Service, including any paid-for functionalities of
+                        the Service, or any suspension or termination of your
+                        access to or use of the Service. You should retain
+                        copies of any User Content you Post to the Service so
+                        that you have permanent copies in the event the Service
+                        is modified in such a way that you lose access to User
                         Content you Posted to the Service.
                       </p>
                     </li>
@@ -519,10 +523,12 @@ export default function TermsOfServiceComponent() {
                     <strong className="text-gray-900">Indemnity</strong>. To the
                     fullest extent permitted by law, you are responsible for
                     your use of the Service, and you will defend and indemnify
-                    VibeStudio, its affiliates and their respective shareholders,
-                    directors, managers, members, officers, employees,
-                    consultants, and agents (together, the “
-                    <strong className="text-gray-900">VibeStudio Entities</strong>
+                    VibeStudio, its affiliates and their respective
+                    shareholders, directors, managers, members, officers,
+                    employees, consultants, and agents (together, the “
+                    <strong className="text-gray-900">
+                      VibeStudio Entities
+                    </strong>
                     ”) from and against every claim brought by a third party,
                     and any related liability, damage, loss, and expense,
                     including attorneys’ fees and costs, arising out of or
@@ -685,21 +691,21 @@ export default function TermsOfServiceComponent() {
                           Arbitration Agreement
                         </strong>
                         .” You agree that any and all disputes or claims that
-                        have arisen or may arise between you and VibeStudio, whether
-                        arising out of or relating to these Terms (including any
-                        alleged breach thereof), the Service, any advertising,
-                        or any aspect of the relationship or transactions
-                        between us, will be resolved exclusively through final
-                        and binding arbitration, rather than a court, in
-                        accordance with the terms of this Arbitration Agreement,
-                        except that you may assert individual claims in small
-                        claims court, if your claims qualify. Further, this
-                        Arbitration Agreement does not preclude you from
+                        have arisen or may arise between you and VibeStudio,
+                        whether arising out of or relating to these Terms
+                        (including any alleged breach thereof), the Service, any
+                        advertising, or any aspect of the relationship or
+                        transactions between us, will be resolved exclusively
+                        through final and binding arbitration, rather than a
+                        court, in accordance with the terms of this Arbitration
+                        Agreement, except that you may assert individual claims
+                        in small claims court, if your claims qualify. Further,
+                        this Arbitration Agreement does not preclude you from
                         bringing issues to the attention of federal, state, or
                         local agencies, and such agencies can, if the law
                         allows, seek relief against us on your behalf. You agree
-                        that, by entering into these Terms, you and VibeStudio are
-                        each waiving the right to a trial by jury or to
+                        that, by entering into these Terms, you and VibeStudio
+                        are each waiving the right to a trial by jury or to
                         participate in a class action. Your rights will be
                         determined by a neutral arbitrator, not a judge or jury.
                         The Federal Arbitration Act governs the interpretation
@@ -759,12 +765,12 @@ export default function TermsOfServiceComponent() {
                         the claim or dispute and (ii) set forth the specific
                         relief sought. If VibeStudio and you do not resolve the
                         claim within sixty (60) calendar days after the Notice
-                        is received, you or VibeStudio may commence an arbitration
-                        proceeding. During the arbitration, the amount of any
-                        settlement offer made by VibeStudio or you will not be
-                        disclosed to the arbitrator until after the arbitrator
-                        determines the amount, if any, to which you or VibeStudio is
-                        entitled.
+                        is received, you or VibeStudio may commence an
+                        arbitration proceeding. During the arbitration, the
+                        amount of any settlement offer made by VibeStudio or you
+                        will not be disclosed to the arbitrator until after the
+                        arbitrator determines the amount, if any, to which you
+                        or VibeStudio is entitled.
                       </p>
                     </li>
 
@@ -815,23 +821,23 @@ export default function TermsOfServiceComponent() {
                       </p>
 
                       <p>
-                        Unless VibeStudio and you agree otherwise, any arbitration
-                        hearings will take place in a reasonably convenient
-                        location for both parties with due consideration of
-                        their ability to travel and other pertinent
-                        circumstances. If the parties are unable to agree on a
-                        location, the determination will be made by AAA. If your
-                        claim is for $10,000 or less, VibeStudio agrees that you may
-                        choose whether the arbitration will be conducted solely
-                        on the basis of documents submitted to the arbitrator,
-                        through a telephonic hearing, or by an in-person hearing
-                        as established by the AAA Rules. If your claim exceeds
-                        $10,000, the right to a hearing will be determined by
-                        the AAA Rules. Regardless of the manner in which the
-                        arbitration is conducted, the arbitrator will issue a
-                        reasoned written decision sufficient to explain the
-                        essential findings and conclusions on which the award is
-                        based.
+                        Unless VibeStudio and you agree otherwise, any
+                        arbitration hearings will take place in a reasonably
+                        convenient location for both parties with due
+                        consideration of their ability to travel and other
+                        pertinent circumstances. If the parties are unable to
+                        agree on a location, the determination will be made by
+                        AAA. If your claim is for $10,000 or less, VibeStudio
+                        agrees that you may choose whether the arbitration will
+                        be conducted solely on the basis of documents submitted
+                        to the arbitrator, through a telephonic hearing, or by
+                        an in-person hearing as established by the AAA Rules. If
+                        your claim exceeds $10,000, the right to a hearing will
+                        be determined by the AAA Rules. Regardless of the manner
+                        in which the arbitration is conducted, the arbitrator
+                        will issue a reasoned written decision sufficient to
+                        explain the essential findings and conclusions on which
+                        the award is based.
                       </p>
                     </li>
 
@@ -848,21 +854,21 @@ export default function TermsOfServiceComponent() {
                         ”) will be governed by the AAA Rules, unless otherwise
                         provided in this Arbitration Agreement. To the extent
                         any Arbitration Fees are not specifically allocated to
-                        either VibeStudio or you under the AAA Rules, VibeStudio and you
-                        shall split them equally; provided that if you are able
-                        to demonstrate to the arbitrator that you are
+                        either VibeStudio or you under the AAA Rules, VibeStudio
+                        and you shall split them equally; provided that if you
+                        are able to demonstrate to the arbitrator that you are
                         economically unable to pay your portion of such
                         Arbitration Fees or if the arbitrator otherwise
                         determines for any reason that you should not be
                         required to pay your portion of any Arbitration Fees,
-                        VibeStudio will pay your portion of such fees. In addition,
-                        if you demonstrate to the arbitrator that the costs of
-                        arbitration will be prohibitive as compared to the costs
-                        of litigation, VibeStudio will pay as much of the
-                        Arbitration Fees as the arbitrator deems necessary to
-                        prevent the arbitration from being cost-prohibitive. Any
-                        payment of attorneys’ fees will be governed by the AAA
-                        Rules.
+                        VibeStudio will pay your portion of such fees. In
+                        addition, if you demonstrate to the arbitrator that the
+                        costs of arbitration will be prohibitive as compared to
+                        the costs of litigation, VibeStudio will pay as much of
+                        the Arbitration Fees as the arbitrator deems necessary
+                        to prevent the arbitration from being cost-prohibitive.
+                        Any payment of attorneys’ fees will be governed by the
+                        AAA Rules.
                       </p>
                     </li>
 
@@ -912,12 +918,12 @@ export default function TermsOfServiceComponent() {
                         change to this Arbitration Agreement (other than a
                         change to the Notice Address) while you are a user of
                         the Service, you may reject any such change by sending
-                        VibeStudio written notice within thirty (30) calendar days
-                        of the change to the Notice Address provided above. By
-                        rejecting any future change, you are agreeing that you
-                        will arbitrate any dispute between us in accordance with
-                        the language of this Arbitration Agreement as of the
-                        date you first accepted these Terms (or accepted any
+                        VibeStudio written notice within thirty (30) calendar
+                        days of the change to the Notice Address provided above.
+                        By rejecting any future change, you are agreeing that
+                        you will arbitrate any dispute between us in accordance
+                        with the language of this Arbitration Agreement as of
+                        the date you first accepted these Terms (or accepted any
                         subsequent changes to these Terms).
                       </p>
                     </li>
@@ -969,17 +975,17 @@ export default function TermsOfServiceComponent() {
                         All disputes and claims arising from these Terms will be
                         governed in accordance with the arbitration provisions
                         set forth above in Section 15; provided that you and
-                        VibeStudio submit to the personal and exclusive jurisdiction
-                        of the state courts and federal courts located within
-                        Santa Clara County, California for (a) individuals
-                        claims brought in small claims court, (b) claims for
-                        injunctive or equitable relief, (c) claims involving
-                        infringement or violation of intellectual property
-                        rights, and (d) enforcement of any awards or relief
-                        provided following arbitration. We operate the Service
-                        from the United States, and we make no representation
-                        that Materials included in the Service are appropriate
-                        or available for use in other locations.
+                        VibeStudio submit to the personal and exclusive
+                        jurisdiction of the state courts and federal courts
+                        located within Santa Clara County, California for (a)
+                        individuals claims brought in small claims court, (b)
+                        claims for injunctive or equitable relief, (c) claims
+                        involving infringement or violation of intellectual
+                        property rights, and (d) enforcement of any awards or
+                        relief provided following arbitration. We operate the
+                        Service from the United States, and we make no
+                        representation that Materials included in the Service
+                        are appropriate or available for use in other locations.
                       </p>
                     </li>
 
@@ -998,9 +1004,9 @@ export default function TermsOfServiceComponent() {
                         </Link>
                         ) (the “Privacy Policy”) carefully for information
                         relating to our collection, use, storage, and disclosure
-                        of your personal information. The VibeStudio Privacy Policy
-                        is incorporated by this reference into, and made a part
-                        of, these Terms.
+                        of your personal information. The VibeStudio Privacy
+                        Policy is incorporated by this reference into, and made
+                        a part of, these Terms.
                       </p>
                     </li>
 
@@ -1026,10 +1032,10 @@ export default function TermsOfServiceComponent() {
                         <strong className="text-gray-900">
                           Contact Information
                         </strong>
-                        . The Service is offered by VibeStudio, Inc., located at 54
-                        State Street, Ste 804 Albany NY 12207. You may contact
-                        us by sending correspondence to that address or by
-                        emailing us at&nbsp;
+                        . The Service is offered by VibeStudio, Inc., located at
+                        54 State Street, Ste 804 Albany NY 12207. You may
+                        contact us by sending correspondence to that address or
+                        by emailing us at&nbsp;
                         <Link
                           href={`mailto:${CONTACT_EMAIL}`}
                           className="font-medium text-gray-900 underline"
