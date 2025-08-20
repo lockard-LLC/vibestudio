@@ -92,6 +92,12 @@ class ContributedChatSessionData implements IDisposable {
 export class ChatSessionsService extends Disposable implements IChatSessionsService {
 	readonly _serviceBrand: undefined;
 	private readonly _itemsProviders: Map<string, IChatSessionItemProvider> = new Map();
+	
+	// Cache for chat session items to avoid redundant provider calls
+	// This cache is particularly beneficial when multiple consumers (like status bar and tree views)
+	// need to access session data around the same time, especially for extension-contributed providers
+	private readonly _sessionItemsCache: Map<string, { items: IChatSessionItem[]; timestamp: number }> = new Map();
+	private readonly CACHE_TTL = 5000; // Cache for 5 seconds to balance freshness with performance
 
 	private readonly _onDidChangeItemsProviders = this._register(new Emitter<IChatSessionItemProvider>());
 	readonly onDidChangeItemsProviders: Event<IChatSessionItemProvider> = this._onDidChangeItemsProviders.event;
@@ -167,6 +173,8 @@ export class ChatSessionsService extends Disposable implements IChatSessionsServ
 			dispose: () => {
 				this._contributions.delete(contribution.type);
 				this._disposeDynamicAgent(contribution.type);
+				// Clear cached session items for this contribution
+				this._sessionItemsCache.delete(contribution.type);
 			}
 		};
 	}
@@ -251,6 +259,9 @@ export class ChatSessionsService extends Disposable implements IChatSessionsServ
 				sessionData.dispose(); // This will call _onWillDisposeSession and clean up
 			}
 		}
+
+		// Clear cached session items for this contribution
+		this._sessionItemsCache.delete(contributionId);
 	}
 
 	private _registerDynamicAgent(contribution: IChatSessionsExtensionPoint): IDisposable {
@@ -335,10 +346,23 @@ export class ChatSessionsService extends Disposable implements IChatSessionsServ
 			throw Error(`Can not find provider for ${chatSessionType}`);
 		}
 
+		// Check cache first
+		const cached = this._sessionItemsCache.get(chatSessionType);
+		if (cached && (Date.now() - cached.timestamp) < this.CACHE_TTL) {
+			return cached.items;
+		}
+
 		const provider = this._itemsProviders.get(chatSessionType);
 
 		if (provider?.provideChatSessionItems) {
 			const sessions = await provider.provideChatSessionItems(token);
+			
+			// Cache the results
+			this._sessionItemsCache.set(chatSessionType, {
+				items: sessions,
+				timestamp: Date.now()
+			});
+			
 			return sessions;
 		}
 
@@ -352,6 +376,8 @@ export class ChatSessionsService extends Disposable implements IChatSessionsServ
 
 		const disposables = new DisposableStore();
 		disposables.add(provider.onDidChangeChatSessionItems(() => {
+			// Clear cache when provider data changes
+			this._sessionItemsCache.delete(chatSessionType);
 			this._onDidChangeSessionItems.fire(chatSessionType);
 		}));
 
@@ -362,6 +388,8 @@ export class ChatSessionsService extends Disposable implements IChatSessionsServ
 				const provider = this._itemsProviders.get(chatSessionType);
 				if (provider) {
 					this._itemsProviders.delete(chatSessionType);
+					// Clear cache when provider is removed
+					this._sessionItemsCache.delete(chatSessionType);
 					this._onDidChangeItemsProviders.fire(provider);
 				}
 			}

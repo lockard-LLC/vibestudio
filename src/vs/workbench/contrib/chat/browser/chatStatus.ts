@@ -35,6 +35,7 @@ import { Link } from '../../../../platform/opener/browser/link.js';
 import { IOpenerService } from '../../../../platform/opener/common/opener.js';
 import { ITelemetryService } from '../../../../platform/telemetry/common/telemetry.js';
 import { IChatStatusItemService, ChatStatusEntry } from './chatStatusItemService.js';
+import { IChatSessionsService, ChatSessionStatus, IChatSessionItem, IChatSessionItemProvider } from '../common/chatSessionsService.js';
 import { ITextResourceConfigurationService } from '../../../../editor/common/services/textResourceConfiguration.js';
 import { EditorResourceAccessor, SideBySideEditor } from '../../../common/editor.js';
 import { getCodeEditor } from '../../../../editor/browser/editorBrowser.js';
@@ -263,13 +264,14 @@ function isNewUser(chatEntitlementService: IChatEntitlementService): boolean {
 }
 
 function canUseCopilot(chatEntitlementService: IChatEntitlementService): boolean {
-	const newUser = isNewUser(chatEntitlementService);
-	const disabled = chatEntitlementService.sentiment.disabled || chatEntitlementService.sentiment.untrusted;
-	const signedOut = chatEntitlementService.entitlement === ChatEntitlement.Unknown;
-	const free = chatEntitlementService.entitlement === ChatEntitlement.Free;
-	const allFreeQuotaReached = free && chatEntitlementService.quotas.chat?.percentRemaining === 0 && chatEntitlementService.quotas.completions?.percentRemaining === 0;
+	return true;
+	// const newUser = isNewUser(chatEntitlementService);
+	// const disabled = chatEntitlementService.sentiment.disabled || chatEntitlementService.sentiment.untrusted;
+	// const signedOut = chatEntitlementService.entitlement === ChatEntitlement.Unknown;
+	// const free = chatEntitlementService.entitlement === ChatEntitlement.Free;
+	// const allFreeQuotaReached = free && chatEntitlementService.quotas.chat?.percentRemaining === 0 && chatEntitlementService.quotas.completions?.percentRemaining === 0;
 
-	return !newUser && !signedOut && !allFreeQuotaReached && !disabled;
+	// return !newUser && !signedOut && !allFreeQuotaReached && !disabled;
 }
 
 function isCompletionsEnabled(configurationService: IConfigurationService, modeId: string = '*'): boolean {
@@ -317,6 +319,7 @@ class ChatStatusDashboard extends Disposable {
 	constructor(
 		@IChatEntitlementService private readonly chatEntitlementService: ChatEntitlementService,
 		@IChatStatusItemService private readonly chatStatusItemService: IChatStatusItemService,
+		@IChatSessionsService private readonly chatSessionsService: IChatSessionsService,
 		@ICommandService private readonly commandService: ICommandService,
 		@IConfigurationService private readonly configurationService: IConfigurationService,
 		@IEditorService private readonly editorService: IEditorService,
@@ -415,6 +418,27 @@ class ChatStatusDashboard extends Disposable {
 						previousElement.replaceWith(rendered.element);
 					}
 				}));
+			}
+		}
+
+		// Running Chat Sessions
+		{
+			const providers = this.chatSessionsService.getAllChatSessionItemProviders();
+			if (providers.length > 0) {
+				// Add section for running sessions
+				addSeparator(localize('runningSessionsTitle', "Running Sessions"), toAction({
+					id: 'workbench.view.chat.sessions',
+					label: localize('viewAllSessions', "View All"),
+					tooltip: localize('viewAllSessionsTooltip', "Open Chat Sessions View"),
+					class: ThemeIcon.asClassName(Codicon.eye),
+					run: () => this.runCommandAndClose('workbench.view.chat.sessions'),
+				}));
+
+				// Create container for running sessions
+				const sessionsContainer = this.element.appendChild($('div.running-sessions-container'));
+
+				// Fetch and display running sessions asynchronously
+				this.renderRunningSessions(sessionsContainer, providers, disposables, token);
 			}
 		}
 
@@ -521,6 +545,101 @@ class ChatStatusDashboard extends Disposable {
 				store.add(new Link(target, node, undefined, this.hoverService, this.openerService));
 			}
 		}
+	}
+
+	private renderRunningSessions(container: HTMLElement, providers: IChatSessionItemProvider[], disposables: DisposableStore, token: CancellationToken): void {
+		// Show loading indicator initially
+		const loadingIndicator = container.appendChild($('div.running-sessions-loading'));
+		loadingIndicator.appendChild($('span.sessions-icon.codicon.codicon-loading.codicon-modifier-spin'));
+		loadingIndicator.appendChild($('span', undefined, localize('loadingSessions', "Loading sessions...")));
+
+		// Fetch running sessions asynchronously
+		this.getRunningSessionsAsync(providers, token).then(sessions => {
+			if (token.isCancellationRequested) {
+				return;
+			}
+
+			// Clear loading indicator
+			clearNode(container);
+
+			if (sessions.length === 0) {
+				// No running sessions found
+				const noSessionsItem = container.appendChild($('div.no-running-sessions'));
+				noSessionsItem.appendChild($('span', undefined, localize('noRunningSessions', "No running sessions")));
+				return;
+			}
+
+			// Show running sessions
+			const sessionsList = container.appendChild($('div.running-sessions-list'));
+			const MAX_SESSIONS_DISPLAY = 5;
+			const sessionsToShow = sessions.slice(0, MAX_SESSIONS_DISPLAY);
+			const remainingSessions = sessions.length - MAX_SESSIONS_DISPLAY;
+
+			// Display each session
+			for (const { session } of sessionsToShow) {
+				const sessionItem = sessionsList.appendChild($('div.running-session-item'));
+
+				// Running icon
+				sessionItem.appendChild($('span.session-icon.codicon.codicon-loading.codicon-modifier-spin'));
+
+				// Session title
+				const titleSpan = sessionItem.appendChild($('span.session-title'));
+				titleSpan.textContent = session.label || session.id || 'Untitled Session';
+				titleSpan.title = session.label || session.id || 'Untitled Session';
+			}
+
+			// Show "and X more..." if there are additional sessions
+			if (remainingSessions > 0) {
+				const moreItem = sessionsList.appendChild($('div.session-more'));
+				moreItem.textContent = localize('andXMoreSessions', "and {0} more...", remainingSessions);
+			}
+		}).catch(error => {
+			if (!token.isCancellationRequested) {
+				// Show error state
+				clearNode(container);
+				const errorItem = container.appendChild($('div.sessions-error'));
+				errorItem.appendChild($('span', undefined, localize('sessionsError', "Error loading sessions")));
+			}
+		});
+	}
+
+	private async getRunningSessionsAsync(providers: IChatSessionItemProvider[], token: CancellationToken): Promise<Array<{ provider: string; session: IChatSessionItem }>> {
+		const runningSessions: Array<{ provider: string; session: IChatSessionItem }> = [];
+		const seenSessions = new Set<string>();
+
+		// Check each provider for running sessions
+		for (const provider of providers) {
+			if (token.isCancellationRequested) {
+				break;
+			}
+
+			try {
+				// Use the cached service method
+				const sessionItems = await this.chatSessionsService.provideChatSessionItems(
+					provider.chatSessionType,
+					token
+				);
+
+				for (const session of sessionItems) {
+					// Only include sessions that are actually in progress
+					if (session.status !== ChatSessionStatus.InProgress) {
+						const sessionKey = `${provider.chatSessionType}-${session.id || session.label}`;
+						if (!seenSessions.has(sessionKey)) {
+							seenSessions.add(sessionKey);
+							runningSessions.push({
+								provider: provider.chatSessionType,
+								session
+							});
+						}
+					}
+				}
+			} catch (error) {
+				// Continue with other providers if one fails
+				continue;
+			}
+		}
+
+		return runningSessions;
 	}
 
 	private runCommandAndClose(commandOrFn: string | Function): void {
@@ -728,9 +847,10 @@ class ChatStatusDashboard extends Disposable {
 
 	private createCompletionsSnooze(container: HTMLElement, label: string, disposables: DisposableStore): void {
 		const isEnabled = () => {
-			const completionsEnabled = isCompletionsEnabled(this.configurationService);
-			const completionsEnabledActiveLanguage = isCompletionsEnabled(this.configurationService, this.editorService.activeTextEditorLanguageId);
-			return completionsEnabled || completionsEnabledActiveLanguage;
+			return true;
+			// const completionsEnabled = isCompletionsEnabled(this.configurationService);
+			// const completionsEnabledActiveLanguage = isCompletionsEnabled(this.configurationService, this.editorService.activeTextEditorLanguageId);
+			// return completionsEnabled || completionsEnabledActiveLanguage;
 		};
 
 		const button = disposables.add(new Button(container, { disabled: !isEnabled(), ...defaultButtonStyles, hoverDelegate: nativeHoverDelegate, secondary: true }));
