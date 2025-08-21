@@ -118,6 +118,7 @@ import { PromptUrlHandler } from './promptSyntax/promptUrlHandler.js';
 import { SAVE_TO_PROMPT_ACTION_ID, SAVE_TO_PROMPT_SLASH_COMMAND_NAME } from './promptSyntax/saveToPromptAction.js';
 import { ConfigureToolSets, UserToolSetsContributions } from './tools/toolSetsContribution.js';
 import { ChatViewsWelcomeHandler } from './viewsWelcome/chatViewsWelcomeHandler.js';
+import { RenameChatSessionAction, OpenChatSessionInNewWindowAction, OpenChatSessionInNewEditorAction } from './actions/chatSessionActions.js';
 
 // Register configuration
 const configurationRegistry = Registry.as<IConfigurationRegistry>(ConfigurationExtensions.Configuration);
@@ -858,7 +859,8 @@ registerWorkbenchContribution2(UserToolSetsContributions.ID, UserToolSetsContrib
 registerAction2(ConfigureToolSets);
 
 // Register chat session actions
-import { RenameChatSessionAction } from './actions/chatSessionActions.js';
 registerAction2(RenameChatSessionAction);
+registerAction2(OpenChatSessionInNewEditorAction);
+registerAction2(OpenChatSessionInNewWindowAction);
 
 ChatWidget.CONTRIBS.push(ChatDynamicVariableModel);
