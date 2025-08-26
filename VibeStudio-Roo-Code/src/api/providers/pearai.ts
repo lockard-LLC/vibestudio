@@ -98,7 +98,7 @@ export class VibeStudioHandler extends BaseProvider implements SingleCompletionH
 			this.handler = new DeepSeekHandler({
 				...options,
 				deepSeekApiKey: options.vibestudioApiKey,
-				deepSeekBaseUrl: PEARAI_URL,
+				deepSeekBaseUrl: VIBESTUDIO_URL,
 			})
 		} else {
 			throw new Error(`Unsupported model: ${modelId}`)
@@ -155,3 +155,4 @@ export class VibeStudioHandler extends BaseProvider implements SingleCompletionH
 		return this.handler.completePrompt(prompt)
 	}
 }
+

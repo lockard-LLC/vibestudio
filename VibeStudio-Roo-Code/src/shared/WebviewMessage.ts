@@ -101,7 +101,7 @@ export interface WebviewMessage {
 		| "openCustomModesSettings"
 		| "checkpointDiff"
 		| "checkpointRestore"
-		| "openPearAiAuth"
+		| "openVibeStudioAuth"
 		| "deleteMcpServer"
 		| "maxOpenTabsContext"
 		| "maxWorkspaceFiles"
@@ -162,3 +162,4 @@ export const checkoutRestorePayloadSchema = z.object({
 export type CheckpointRestorePayload = z.infer<typeof checkoutRestorePayloadSchema>
 
 export type WebViewMessagePayload = CheckpointDiffPayload | CheckpointRestorePayload
+

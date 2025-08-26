@@ -90,22 +90,22 @@ export function activate(context: vscode.ExtensionContext) {
 	 * https://code.visualstudio.com/api/extension-guides/virtual-documents
 	 */
 	context.subscriptions.push(
-		vscode.commands.registerCommand("pearai-roo-cline.pearaiLogin", async (data) => {
-			console.dir("Logged in to PearAI:")
+		vscode.commands.registerCommand("vibestudio-roo-cline.VibeStudioLogin", async (data) => {
+			console.dir("Logged in to VibeStudio:")
 			console.dir(data)
-			context.secrets.store("pearaiApiKey", data.accessToken)
-			context.secrets.store("pearaiRefreshKey", data.refreshToken)
+			context.secrets.store("VibeStudioApiKey", data.accessToken)
+			context.secrets.store("VibeStudioRefreshKey", data.refreshToken)
 			const provider = await ClineProvider.getInstance()
 			if (provider) {
-				// Update the API configuration to clear the PearAI key
+				// Update the API configuration to clear the VibeStudio key
 				await provider.setValues({
-					pearaiApiKey: data.accessToken,
+					VibeStudioApiKey: data.accessToken,
 				})
 				await provider.postStateToWebview()
 				// Update MCP server with new token
 				const mcpHub = provider.getMcpHub()
 				if (mcpHub) {
-					await mcpHub.updatePearAiApiKey(data.accessToken)
+					await mcpHub.updateVibeStudioApiKey(data.accessToken)
 				}
 			}
 			vscode.commands.executeCommand("roo-cline.plusButtonClicked")
@@ -113,23 +113,23 @@ export function activate(context: vscode.ExtensionContext) {
 	)
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand("pearai-roo-cline.pearaiLogout", async () => {
-			console.dir("Logged out of PearAI:")
-			context.secrets.delete("pearaiApiKey")
-			context.secrets.delete("pearaiRefreshKey")
+		vscode.commands.registerCommand("vibestudio-roo-cline.VibeStudioLogout", async () => {
+			console.dir("Logged out of VibeStudio:")
+			context.secrets.delete("VibeStudioApiKey")
+			context.secrets.delete("VibeStudioRefreshKey")
 
 			// Get the current provider instance and update webview state
 			const provider = await ClineProvider.getInstance()
 			if (provider) {
-				// Update the API configuration to clear the PearAI key
+				// Update the API configuration to clear the VibeStudio key
 				await provider.setValues({
-					pearaiApiKey: undefined,
+					VibeStudioApiKey: undefined,
 				})
 				await provider.postStateToWebview()
 				// Clear MCP server token
 				const mcpHub = provider.getMcpHub()
 				if (mcpHub) {
-					await mcpHub.clearPearAiApiKey()
+					await mcpHub.clearVibeStudioApiKey()
 				}
 			}
 		}),
@@ -227,7 +227,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand("roo-cline.focus", async (...args: any[]) => {
-			await vscode.commands.executeCommand("pearai-roo-cline.SidebarProvider.focus")
+			await vscode.commands.executeCommand("vibestudio-roo-cline.SidebarProvider.focus")
 		}),
 	)
 	// Implements the `RooCodeAPI` interface.
@@ -244,3 +244,4 @@ export async function deactivate() {
 	// Clean up terminal handlers
 	TerminalRegistry.cleanup()
 }
+

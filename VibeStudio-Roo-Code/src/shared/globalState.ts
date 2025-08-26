@@ -26,7 +26,7 @@ export const SECRET_KEYS = [
 	"mistralApiKey",
 	"unboundApiKey",
 	"requestyApiKey",
-	"pearaiApiKey",
+	"vibestudioApiKey",
 ] as const
 
 // type CheckSecretKeysExhaustiveness = Exclude<SecretKey, (typeof SECRET_KEYS)[number]> extends never ? true : false
@@ -125,9 +125,9 @@ export const GLOBAL_STATE_KEYS = [
 	"maxWorkspaceFiles",
 	"maxReadFileLine",
 	"fakeAi",
-	"pearaiModelId",
-	"pearaiModelInfo",
-	"pearaiBaseUrl",
+	"vibestudioModelId",
+	"vibestudioModelInfo",
+	"vibestudioBaseUrl",
 ] as const
 
 export const PASS_THROUGH_STATE_KEYS = ["taskHistory"] as const
@@ -144,3 +144,4 @@ export const isGlobalStateKey = (key: string): key is GlobalStateKey =>
 
 export const isPassThroughStateKey = (key: string): key is (typeof PASS_THROUGH_STATE_KEYS)[number] =>
 	PASS_THROUGH_STATE_KEYS.includes(key as (typeof PASS_THROUGH_STATE_KEYS)[number])
+

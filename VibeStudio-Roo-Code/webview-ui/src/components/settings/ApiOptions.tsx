@@ -37,10 +37,10 @@ import {
 	unboundDefaultModelInfo,
 	requestyDefaultModelId,
 	requestyDefaultModelInfo,
-	pearAiModels,
-	pearAiDefaultModelId,
-	pearAiDefaultModelInfo,
-	PEARAI_URL,
+	vibestudioModels,
+	vibestudioDefaultModelId,
+	vibestudioDefaultModelInfo,
+	VIBESTUDIO_URL,
 	ApiProvider,
 } from "../../../../src/shared/api"
 import { ExtensionMessage } from "../../../../src/shared/ExtensionMessage"
@@ -59,7 +59,7 @@ import { TemperatureControl } from "./TemperatureControl"
 import { validateApiConfiguration, validateModelId, validateBedrockArn } from "@/utils/validate"
 import { ApiErrorMessage } from "./ApiErrorMessage"
 import { ThinkingBudget } from "./ThinkingBudget"
-import { usePearAiModels } from "../../hooks/usePearAiModels"
+import { useVibeStudioModels } from "../../hooks/useVibeStudioModels"
 
 interface ApiOptionsProps {
 	uriScheme: string | undefined
@@ -101,7 +101,7 @@ const ApiOptions = ({
 	})
 
 	const [openAiModels, setOpenAiModels] = useState<Record<string, ModelInfo> | null>(null)
-	const pearAiModels = usePearAiModels(apiConfiguration)
+	const vibeStudioModels = useVibeStudioModels(apiConfiguration)
 
 	const [anthropicBaseUrlSelected, setAnthropicBaseUrlSelected] = useState(!!apiConfiguration?.anthropicBaseUrl)
 	const [azureApiVersionSelected, setAzureApiVersionSelected] = useState(!!apiConfiguration?.azureApiVersion)
@@ -127,8 +127,8 @@ const ApiOptions = ({
 	)
 
 	const { selectedProvider, selectedModelId, selectedModelInfo } = useMemo(() => {
-		return normalizeApiConfiguration(apiConfiguration, pearAiModels)
-	}, [apiConfiguration, pearAiModels])
+		return normalizeApiConfiguration(apiConfiguration, vibeStudioModels)
+	}, [apiConfiguration, vibeStudioModels])
 
 	// Debounced refresh model updates, only executed 250ms after the user
 	// stops typing.
@@ -237,8 +237,8 @@ const ApiOptions = ({
 	useEvent("message", onMessage)
 
 	const selectedProviderModelOptions = useMemo(() => {
-		if (selectedProvider === "pearai") {
-			return Object.keys(pearAiModels).map((modelId) => ({
+	if (selectedProvider === "vibestudio") {
+			return Object.keys(vibeStudioModels).map((modelId) => ({
 				value: modelId,
 				label: modelId,
 			}))
@@ -249,7 +249,7 @@ const ApiOptions = ({
 					label: modelId,
 				}))
 			: []
-	}, [selectedProvider, pearAiModels])
+	}, [selectedProvider, vibeStudioModels])
 
 	return (
 		<div className="flex flex-col gap-3">
@@ -262,7 +262,7 @@ const ApiOptions = ({
 						<SelectValue placeholder={t("settings:common.select")} />
 					</SelectTrigger>
 					<SelectContent>
-						<SelectItem value="pearai">PearAI</SelectItem>
+						<SelectItem value="vibestudio">VibeStudio</SelectItem>
 						<SelectSeparator />
 						{PROVIDERS.map(({ value, label }) => (
 							<SelectItem key={value} value={value}>
@@ -273,17 +273,17 @@ const ApiOptions = ({
 				</Select>
 			</div>
 
-			{selectedProvider === "pearai" && (
+			{selectedProvider === "vibestudio" && (
 				<div>
-					{!apiConfiguration?.pearaiApiKey ? (
+					{!apiConfiguration?.vibestudioApiKey ? (
 						<>
 							<VSCodeButton
 								onClick={() => {
 									vscode.postMessage({
-										type: "openPearAiAuth",
+										type: "openVibeStudioAuth",
 									})
 								}}>
-								Login to PearAI
+								Login to VibeStudio
 							</VSCodeButton>
 							<p
 								style={{
@@ -291,7 +291,7 @@ const ApiOptions = ({
 									marginTop: "5px",
 									color: "var(--vscode-descriptionForeground)",
 								}}>
-								Connect your PearAI account to use servers.
+								Connect your VibeStudio account to use servers.
 							</p>
 						</>
 					) : (
@@ -301,7 +301,7 @@ const ApiOptions = ({
 								marginTop: "5px",
 								color: "var(--vscode-descriptionForeground)",
 							}}>
-							User already logged in to PearAI. Click 'Done' to proceed!
+							User already logged in to VibeStudio. Click 'Done' to proceed!
 						</p>
 					)}
 				</div>
@@ -1590,7 +1590,7 @@ export function getOpenRouterAuthUrl(uriScheme?: string) {
 
 export function normalizeApiConfiguration(
 	apiConfiguration?: ApiConfiguration,
-	pearAiModelsQuery?: Record<string, ModelInfo>,
+	vibeStudioModelsQuery?: Record<string, ModelInfo>,
 ) {
 	const provider = apiConfiguration?.apiProvider || "anthropic"
 	const modelId = apiConfiguration?.apiModelId
@@ -1691,11 +1691,11 @@ export function normalizeApiConfiguration(
 					supportsImages: false, // VSCode LM API currently doesn't support images.
 				},
 			}
-		case "pearai": {
+		case "vibestudio": {
 			// Always use the models from the hook which are fetched when provider is selected
 			return getProviderData(
-				pearAiModelsQuery || { [pearAiDefaultModelId]: pearAiDefaultModelInfo },
-				pearAiDefaultModelId,
+				vibeStudioModelsQuery || { [vibestudioDefaultModelId]: vibestudioDefaultModelInfo },
+				vibestudioDefaultModelId,
 			)
 		}
 		default:
@@ -1704,3 +1704,5 @@ export function normalizeApiConfiguration(
 }
 
 export default memo(ApiOptions)
+
+

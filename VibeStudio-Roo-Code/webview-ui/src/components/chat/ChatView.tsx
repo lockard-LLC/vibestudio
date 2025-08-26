@@ -14,14 +14,14 @@ import {
 import { McpServer, McpTool } from "../../../../src/shared/mcp"
 import { findLast } from "../../../../src/shared/array"
 import { combineApiRequests } from "../../../../src/shared/combineApiRequests"
-import { ModelInfo, pearAiDefaultModelId, pearAiDefaultModelInfo, PEARAI_URL } from "../../../../src/shared/api"
+import { ModelInfo, vibestudioDefaultModelId, vibestudioDefaultModelInfo, VIBESTUDIO_URL } from "../../../../src/shared/api"
 import { combineCommandSequences } from "../../../../src/shared/combineCommandSequences"
 import { getApiMetrics } from "../../../../src/shared/getApiMetrics"
 import { useExtensionState } from "../../context/ExtensionStateContext"
 import { vscode } from "../../utils/vscode"
 import HistoryPreview from "../history/HistoryPreview"
 import { normalizeApiConfiguration } from "../settings/ApiOptions"
-import { usePearAiModels } from "../../hooks/usePearAiModels"
+import { useVibeStudioModels } from "../../hooks/useVibeStudioModels"
 import Announcement from "./Announcement"
 import BrowserSessionRow from "./BrowserSessionRow"
 import ChatRow from "./ChatRow"
@@ -34,7 +34,7 @@ import { getAllModes } from "../../../../src/shared/modes"
 import TelemetryBanner from "../common/TelemetryBanner"
 import { useAppTranslation } from "@/i18n/TranslationContext"
 import removeMd from "remove-markdown"
-import splashIcon from "../../../../assets/icons/pearai-agent-splash.svg"
+import splashIcon from "../../../../assets/icons/vibestudio-agent-splash.svg"
 import { Button } from "../ui/button-pear-scn"
 import {
 	vscBackground,
@@ -484,11 +484,11 @@ const ChatView = ({ isHidden, showAnnouncement, hideAnnouncement, showHistoryVie
 		startNewTask()
 	}, [startNewTask])
 
-	const pearAiModels = usePearAiModels(apiConfiguration)
+	const vibeStudioModels = useVibeStudioModels(apiConfiguration)
 
 	const { selectedModelInfo } = useMemo(() => {
-		return normalizeApiConfiguration(apiConfiguration, pearAiModels)
-	}, [apiConfiguration, pearAiModels])
+		return normalizeApiConfiguration(apiConfiguration, vibeStudioModels)
+	}, [apiConfiguration, vibeStudioModels])
 
 	const selectImages = useCallback(() => {
 		vscode.postMessage({ type: "selectImages" })
@@ -995,7 +995,7 @@ const ChatView = ({ isHidden, showAnnouncement, hideAnnouncement, showHistoryVie
 	// 	`\n(${t("chat:addContext")}${shouldDisableImages ? `, ${t("chat:dragFiles")}` : `, ${t("chat:dragFilesImages")}`})`
 
 	const placeholderText = useMemo(() => {
-		const baseText = task ? "Follow up here." : "Give PearAI Agent a task here."
+		const baseText = task ? "Follow up here." : "Give VibeStudio Agent a task here."
 		const contextText = " Use @ to add context."
 		const imageText = shouldDisableImages ? "" : "\nhold shift to drag in images"
 		const helpText = imageText ? `\n${contextText}${imageText}` : `\n${contextText}`
@@ -1169,7 +1169,7 @@ const ChatView = ({ isHidden, showAnnouncement, hideAnnouncement, showHistoryVie
 									<img src={splashIcon} alt="..." />
 									<div className="w-[300px] flex-col justify-start items-start gap-5 inline-flex">
 										<div className="flex flex-col text-left">
-											<div className="text-2xl">PearAI Coding Agent</div>
+											<div className="text-2xl">VibeStudio Coding Agent</div>
 											<div className="h-[18px] opacity-50 text-xs leading-[18px]">
 												Powered by Roo Code / Cline
 											</div>

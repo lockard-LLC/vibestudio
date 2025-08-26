@@ -1,4 +1,4 @@
-# PearAI's Integration of Roo Code / Cline, a coding agent. Name attribution will always be kept in tact.
+# VibeStudio’s Integration of Roo Code / Cline (name attribution preserved).
 
 ## Local Setup & Development
 
@@ -7,7 +7,7 @@
     git clone https://github.com/RooVetGit/Roo-Code.git
     ```
 2. **Download esbuild problem matchers**
-   Install https://market.trypear.ai/items?itemName=connor4312.esbuild-problem-matchers
+   Install https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers
 3. **Install dependencies**:
     ```bash
     npm run install:all
@@ -47,7 +47,6 @@ We use [changesets](https://github.com/changesets/changesets) for versioning and
 `bash
     code --install-extension bin/roo-code-4.0.0.vsix
     `
-|
 
 <!-- END CONTRIBUTORS SECTION -->
 

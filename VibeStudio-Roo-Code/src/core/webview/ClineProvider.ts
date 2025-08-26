@@ -78,8 +78,8 @@ export type ClineProviderEvents = {
 }
 
 export class ClineProvider extends EventEmitter<ClineProviderEvents> implements vscode.WebviewViewProvider {
-	public static readonly sideBarId = "pearai-roo-cline.SidebarProvider" // used in package.json as the view's id. This value cannot be changed due to how vscode caches views based on their id, and updating the id would break existing instances of the extension.
-	public static readonly tabPanelId = "pearai-roo-cline.TabPanelProvider"
+	public static readonly sideBarId = "vibestudio-roo-cline.SidebarProvider" // used in package.json as the view's id. This value cannot be changed due to how vscode caches views based on their id, and updating the id would break existing instances of the extension.
+	public static readonly tabPanelId = "vibestudio-roo-cline.TabPanelProvider"
 	private static activeInstances: Set<ClineProvider> = new Set()
 	private disposables: vscode.Disposable[] = []
 	private view?: vscode.WebviewView | vscode.WebviewPanel
@@ -245,7 +245,7 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 
 		// If no visible provider, try to show the sidebar view
 		if (!visibleProvider) {
-			await vscode.commands.executeCommand("pearai-roo-cline.SidebarProvider.focus")
+			await vscode.commands.executeCommand("vibestudio-roo-cline.SidebarProvider.focus")
 			// Wait briefly for the view to become visible
 			await delay(100)
 			visibleProvider = ClineProvider.getVisibleInstance()
@@ -2021,14 +2021,14 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 						break
 					}
 
-					case "openPearAiAuth":
-						const extensionUrl = `${vscode.env.uriScheme}://pearai.pearai/auth`
+					case "openVibeStudioAuth":
+						const extensionUrl = `${vscode.env.uriScheme}://vibestudio.vibestudio/auth`
 						const callbackUri = await vscode.env.asExternalUri(vscode.Uri.parse(extensionUrl))
 
 						await vscode.env.openExternal(
 							await vscode.env.asExternalUri(
 								vscode.Uri.parse(
-									`https://trypear.ai/signin?callback=${callbackUri.toString()}`, // Change to localhost if running locally
+									`https://vibestudio.online/signin?callback=${callbackUri.toString()}`, // Change to localhost if running locally
 								),
 							),
 						)
@@ -2853,3 +2853,4 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 		return properties
 	}
 }
+

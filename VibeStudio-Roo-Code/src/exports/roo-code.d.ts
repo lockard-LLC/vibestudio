@@ -162,7 +162,7 @@ export type SecretKey =
 	| "mistralApiKey"
 	| "unboundApiKey"
 	| "requestyApiKey"
-	| "pearaiApiKey"
+	| "vibestudioApiKey"
 
 export type GlobalStateKey =
 	| "apiProvider"
@@ -256,9 +256,9 @@ export type GlobalStateKey =
 	| "language"
 	| "maxReadFileLine"
 	| "fakeAi"
-	| "pearaiModelId"
-	| "pearaiModelInfo"
-	| "pearaiBaseUrl"
+	| "vibestudioModelId"
+	| "vibestudioModelInfo"
+	| "vibestudioBaseUrl"
 
 export type ConfigurationKey = GlobalStateKey | SecretKey
 

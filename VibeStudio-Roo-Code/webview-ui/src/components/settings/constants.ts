@@ -7,7 +7,7 @@ import {
 	geminiModels,
 	mistralModels,
 	openAiNativeModels,
-	pearAiModels,
+	vibestudioModels,
 	vertexModels,
 } from "../../../../src/shared/api"
 

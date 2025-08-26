@@ -12,6 +12,9 @@ export const TEST_MODE_ENABLED = ["true", "True", "TRUE"].includes(
 
 export const BUNNY_CDN_HOST = "https://vibestudio.b-cdn.net";
 
+// Public app site for downloads
+export const APP_DOWNLOAD_URL = "https://app.vibestudio.online";
+
 export const MACOS_SILICON_APP_URL =
   "https://vibestudio-app.nyc3.digitaloceanspaces.com/VibeStudio-latest/darwin-arm64/VibeStudio-Installer.dmg";
 export const MACOS_INTEL_APP_URL =
@@ -30,7 +33,8 @@ export const DOWNLOAD_URLS = {
 } as const;
 
 export const getDownloadUrl = (osType: keyof typeof DOWNLOAD_URLS) => {
-  return DOWNLOAD_URLS[osType] || null;
+  // Route all downloads through the public app site for OS detection and handling
+  return APP_DOWNLOAD_URL;
 };
 
 export const CONTACT_EMAIL = "hello@vibestudio.online";

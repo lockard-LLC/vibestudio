@@ -30,7 +30,7 @@ import {
 } from "../../shared/mcp"
 import { fileExistsAtPath } from "../../utils/fs"
 import { arePathsEqual } from "../../utils/path"
-import { PEARAI_URL } from "../../shared/api"
+import { VIBESTUDIO_URL } from "../../shared/api"
 
 export type McpConnection = {
 	server: McpServer
@@ -264,7 +264,7 @@ export class McpHub {
 
 	private async fetchDefaultSettings(): Promise<Record<string, any>> {
 		try {
-			const response = await fetch(`${PEARAI_URL}/getDefaultAgentMCPSettings`)
+			const response = await fetch(`${VIBESTUDIO_URL}/getDefaultAgentMCPSettings`)
 			if (!response.ok) {
 				throw new Error(`HTTP error! status: ${response.status}`)
 			}
@@ -281,7 +281,7 @@ export class McpHub {
 
 	private async fetchServersToRemove(): Promise<string[]> {
 		try {
-			const response = await fetch(`${PEARAI_URL}/getAgentMCPSettingsRemove`)
+			const response = await fetch(`${VIBESTUDIO_URL}/getAgentMCPSettingsRemove`)
 			if (!response.ok) {
 				throw new Error(`HTTP error! status: ${response.status}`)
 			}
@@ -293,12 +293,12 @@ export class McpHub {
 		}
 	}
 
-	private async getPearAiApiKey(): Promise<string | null> {
+	private async getVibeStudioApiKey(): Promise<string | null> {
 		try {
-			const token = await this.context.secrets.get("pearaiApiKey")
+			const token = await this.context.secrets.get("vibestudioApiKey")
 			return token || null
 		} catch (error) {
-			console.error("Failed to get PearAI token from secrets:", error)
+			console.error("Failed to get VibeStudio token from secrets:", error)
 			return null
 		}
 	}
@@ -342,11 +342,11 @@ export class McpHub {
 
 				// If this is the pearai server, check login status and update API key
 				if (serverName === "pearai") {
-					const apiKey = await this.getPearAiApiKey()
+					const apiKey = await this.getVibeStudioApiKey()
 					if (apiKey) {
 						mergedServers[serverName] = {
 							...serverConfig,
-							args: ["pearai-mcp", apiKey],
+							args: ["vibestudio-mcp", apiKey],
 						}
 					}
 				}
@@ -1015,16 +1015,16 @@ export class McpHub {
 			if (config.mcpServers?.pearai) {
 				config.mcpServers.pearai = {
 					...config.mcpServers.pearai,
-					args: ["pearai-mcp", "<PEARAI_API_KEY>"],
+					args: ["vibestudio-mcp", "<VIBESTUDIO_API_KEY>"],
 				}
 
 				await fs.writeFile(settingsPath, JSON.stringify(config, null, 2))
 				await this.updateServerConnections(config.mcpServers)
-				vscode.window.showInformationMessage("PearAI API key cleared successfully")
+				vscode.window.showInformationMessage("VibeStudio API key cleared successfully")
 			}
 		} catch (error) {
-			console.error("Failed to clear PearAI API key:", error)
-			vscode.window.showErrorMessage("Failed to clear PearAI API key")
+			console.error("Failed to clear VibeStudio API key:", error)
+			vscode.window.showErrorMessage("Failed to clear VibeStudio API key")
 			throw error
 		}
 	}
@@ -1038,17 +1038,18 @@ export class McpHub {
 			if (config.mcpServers?.pearai) {
 				config.mcpServers.pearai = {
 					...config.mcpServers.pearai,
-					args: ["pearai-mcp", apiKey],
+					args: ["vibestudio-mcp", apiKey],
 				}
 
 				await fs.writeFile(settingsPath, JSON.stringify(config, null, 2))
 				await this.updateServerConnections(config.mcpServers)
-				vscode.window.showInformationMessage("PearAI API key updated successfully")
+				vscode.window.showInformationMessage("VibeStudio API key updated successfully")
 			}
 		} catch (error) {
-			console.error("Failed to update PearAI API key:", error)
-			vscode.window.showErrorMessage("Failed to update PearAI API key")
+			console.error("Failed to update VibeStudio API key:", error)
+			vscode.window.showErrorMessage("Failed to update VibeStudio API key")
 			throw error
 		}
 	}
 }
+

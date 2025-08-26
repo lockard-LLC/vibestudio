@@ -21,7 +21,7 @@ import {
 import { ApiConfiguration, ModelInfo } from "../../../../src/shared/api"
 
 import { normalizeApiConfiguration } from "./ApiOptions"
-import { usePearAiModels } from "../../hooks/usePearAiModels"
+import { useVibeStudioModels } from "../../hooks/useVibeStudioModels"
 import { ThinkingBudget } from "./ThinkingBudget"
 import { ModelInfoView } from "./ModelInfoView"
 
@@ -64,11 +64,11 @@ export const ModelPicker = ({
 	const searchInputRef = useRef<HTMLInputElement>(null)
 	const modelIds = useMemo(() => Object.keys(models ?? {}).sort((a, b) => a.localeCompare(b)), [models])
 
-	const pearAiModels = usePearAiModels(apiConfiguration)
+	const vibeStudioModels = useVibeStudioModels(apiConfiguration)
 
 	const { selectedModelId, selectedModelInfo } = useMemo(
-		() => normalizeApiConfiguration(apiConfiguration, pearAiModels),
-		[apiConfiguration, pearAiModels],
+		() => normalizeApiConfiguration(apiConfiguration, vibeStudioModels),
+		[apiConfiguration, vibeStudioModels],
 	)
 
 	const [searchValue, setSearchValue] = useState(selectedModelId || "")

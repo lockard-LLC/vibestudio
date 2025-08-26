@@ -12,8 +12,8 @@ import {
 	unboundDefaultModelInfo,
 	requestyDefaultModelId,
 	requestyDefaultModelInfo,
-	PEARAI_URL,
-	pearAiModels,
+	VIBESTUDIO_URL,
+	vibestudioModels,
 } from "../../../src/shared/api"
 import { vscode } from "../utils/vscode"
 import { convertTextMateToHljs } from "../utils/textMateToHljs"
@@ -202,14 +202,14 @@ export const ExtensionStateContextProvider: React.FC<{ children: React.ReactNode
 					}))
 					const config = newState.apiConfiguration
 					const hasKey = checkExistKey(config)
-					if (!hasKey && (!config || config.apiProvider !== "pearai")) {
+					if (!hasKey && (!config || config.apiProvider !== "vibestudio")) {
 						vscode.postMessage({
 							type: "apiConfiguration",
 							apiConfiguration: {
-								apiProvider: "pearai",
-								pearaiBaseUrl: PEARAI_URL,
-								pearaiModelId: "pearai-model",
-								pearaiModelInfo: pearAiModels["pearai-model"],
+								apiProvider: "vibestudio",
+								vibestudioBaseUrl: VIBESTUDIO_URL,
+								vibestudioModelId: "vibestudio-model",
+								vibestudioModelInfo: vibestudioModels["vibestudio-model"],
 							},
 						})
 					}

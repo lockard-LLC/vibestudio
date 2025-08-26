@@ -15,4 +15,5 @@ export * from "./select-dropdown"
 export * from "./select"
 export * from "./textarea"
 export * from "./tooltip"
-export * from "./pearaiindex"
+export * from "./vibestudioindex"
+

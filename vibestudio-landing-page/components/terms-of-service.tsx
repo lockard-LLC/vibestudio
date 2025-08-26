@@ -25,7 +25,8 @@ export default function TermsOfServiceComponent() {
 
               <p>
                 Welcome, and thank you for your interest in VibeStudio, Inc.
-                (VibeStudio,&quot; &quot;we,&quot; or &quot;us&quot;) and our website at&nbsp;
+                (VibeStudio,&quot; &quot;we,&quot; or &quot;us&quot;) and our
+                website at&nbsp;
                 <Link
                   href="http://www.vibestudio.online"
                   className="font-medium text-gray-900 underline"

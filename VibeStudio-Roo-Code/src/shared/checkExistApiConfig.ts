@@ -5,7 +5,7 @@ export function checkExistKey(config: ApiConfiguration | undefined) {
 	if (!config) return false
 
 	// Special case for providers that don't need configuration in the apiConfiguration object
-	if (config.apiProvider === "human-relay" || config.apiProvider === "fake-ai" || config.apiProvider === "pearai") {
+	if (config.apiProvider === "human-relay" || config.apiProvider === "fake-ai" || config.apiProvider === "vibestudio") {
 		return true
 	}
 
@@ -23,3 +23,4 @@ export function checkExistKey(config: ApiConfiguration | undefined) {
 
 	return hasSecretKey || hasOtherConfig
 }
+

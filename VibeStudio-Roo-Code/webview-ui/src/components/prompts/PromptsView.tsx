@@ -228,7 +228,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 		const result = CustomModeSchema.safeParse(newMode)
 		if (!result.success) {
 			// Map Zod errors to specific fields
-			result.error.errors.forEach((error) => {
+    result.error.errors.forEach((error: any) => {
 				const field = error.path[0] as string
 				const message = error.message
 
