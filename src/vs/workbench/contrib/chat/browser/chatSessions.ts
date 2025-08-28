@@ -73,6 +73,19 @@ import { IObservable } from '../../../../base/common/observable.js';
 import { ChatSessionItemWithProvider, getChatSessionType, isChatSession } from './chatSessions/common.js';
 import { ChatSessionTracker } from './chatSessions/chatSessionTracker.js';
 
+// Telemetry types for chat widget initialization
+type ChatWidgetInitFromSessionsEvent = {
+	source: 'sessionsView';
+	success: boolean;
+};
+
+type ChatWidgetInitFromSessionsClassification = {
+	source: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'The source of chat widget initialization.' };
+	success: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; isMeasurement: true; comment: 'Whether widget initialization succeeded.' };
+	owner: 'microsoft';
+	comment: 'Tracks chat widget initialization from the sessions view for feature usage insights.';
+};
+
 export const VIEWLET_ID = 'workbench.view.chat.sessions';
 
 // Helper function to update relative time for chat sessions (similar to timeline)
@@ -403,13 +416,17 @@ class LocalChatSessionsProvider extends Disposable implements IChatSessionItemPr
 			});
 		});
 
-		// Add chat view instance
+		// Always add chat view instance - even if widget doesn't exist yet
 		const chatWidget = this.chatWidgetService.getWidgetsByLocations(ChatAgentLocation.Panel)
 			.find(widget => typeof widget.viewContext === 'object' && 'viewId' in widget.viewContext && widget.viewContext.viewId === LocalChatSessionsProvider.CHAT_WIDGET_VIEW_ID);
+		
 		let status: ChatSessionStatus | undefined;
 		let widgetTimestamp: number | undefined;
+		let widgetTitle = nls.localize2('chat.sessions.chatView', "Chat").value;
+		
 		if (chatWidget?.viewModel?.model) {
 			status = this.modelToStatus(chatWidget.viewModel.model);
+			widgetTitle = chatWidget.viewModel.model.title || widgetTitle;
 			// Get the last interaction timestamp from the model
 			const requests = chatWidget.viewModel.model.getRequests();
 			if (requests.length > 0) {
@@ -420,22 +437,22 @@ class LocalChatSessionsProvider extends Disposable implements IChatSessionItemPr
 				widgetTimestamp = Date.now();
 			}
 		}
-		if (chatWidget) {
-			const widgetSession: ILocalChatSessionItem & ChatSessionItemWithProvider = {
-				id: LocalChatSessionsProvider.CHAT_WIDGET_VIEW_ID,
-				label: chatWidget.viewModel?.model.title || nls.localize2('chat.sessions.chatView', "Chat").value,
-				description: nls.localize('chat.sessions.chatView.description', "Chat View"),
-				iconPath: Codicon.chatSparkle,
-				widget: chatWidget,
-				sessionType: 'widget',
-				status,
-				provider: this,
-				timing: {
-					startTime: widgetTimestamp ?? 0
-				}
-			};
-			sessions.push(widgetSession);
-		}
+
+		// Always create widget session entry
+		const widgetSession: ILocalChatSessionItem & ChatSessionItemWithProvider = {
+			id: LocalChatSessionsProvider.CHAT_WIDGET_VIEW_ID,
+			label: widgetTitle,
+			description: nls.localize('chat.sessions.chatView.description', "Chat View"),
+			iconPath: Codicon.chatSparkle,
+			widget: chatWidget, // This will be undefined if no widget exists
+			sessionType: 'widget',
+			status,
+			provider: this,
+			timing: {
+				startTime: widgetTimestamp ?? 0
+			}
+		};
+		sessions.push(widgetSession);
 
 		// Build editor-based sessions in the order specified by editorOrder
 		this.editorOrder.forEach((editorKey, index) => {
@@ -479,9 +496,13 @@ class LocalChatSessionsProvider extends Disposable implements IChatSessionItemPr
 			}
 		});
 
-		// Sort sessions by timestamp (newest first), but keep "Show history..." at the end
-		const normalSessions = sessions.filter(s => s.id !== 'show-history');
-		processSessionsWithTimeGrouping(normalSessions);
+		// Separate widget session from editor sessions for proper ordering
+		// Widget session should always be first, regardless of timestamp
+		const widgetSessions = sessions.filter(s => s.sessionType === 'widget');
+		const editorSessions = sessions.filter(s => s.sessionType === 'editor');
+		
+		// Apply timestamp sorting only to editor sessions to maintain relative order
+		processSessionsWithTimeGrouping(editorSessions);
 
 		// Add "Show history..." node at the end
 		const historyNode: IChatSessionItem = {
@@ -489,7 +510,8 @@ class LocalChatSessionsProvider extends Disposable implements IChatSessionItemPr
 			label: nls.localize('chat.sessions.showHistory', "History"),
 		};
 
-		return [...normalSessions, historyNode];
+		// Always place widget sessions first, then sorted editor sessions, then history
+		return [...widgetSessions, ...editorSessions, historyNode];
 	}
 }
 
@@ -1196,6 +1218,7 @@ class SessionsViewPane extends ViewPane {
 		@ILogService private readonly logService: ILogService,
 		@IProgressService private readonly progressService: IProgressService,
 		@IMenuService private readonly menuService: IMenuService,
+		@ITelemetryService private readonly telemetryService: ITelemetryService,
 	) {
 		super(options, keybindingService, contextMenuService, configurationService, contextKeyService, viewDescriptorService, instantiationService, openerService, themeService, hoverService);
 
@@ -1450,11 +1473,38 @@ class SessionsViewPane extends ViewPane {
 					// Focus the existing editor
 					await element.group.openEditor(element.editor, { pinned: true });
 					return;
-				} else if (element.sessionType === 'widget' && element.widget) {
-					// Focus the chat widget
-					const chatViewPane = await this.viewsService.openView(ChatViewId) as ChatViewPane;
-					if (chatViewPane && element.widget.viewModel?.model) {
-						await chatViewPane.loadSession(element.widget.viewModel.model.sessionId);
+				} else if (element.sessionType === 'widget') {
+					// Handle both existing widget and on-demand initialization
+					if (element.widget) {
+						// Focus the existing chat widget
+						const chatViewPane = await this.viewsService.openView(ChatViewId) as ChatViewPane;
+						if (chatViewPane && element.widget.viewModel?.model) {
+							await chatViewPane.loadSession(element.widget.viewModel.model.sessionId);
+						}
+					} else {
+						// On-demand initialization: widget doesn't exist, so create it by opening chat view
+						try {
+							const chatViewPane = await this.viewsService.openView(ChatViewId) as ChatViewPane;
+							if (chatViewPane) {
+								// The ChatViewPane will automatically create and register the widget
+								// Send telemetry for this initialization
+								this.telemetryService.publicLog2<ChatWidgetInitFromSessionsEvent, ChatWidgetInitFromSessionsClassification>(
+									'chatWidgetInitFromSessions', {
+										source: 'sessionsView',
+										success: true
+									}
+								);
+							}
+						} catch (error) {
+							this.logService.error('[SessionsViewPane] Failed to initialize chat widget from sessions view:', error);
+							// Send error telemetry
+							this.telemetryService.publicLog2<ChatWidgetInitFromSessionsEvent, ChatWidgetInitFromSessionsClassification>(
+								'chatWidgetInitFromSessions', {
+									source: 'sessionsView',
+									success: false
+								}
+							);
+						}
 					}
 					return;
 				}
