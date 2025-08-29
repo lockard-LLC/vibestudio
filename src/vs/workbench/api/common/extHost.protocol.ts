@@ -2959,6 +2959,7 @@ export interface ExtHostThemingShape {
 }
 
 export interface MainThreadThemingShape extends IDisposable {
+	$getColorAsHex(colorId: string): Promise<string | undefined>;
 }
 
 export interface MainThreadLocalizationShape extends IDisposable {
