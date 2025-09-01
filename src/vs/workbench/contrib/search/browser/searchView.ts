@@ -766,6 +766,27 @@ export class SearchView extends ViewPane {
 			return new Promise<void>(resolve => progressComplete = resolve);
 		});
 
+		const doReplaceAll = () => {
+			this.searchWidget.setReplaceAllActionState(false);
+			this.viewModel.searchResult.replaceAll(progressReporter).then(() => {
+				progressComplete();
+				const messageEl = this.clearMessage();
+				dom.append(messageEl, afterReplaceAllMessage);
+				this.reLayout();
+			}, (error) => {
+				progressComplete();
+				errors.isCancellationError(error);
+				this.notificationService.error(error);
+			});
+		};
+
+		const shouldConfirm = this.configurationService.getValue<ISearchConfigurationProperties>('search').confirmReplaceAll !== false;
+
+		if (!shouldConfirm) {
+			doReplaceAll();
+			return;
+		}
+
 		const confirmation: IConfirmation = {
 			title: nls.localize('replaceAll.confirmation.title', "Replace All"),
 			message: this.buildReplaceAllConfirmationMessage(occurrences, fileCount, replaceValue),
@@ -774,17 +795,7 @@ export class SearchView extends ViewPane {
 
 		this.dialogService.confirm(confirmation).then(res => {
 			if (res.confirmed) {
-				this.searchWidget.setReplaceAllActionState(false);
-				this.viewModel.searchResult.replaceAll(progressReporter).then(() => {
-					progressComplete();
-					const messageEl = this.clearMessage();
-					dom.append(messageEl, afterReplaceAllMessage);
-					this.reLayout();
-				}, (error) => {
-					progressComplete();
-					errors.isCancellationError(error);
-					this.notificationService.error(error);
-				});
+				doReplaceAll();
 			} else {
 				progressComplete();
 			}
